@@ -1,0 +1,2954 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AINFormControls</name>
+    </assembly>
+    <members>
+        <member name="T:AINFormControls.AINCustomButton">
+            <summary>
+            [RU] Элемент управления, представляющий собой настраиваемую пользовательскую кнопку.<br/>
+            [EN] A control that is a customizable custom button.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomButton.isMouseOver">
+            <summary>
+            [RU] Находится ли курсор мыши над кнопкой.<br/>
+            [EN] Whether the mouse cursor is over the button.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomButton.isMousePress">
+            <summary>
+            [RU] Нажата ли кнопка.<br/>
+            [EN] Is the button pressed?
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomButton.buttonText">
+            <summary>
+            [RU] Текст на кнопке.<br/>
+            [EN] The text on the button.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomButton.image">
+            <summary>
+            [RU] Изображение для включённой кнопки.<br/>
+            [EN] Image for the enabled button.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomButton.disabledImage">
+            <summary>
+            [RU] Изображение для выключенной кнопки.<br/>
+            [EN] Image for the disabled button.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomButton.imageAlign">
+            <summary>
+            [RU] Выравнивание изображения на кнопке.<br/>
+            [EN] Alignment of the image on the button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.TopBorderHighlightColor">
+            <summary>
+            [RU] Цвет подсветки верхней границы для включённой кнопки.<br/>
+            [EN] The highlight color of the top border for an enabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverTopBorderHighlightColor">
+            <summary>
+            [RU] Цвет подсветки верхней границы кнопки при наведении курсора мыши.<br/>
+            [EN] The highlight color for the top border of the button when hovering the mouse cursor.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledTopBorderHighlightColor">
+            <summary>
+            [RU] Цвет подсветки верхней границы выключенной кнопки.<br/>
+            [EN] The highlight color of the top border of a disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.LeftBorderHighlightColor">
+            <summary>
+            [RU] Цвет подсветки левой границы для включённой кнопки.<br/>
+            [EN] The highlight color of the left border for an enabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverLeftBorderHighlightColor">
+            <summary>
+            [RU] Цвет подсветки левой границы кнопки при наведении курсора мыши.<br/>
+            [EN] The highlight color for the left border of the button when hovering the mouse cursor.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledLeftBorderHighlightColor">
+            <summary>
+            [RU] Цвет подсветки левой границы выключенной кнопки.<br/>
+            [EN] The highlight color of the left border of a disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.BottomBorderShadowColor">
+            <summary>
+            [RU] Цвет тени для нижней границы включённой кнопки.<br/>
+            [EN] The shadow color for the bottom border of an enabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverBottomBorderShadowColor">
+            <summary>
+            [RU] Цвет тени для нижней границы включённой кнопки при наведении курсора мыши.<br/>
+            [EN] The shadow color for the bottom border of an enabled button on mouseover.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledBottomBorderShadowColor">
+            <summary>
+            [RU] Цвет тени для нижней границы недоступной кнопки.<br/>
+            [EN] The shadow color for the bottom border of an disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.RightBorderShadowColor">
+            <summary>
+            [RU] Цвет тени для правой границы кнопки.<br/>
+            [EN] The shadow color for the right border of the button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverRightBorderShadowColor">
+            <summary>
+            [RU] Цвет тени для правой границы кнопки при наведении курсора мыши.<br/>
+            [EN] The shadow color for the right border of the button on mouseover.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledRightBorderShadowColor">
+            <summary>
+            [RU] Цвет тени для нижней границы недоступной кнопки.<br/>
+            [EN] The shadow color for the bottom border of an disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverColor">
+            <summary>
+            [RU] Цвет фона кнопки при наведении курсора мыши, если не используется режим градиентной заливки, т.е. свойство UseGradientFill равно False.<br/>
+            [EN] The color of the background of the button when hovering the mouse cursor, if the gradient filling mode is not used, i.e. UsegradientFill property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverForeColor">
+            <summary>
+            [RU] Цвет текста на кнопке при наведении курсора мыши.<br/>
+            [EN] The color of the text on the button when hovering the mouse cursor.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverFont">
+            <summary>
+            [RU] Шрифт, используемый для текста кнопки при наведении курсора мыши.<br/>
+            [EN] The font used for the text of the button when hovering the mouse cursor.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.PressBackColor">
+            <summary>
+            [RU] Цвет фона кнопки при нажатии, если не используется режим градиентной заливки, т.е. свойство UseGradientFill равно False.<br/>
+            [EN] The color of the background of the button when pressing, if the gradient filling mode is not used, i.e. UsegradientFill property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.PressForeColor">
+            <summary>
+            [RU] Цвет текста на кнопке при нажатии.<br/>
+            [EN] The color of the text on the button when pressing.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.PressOffsetX">
+            <summary>
+            [RU] Смещение кнопки и её текста в пикселях по оси X при нажатии.<br/>
+            [EN] Offset of the button and its text in pixels along the X axis when pressed.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.PressOffsetY">
+            <summary>
+            [RU] Смещение кнопки и её текста в пикселях по оси Y при нажатии.<br/>
+            [EN] Offset of the button and its text in pixels along the Y axis when pressed.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.Image">
+            <summary>
+            [RU] Изображение для отрисовки на включённой кнопке.<br/>
+            [EN] Image to be drawn on the enabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledImage">
+            <summary>
+            [RU] Изображение для отрисовки на выключенной кнопке.<br/>
+            [EN] Image to be drawn on the disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.ImageAlign">
+            <summary>
+            [RU] Задаёт выравнивание изображения на кнопке.<br/>
+            [EN] Sets the alignment of the image on the button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.UseGradientFill">
+            <summary>
+            [RU] Следует ли использовать градиентную заливку фона для включённой кнопки.<br/>
+            [EN] Whether to use a gradient background fill for an enabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.UseBorderHighlightAndShadows">
+            <summary>
+            [RU] Следует ли использовать отрисовку границ кнопки: левую и верхнюю (подсветка кнопки) и правую и нижнюю (тени кнопки).<br/>
+            [EN] Whether to use button border drawing: left and top (button highlight) and right and bottom (button shadows).
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.GradientFillStartColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки фона для включённой кнопки, когда курсор мыши не находится над кнопкой. Используется, если свойство UseGradientFill выставлено в True.<br/>
+            [EN] The start color of the gradient pouring of the background for the button on when the mouse cursor is not above the button. Used if the UseGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.GradientFillEndColor">
+            <summary>
+            [RU] Конечный цвет градиентной заливки фона для включённой кнопки, когда курсор мыши не находится над кнопкой. Используется, если свойство UseGradientFill выставлено в True.<br/>
+            [EN] The end color of the gradient pouring of the background for the enabled button when the mouse cursor is not above the button. Used if the UseGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.GradientFillAngle">
+            <summary>
+            [RU] Угол градиентной заливки фона для включённой кнопки, когда курсор мыши не находится над кнопкой. Используется, если свойство UseGradientFill выставлено в True.<br/>
+            [EN] Background gradient fill angle for the enabled button when the mouse cursor is not above the button. Used if the UseGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.IsGradientFillAngleScalable">
+            <summary>
+            [RU] Является ли угол градиентной заливки фона для кнопки масштабируемым. Используется, если свойство UseGradientFill выставлено в True.<br/>
+            [EN] Whether the button's background gradient fill angle is scalable. Used if the UseGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.UseHoverGradientFill">
+            <summary>
+            [RU] Использовать ли градиентную заливку при наведении курсора мыши.<br/>
+            [EN] Whether to use a gradient fill on mouseover.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverGradientFillStartColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки при наведении курсора мыши. Используется, когда свойства UseGradientFill и UseHoverGradientFill выставлены в True.<br/>
+            [EN] The start color of the gradient fill on mouseover. Used when the UseGradientFill and UseHoverGradientFill properties are set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverGradientFillEndColor">
+            <summary>
+            [RU] Конечный цвет градиентной заливки при наведении курсора мыши. Используется, когда свойства UseGradientFill и UseHoverGradientFill выставлены в True.<br/>
+            [EN] The end color of the gradient fill on mouseover. Used when the UseGradientFill and UseHoverGradientFill properties are set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledBackColor">
+            <summary>
+            [RU] Цвет фона для недоступной кнопки.<br/>
+            [EN] Background color for the disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledForeColor">
+            <summary>
+            [RU] Цвет шрифта для недоступной кнопки.<br/>
+            [EN] Font color for the disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledGradientFillAngle">
+            <summary>
+            [RU] Угол градиентной заливки для недоступной кнопки.<br/>
+            [EN] Gradient fill angle for an disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.IsDisabledGradientFillAngleScalable">
+            <summary>
+            [RU] Является ли масштабируемым угол градиентной заливки при недоступной кнопке.<br/>
+            [EN] Is the angle for gradient fill scalable when the button is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledGradientFillStartColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки для недоступной кнопки.<br/>
+            [EN] The start gradient fill color for an disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.DisabledGradientFillEndColor">
+            <summary>
+            [RU] Конечный цвет градиентной заливки для недоступной кнопки.<br/>
+            [EN] The end gradient fill color for an disabled button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.HoverGradientFillAngle">
+            <summary>
+            [RU] Угол для градиентной заливки при наведении указателя мыши на кнопку.<br/>
+            [EN] The angle for the gradient fill when hovering the mouse over the button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.IsHoverGradientFillAngleScalable">
+            <summary>
+            [RU] Является ли масштабируемым угол для градиентной заливки при наведении указателя мыши на кнопку.<br/>
+            [EN] Whether the angle for the gradient fill when hovering over the button is scalable.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.ImageExtraOffsetX">
+            <summary>
+            [RU] Дополнительное смещение изображения для кнопки, по оси X, в пикселях.<br/>
+            [EN] Additional image offset for the button, along the X axis, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.ImageExtraOffsetY">
+            <summary>
+            [RU] Дополнительное смещение изображения для кнопки, по оси Y, в пикселях.<br/>
+            [EN] Additional image offset for the button, along the Y axis, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomButton.ButtonText">
+            <summary>
+            [RU] Текст, выводимый на кнопке.<br/>
+            [EN] Text displayed on the button.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomButton.ButtonClick">
+            <summary>
+            [RU] Событие клика левой кнопкой мыши по кнопке.<br/>
+            [EN] Left mouse click event on a button.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomButton.ButtonRightClick">
+            <summary>
+            [RU] Событие клика правой кнопкой мыши по кнопке.<br/>
+            [EN] Right-click event on a button.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomButton.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр AINCustomButton.<br/>
+            [EN] Constructor, creates an instance of AINCustomButton.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            [RU] Событие вызывается при отрисовке элемента управления.<br/>
+            [EN] The event is raised when the control is rendered.
+            </summary>
+            <param name="pe">[RU] Параметры события;<br/>[EN] Event parameters</param>
+        </member>
+        <member name="F:AINFormControls.AINCustomButton.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomButton.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomButton.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomCheckBox">
+            <summary>
+            [RU] Элемент управления, представляющий собой флажок, который можно включать и выключать.<br/>
+            [EN] A control that is a checkbox that can be turned on or off. 
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckBoxOffsetX">
+            <summary>
+            [RU] Смещение основной рамки для флажка по оси X, в пикселях.<br/>
+            [EN] X-axis offset of the main frame for the checkbox, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckBoxOffsetY">
+            <summary>
+            [RU] Смещение основной рамки для флажка по оси Y, в пикселях.<br/>
+            [EN] Y-axis offset of the main frame for the checkbox, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.ShadowWidth">
+            <summary>
+            [RU] Ширина тени основной рамки для флажка, в пикселях.<br/>
+            [EN] The width of the checkbox's main border shadow, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkCustomString">
+            <summary>
+            [RU] Строка, задающая символ, который будет использоваться в качестве отмеченного состояния флажка.<br/>
+            [EN] A string specifying the character to be used as the checked state of the checkbox.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkCustomStringOffsetX">
+            <summary>
+            [RU] Смещение отметки для отмеченного состояния флажка по оси X, в пикселях.<br/>
+            [EN] Offset of the marked state of the checkbox along the X axis, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkCustomStringOffsetY">
+            <summary>
+            [RU] Смещение отметки для отмеченного состояния флажка по оси Y, в пикселях.<br/>
+            [EN] Offset of the marked state of the checkbox along the Y axis, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkFont">
+            <summary>
+            [RU] Шрифт, используемый для отрисовки отметки для флажка.<br/>
+            [EN] The font used to draw the label for the checkbox.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckSquareSide">
+            <summary>
+            [RU] Длина одной стороны основной рамки для флажка, определяет размер квадратной рамки.<br/>
+            [EN] The length of one side of the main frame for the flag determines the size of the square frame.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.TextOffsetX">
+            <summary>
+            [RU] Смещение текста по оси X.<br/>
+            [EN] Offset text along the X axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.TextOffsetY">
+            <summary>
+            [RU] Смещение текста по оси Y.<br/>
+            [EN] Offset text along the Y axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkColor">
+            <summary>
+            [RU] Цвет отметки (символа) для отмеченного состояния флажка.<br/>
+            [EN] The color of the mark (symbol) for the checked state of the checkbox.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkBackColor">
+            <summary>
+            [RU] Цвет фона для отметки.<br/>
+            [EN] Background color for the checkmark.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkShadowColor">
+            <summary>
+            [RU] Цвет тени для отметки.<br/>
+            [EN] Shadow color for the mark.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.UseCheckMarkBorder">
+            <summary>
+            [RU] Определяет, следует ли использовать отрисовку границы для отметки.<br/>
+            [EN] Determines whether border drawing should be used for the mark.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckMarkBorderColor">
+            <summary>
+            [RU] Цвет границы для отметки.<br/>
+            [EN] Border color for the mark.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.FontTextRenderingHint">
+            <summary>
+            [RU] Задаёт режим отрисовки текста для флажка.<br/>
+            [EN] Sets the text rendering mode for the checkbox.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.Checked">
+            <summary>
+            [RU] Возвращает или задаёт значение, является ли флажок отмеченным или нет.<br/>
+            [EN] Gets or sets whether the checkbox is checked or unchecked.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.CheckBoxText">
+            <summary>
+            [RU] Возвращает или задаёт текст, выводимый рядом с флажком.<br/>
+            [EN] Gets or sets the text that appears next to the checkbox.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.MouseOverBackColor">
+            <summary>
+            [RU] Цвет фона при наведении курсора мыши на область элемента управления.<br/>
+            [EN] The background color when the mouse hovers over the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.MouseOverForeColor">
+            <summary>
+            [RU] Цвет текста при наведении курсора мыши на область элемента управления.<br/>
+            [EN] The color of the text when the mouse hovers over the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.MousePressBackColor">
+            <summary>
+            [RU] Цвет фона при нажатии левой кнопкой мыши на область элемента управления.<br/>
+            [EN] The background color when the left mouse button is clicked on the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.MouseOverFont">
+            <summary>
+            [RU] Шрифт, используемый при наведении курсора мыши на область элемента управления.<br/>
+            [EN] The font used when the mouse hovers over the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.UseMouseOverEffects">
+            <summary>
+            [RU] Следует ли применять специальные эффекты при наведении курсора на элемент управления.<br/>
+            [EN] Regulates whether to apply or not special effects when mouse is over the control.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.UsePressEffects">
+            <summary>
+            [RU] Следует ли применять специальные эффекты при нажатии на элемент управления.<br/>
+            [EN] Regulates whether to apply or not special effects when control is pressed.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.PressTextOffsetX">
+            <summary>
+            [RU] Смещение текста по оси X, выводимого рядом с флажком, при нажатии левой кнопкой мыши на область элемента управления.<br/>
+            [EN] X-axis offset of the text displayed next to the checkbox when left-clicking on the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.PressTextOffsetY">
+            <summary>
+            [RU] Смещение текста по оси Y, выводимого рядом с флажком, при нажатии левой кнопкой мыши на область элемента управления.<br/>
+            [EN] Y-axis offset of the text displayed next to the checkbox when left-clicking on the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.PressCheckBoxOffsetX">
+            <summary>
+            [RU] Смещение флажка по оси X при нажатии левой кнопки мыши на область элемента управления.<br/>
+            [EN] The X-axis offset of the checkbox when the left mouse button is pressed on the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.PressCheckBoxOffsetY">
+            <summary>
+            [RU] Смещение флажка по оси Y при нажатии левой кнопки мыши на область элемента управления.<br/>
+            [EN] The Y-axis offset of the checkbox when the left mouse button is pressed on the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.DisabledForeColor">
+            <summary>
+            [RU] Цвет текста, когда флажок является недоступным.<br/>
+            [EN] Text color when the checkbox is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.DisabledBackColor">
+            <summary>
+            [RU] Цвет фона, когда флажок является недоступным.<br/>
+            [EN] The background color when the checkbox is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.DisabledCheckMarkBorderColor">
+            <summary>
+            [RU] Цвет рамки для флажка, когда флажок является недоступным.<br/>
+            [EN] The border color for the checkbox when the checkbox is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.DisabledCheckMarkColor">
+            <summary>
+            [RU] Цвет отметки для флажка, когда флажок является недоступным.<br/>
+            [EN] The tick color for the checkbox when the checkbox is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.DisabledCheckMarkBackColor">
+            <summary>
+            [RU] Цвет фона для рамки флажка, когда флажок является недоступным.<br/>
+            [EN] The background color for the checkbox frame when the checkbox is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomCheckBox.DisabledCheckMarkShadowColor">
+            <summary>
+            [RU] Цвет тени для рамки флажка, когда флажок является недоступным.<br/>
+            [EN] The shadow color for the checkbox border when the checkbox is disabled.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomCheckBox.CheckedChanged">
+            <summary>
+            [RU] Событие возникает, когда изменяется состояние флажка.<br/>
+            [EN] The event occurs when the state of a checkbox changes.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomCheckBox.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр AINCustomCheckBox.<br/>
+            [EN] Constructor, creates an instance of AINCustomCheckBox.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomCheckBox.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomCheckBox.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomCheckBox.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomGroupBox">
+            <summary>
+            [RU] Элемент управления, представляющий собой рамку для группировки других элементов управления.<br/>
+            [EN] A control that provides a frame for grouping other controls. 
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomGroupBox.AINCustomGroupBoxBorderDashStyle">
+            <summary>
+            [RU] Перечисление задаёт возможные значения для стиля штриха при отрисовке границы элемента управления.<br/>
+            [EN] The enumeration specifies possible values for the stroke style when drawing the control's border.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomGroupBox.AINCustomGroupBoxBorderDashStyle.Solid">
+            <summary>
+            [RU] Стиль для отрисовки сплошной линии.<br/>
+            [EN] Style for drawing a solid line.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomGroupBox.AINCustomGroupBoxBorderDashStyle.Dash">
+            <summary>
+            [RU] Стиль для отрисовки штриховой линии.<br/>
+            [EN] Style for drawing a dashed line.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomGroupBox.AINCustomGroupBoxBorderDashStyle.Dot">
+            <summary>
+            [RU] Стиль для отрисовки пунктирной линии.<br/>
+            [EN] Style for drawing a dotted line.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomGroupBox.AINCustomGroupBoxBorderDashStyle.DashDot">
+            <summary>
+            [RU] Стиль для отрисовки штрихпунктирной линии.<br/>
+            [EN] Style for drawing a dash-dotted line.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomGroupBox.AINCustomGroupBoxBorderDashStyle.DashDotDot">
+            <summary>
+            [RU] Стиль для отрисовки штрихпунктирной линии с двумя точками.<br/>
+            [EN] Style for drawing a dash-dotted line with two dots.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.TextLeftOffset">
+            <summary>
+            [RU] Смещение слева для отрисовки текста заголовка (свойства Text).<br/>
+            [EN] Left offset for drawing title text (Text properties).
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.TextInternalLeftOffset">
+            <summary>
+            [RU] Внутреннее смещение для для отрисовки текста заголовка элемента (свойства Text). Определяет отступ текста от левой границы прямоугольника, являющегося рамкой для заголовка.<br/>
+            [EN] The internal offset for drawing the text of the element's title (Text properties). Determines the indentation of text from the left border of the rectangle that is the frame for the title.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.BorderDashStyle">
+            <summary>
+            [RU] Стиль штриха для отрисовки границы элемента управления.<br/>
+            [EN] The stroke style for drawing the control's border.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HeaderImage">
+            <summary>
+            [RU] Изображение для заголовка.<br/>
+            [EN] Header image.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HeaderImageOffsetX">
+            <summary>
+            [RU] Отступ изображения для заголовка по оси X.<br/>
+            [EN] X-axis image offset for title.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HeaderImageOffsetY">
+            <summary>
+            [RU] Отступ изображения для заголовка по оси Y.<br/>
+            [EN] Y-axis image offset for title.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.UseInternalGradientFill">
+            <summary>
+            [RU] Свойство определяет, следует ли использовать ли градиентную заливку для внутренней области элемента управления.<br/>
+            [EN] The property determines whether a gradient fill should be used for the interior area of the control.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.UseHeaderGradientFill">
+            <summary>
+            [RU] Свойство определяет, использовать ли градиентную заливку для фона заголовка.<br/>
+            [EN] The property determines whether to use a gradient fill for the header background.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HeaderGradientStartColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки для фона заголовка.<br/>
+            [EN] The start gradient fill color for the header background.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HeaderGradientEndColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки для фона заголовка.<br/>
+            [EN] The end gradient fill color for the header background.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HeaderGradientAngle">
+            <summary>
+            [RU] Угол градиента для заливки фона заголовка.<br/>
+            [EN] Gradient angle for header background fill.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.IsHeaderGradientAngleScalable">
+            <summary>
+            [RU] Является ли угол градиента для заливки фона заголовка масштабируемым.<br/>
+            [EN] Whether the gradient angle for the header background fill is scalable.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.InternalGradientStartColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки для внутренней области элемента управления.<br/>
+            [EN] The start gradient fill color for the control's internal area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.InternalGradientEndColor">
+            <summary>
+            [RU] Конечный цвет градиентной заливки для внутренней области элемента управления.<br/>
+            [EN] The end gradient fill color for the control's internal area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HeaderTextForeColor">
+            <summary>
+            [RU] Цвет шрифта для заголовка.<br/>
+            [EN] Font color for title.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.InternalGradientAngle">
+            <summary>
+            [RU] Угол градиента для заливки внутренней области.<br/>
+            [EN] The gradient angle to fill the internal area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.IsInternalGradientAngleScalable">
+            <summary>
+            [RU] Является ли угол градиента для заливки внутренней области масштабируемым.<br/>
+            [EN] Whether the gradient angle for filling the interior area is scalable.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.BorderColor">
+            <summary>
+            [RU] Цвет границы элемента управления.<br/>
+            [EN] The control's border color.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.InternalBackColor">
+            <summary>
+            [RU] Цвет заливки внутренней области элемента управления, если не используется градиентная заливка внутренней области.<br/>
+            [EN] The fill color of the control's interior area if the internal area is not filled with a gradient.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.TextFont">
+            <summary>
+            [RU] Шрифт заголовка элемента управления.<br/>
+            [EN] The control's title font.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.TextBackColor">
+            <summary>
+            [RU] Цвет заливки фона для заголовка элемента управления.<br/>
+            [EN] The background fill color for the control's header.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.TextBorderColor">
+            <summary>
+            [RU] Цвет границы для заголовка элемента управления.<br/>
+            [EN] The border color for the control's title.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.BorderWidth">
+            <summary>
+            [RU] Ширина границы в пикселях.<br/>
+            [EN] Border width in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HasBorder">
+            <summary>
+            [RU] Определяет необходимость отрисовки границы элемента управления.<br/>
+            [EN] Determines whether the control's border should be drawn.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.HasTextBorder">
+            <summary>
+            [RU] Задаёт необходимость отрисовки границы для заголовка элемента управления.<br/>
+            [EN] Specifies whether a border should be drawn for the control's title.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomGroupBox.TextExtraWidth">
+            <summary>
+            [RU] Задаёт дополнительную ширину для заголовка элемента управления.<br/>
+            [EN] Sets additional width for the control's title.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomGroupBox.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента AINCustomGroupBox.<br/>
+            [EN] Constructor, creates an instance of the AINCustomGroupBox element.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomGroupBox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            [RU] Событие вызывается при отрисовке элемента управления.<br/>
+            [EN] The event is raised when the control is rendered.
+            </summary>
+            <param name="pe">[RU] Параметры события;<br/>[EN] Event parameters</param>
+        </member>
+        <member name="F:AINFormControls.AINCustomGroupBox.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomGroupBox.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomGroupBox.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomListBox">
+            <summary>
+            [RU] Элемент управления, представляющий собой список элементов.<br/>
+            [EN] A control that is a list of elements.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.StringItems">
+            <summary>
+            [RU] Элементы списка, представляющие собой строки.<br/>
+            [EN] List elements that are represented as strings.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.ItemBackColor">
+            <summary>
+            [RU] Цвет фона для элемента списка.<br/>
+            [EN] The background color for the list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.ItemForeColor">
+            <summary>
+            [RU] Цвет шрифта для элемента списка.<br/>
+            [EN] The font color for the list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.CustomBorderColor">
+            <summary>
+            [RU] Пользовательский цвет границы для списка.<br/>
+            [EN] Custom border color for list.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.ItemBorderColor">
+            <summary>
+            [RU] Цвет границы для элемента списка.<br/>
+            [EN] The border color for the list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.MouseOverItemBackColor">
+            <summary>
+            [RU] Цвет фона для элемента списка при наведении мышью, если включено свойство UseMouseOverEffects.<br/>
+            [EN] The background color for a list item on mouseover when the UseMouseOverEffects property is enabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.MouseOverItemForeColor">
+            <summary>
+            [RU] Цвет шрифта для элемента списка при наведении мышью, если включено свойство UseMouseOverEffects.<br/>
+            [EN] Font color for a list item on mouseover when UseMouseOverEffects is enabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.UseMouseOverEffects">
+            <summary>
+            [RU] Свойство определяет, следует ли использовать дополнительные эффекты при наведении курсора мыши
+            на элементы списка.<br/>
+            [EN] The property determines whether additional effects should be used when hovering the mouse over list items.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.SelectedItemBackColor">
+            <summary>
+            [RU] Цвет фона для выбранного элемента списка.<br/>
+            [EN] The background color for the selected list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.SelectedItemForeColor">
+            <summary>
+            [RU] Цвет шрифта для выбранного элемента списка.<br/>
+            [EN] The font color for the selected list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.SelectedItemBorderColor">
+            <summary>
+            [RU] Цвет границы для выбранного элемента списка.<br/>
+            [EN] The border color for the selected list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.UseCustomBorderStyle">
+            <summary>
+            [RU] Свойство определяет, следует ли использовать собственный стиль границы для элемента управления.<br/>
+            [EN] The property determines whether the control should use a custom border style.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.UseItemBorder">
+            <summary>
+            [RU] Свойство определяет, следует ли использовать отрисовку границы для элементов списка.<br/>
+            [EN] The property determines whether border drawing should be used for list items.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.DefaultItemsImage">
+            <summary>
+            [RU] Изображение, используемое по умолчанию для всех элементов списка.<br/>
+            [EN] The default image for all list items.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.DefaultSelectedItemsImage">
+            <summary>
+            [RU] Изображение, используемое по умолчанию для всех выбранных элементов списка.<br/>
+            [EN] The default image for all selected list items.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.ItemExtraHeight">
+            <summary>
+            [RU] Дополнительная высота для каждого элемента списка.<br/>
+            [EN] The extra height for each list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.MultiSelect">
+            <summary>
+            [RU] Свойство определяет, можно ли выбрать несколько элементов списка.<br/>
+            [EN] The property determines whether multiple list items can be selected.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.ImageOffsetX">
+            <summary>
+            [RU] Возвращает или задает смещение для изображения для элемента списка по оси X.<br/>
+            [EN] Returns or sets the image offset for the list item along the X axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBox.ImageOffsetY">
+            <summary>
+            [RU] Возвращает или задает смещение для изображения для элемента списка по оси Y.<br/>
+            [EN] Returns or sets the image offset for the list item along the Y axis.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomListBox.ItemSelectedDelegate">
+            <summary>
+            [RU] Делегат для события выбора элемента списка.<br/>
+            [EN] Delegate for the list item selection event.
+            </summary>
+            <param name="sender">[RU] Экземпляр списка, для которого произошло событие.<br/>[EN] The list instance for which the event occurred.</param>
+            <param name="item">[RU] Экземпляр выбранного в списке элемента.<br/>[EN] An instance of the item selected in the list.</param>
+        </member>
+        <member name="T:AINFormControls.AINCustomListBox.ItemDeselectedDelegate">
+            <summary>
+            [RU] Делегат для события снятия выбора с элемента списка.<br/>
+            [EN] Delegate for the event of deselecting a list item.
+            </summary>
+            <param name="sender">[RU] Экземпляр списка, для которого произошло событие.<br/>[EN] The list instance for which the event occurred.</param>
+            <param name="item">[RU] Экземпляр выбранного в списке элемента.<br/>[EN] An instance of the item selected in the list.</param>
+        </member>
+        <member name="E:AINFormControls.AINCustomListBox.ItemSelected">
+            <summary>
+            [RU] Событие выбора элемента списка.<br/>
+            [EN] List item selection event.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomListBox.ItemDeselected">
+            <summary>
+            [RU] Событие снятия выбора с элемента списка.<br/>
+            [EN] Event of deselecting a list item.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента AINCustomListBox.<br/>
+            [EN] Constructor, creates an instance of the AINCustomListBox element.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.IsOnlyOneItemSelected">
+            <summary>
+            [RU] Возвращает true, если в списке был выбран только один элемент.<br/>
+            [EN] Returns true if only one element was selected in the list.
+            </summary>
+            <returns>[RU] true, если в списке был выбран только один элемента, иначе false<br/>[EN] true if only one element was selected in the list, false otherwise</returns>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.AreMultipleItemsSelected">
+            <summary>
+            [RU] Возвращает true, если в списке было выбрано несколько элементов.<br/>
+            [EN] Returns true if multiple items were selected in the list.
+            </summary>
+            <returns>[RU] true, если в списке было выбрано более одного элемента, иначе false<br/>[EN] true if more than one item was selected in the list, false otherwise</returns>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.IsStrictCountItemsSelected(System.Int32)">
+            <summary>
+            [RU] Возвращает true в том случае, если в списке выбрано указанное в параметре <paramref name="strictCountOfSelectedItems"/> количество элементов.<br/>
+            [EN] Returns true if the number of elements specified in the <paramref name="strictCountOfSelectedItems"/> parameter is selected in the list.
+            </summary>
+            <param name="strictCountOfSelectedItems">[RU] Количество элементов, выбранных в списке, которое требуется проверить.<br/>[EN] The number of items selected in the list that you want to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.GetSelectedItems">
+            <summary>
+            [RU] Возвращает новый список, содержащий выбранные в списке элементы.<br/>
+            [EN] Returns a new list containing the selected items in the list.
+            </summary>
+            <returns>[RU] Возвращает новый список с выбранными элементами списка. Если нет выбранных элементов, возвращает пустой список.<br/>[EN] Returns a new list with the selected list items. If there are no selected items, returns an empty list.</returns>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.GetSelectedItemsIndices">
+            <summary>
+            [RU] Возвращает список, содержащий индексы выбранных элементов списка.<br/>
+            [EN] Returns a list containing the indexes of the selected list elements.
+            </summary>
+            <returns>[RU] Возвращает новый список, содержащий индексы всех выбранных элементов списка. Если нет выбранных элементов, возвращает пустой список.<br/>[EN] Returns a new list containing the indexes of all selected list elements. If there are no selected items, returns an empty list.</returns>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.SelectAllItems">
+            <summary>
+            [RU] Выбирает все элементы списка.<br/>
+            [EN] Selects all elements of the list.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.DeselectAllItems">
+            <summary>
+            [RU] Снимает выделение со всех элементов списка.<br/>
+            [EN] Deselects all list items.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.RemoveAllItems">
+            <summary>
+            [RU] Удаляет все элементы списка.<br/>
+            [EN] Removes all elements of the list.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.RemoveSelectedItems">
+            <summary>
+            [RU] Удаляет все выбранные элементы списка.<br/>
+            [EN] Removes all selected list items.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.RefreshItems">
+            <summary>
+            [RU] Производит сброс информации о прямоугольной области для каждого элемента списка и вызывает перерисовку списка.<br/>
+            [EN] Resets the rectangular area information for each list element and causes the list to be redrawn.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.AddItem(System.String)">
+            <summary>
+            [RU] Добавляет в список новый элемент в виде заданной строки <paramref name="readableName"/>.<br/>
+            [EN] Adds a new element to the list as the specified string <paramref name="readableName"/>.
+            </summary>
+            <param name="readableName">[RU] Новый элемент списка в виде строки.<br/>[EN] New list item as a string.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.AddItem(AINFormControls.AINCustomListBoxItem)">
+            <summary>
+            [RU] Добавляет в список новый элемент в виде экземпляра класса AINCustomListBoxItem.<br/>
+            [EN] Adds a new element to the list as an instance of the AINCustomListBoxItem class.
+            </summary>
+            <param name="item">[RU] Новый элемент для добавления в список.<br/>[EN] A new item to add to the list.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.GetItem(System.Int32)">
+            <summary>
+            [RU] Получает элемент списка по заданному индексу <paramref name="index"/> или возвращает null, если индекс задан неверно.<br/>
+            [EN] Retrieves the list element at the given index <paramref name="index"/> or returns null if the index is incorrect.
+            </summary>
+            <param name="index">[RU] Индекс элемента списка, который требуется получить.<br/>[EN] The index of the list element to retrieve.</param>
+            <returns></returns>
+        </member>
+        <member name="F:AINFormControls.AINCustomListBox.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBox.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomListBoxItem">
+            <summary>
+            [RU] Представляет элемент для списка AINCustomListBox.<br/>
+            [EN] Represents an item for an AINCustomListBox.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBoxItem.ReadableName">
+            <summary>
+            [RU] Строка, задающая отображаемое название для элемента списка.<br/>
+            [EN] A string that specifies the display name for the list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBoxItem.Object">
+            <summary>
+            [RU] Внутренний объект, ассоциированный с данным элементом списка.<br/>
+            [EN] The internal object associated with this list element.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBoxItem.ItemImage">
+            <summary>
+            [RU] Иконка, используемая для данного элемента списка.<br/>
+            [EN] The icon used for this list item.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomListBoxItem.SelectedItemImage">
+            <summary>
+            [RU] Иконка, используемая, когда данный элемент списка выбран.<br/>
+            [EN] The icon used when this list item is selected.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBoxItem.#ctor(System.String)">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента списка, используя отображаемое имя элемента в виде строки <paramref name="readableName"/>.<br/>
+            [EN] The constructor instantiates a list item using the item's display name as the string <paramref name="readableName"/>.
+            </summary>
+            <param name="readableName">[RU] Отображаемое имя элемента списка.<br/>[EN] The display name of the list item.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBoxItem.#ctor(System.String,System.Object)">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента списка, используя отображаемое имя элемента в виде строки <paramref name="readableName"/> и объект <paramref name="object"/>, ассоциированный и связанный с элементом списка.<br/>
+            [EN] The constructor instantiates a list item using the item's display name as the string <paramref name="readableName"/> and the <paramref name="object"/> object associated and linked to the list item.
+            </summary>
+            <param name="readableName">[RU] Отображаемое имя элемента списка.<br/>[EN] The display name of the list item.</param>
+            <param name="object">[RU] Ассоциированный и связанный объект с данным элементом списка.<br/>[EN] The associated and linked object with a given list element.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBoxItem.#ctor(System.String,System.Drawing.Image)">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента списка, используя отображаемое имя элемента в виде строки <paramref name="readableName"/> и изображение, которое будет выводиться рядом с этим именем элемента в списке.<br/>
+            [EN] The constructor creates an instance of a list item using the item's display name as a string <paramref name="readableName"/> and an image that will be displayed next to that item name in the list.
+            </summary>
+            <param name="readableName">[RU] Отображаемое имя элемента списка.<br/>[EN] The display name of the list item.</param>
+            <param name="itemImage">[RU] Изображение для данного элемента списка.<br/>[EN] The image for this list item.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBoxItem.#ctor(System.String,System.Drawing.Image,System.Drawing.Image)">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента списка, используя отображаемое имя элемента в виде строки <paramref name="readableName"/>, изображение <paramref name="itemImage"/> для невыбранного элемента и изображение <paramref name="selectedItemImage"/> для выбранного элемента списка.<br/>
+            [EN] The constructor instantiates a list item using the item's display name as a string <paramref name="readableName"/>, an image <paramref name="itemImage"/> for the unselected item, and an image <paramref name="selectedItemImage"/> for the selected one list element.
+            </summary>
+            <param name="readableName">[RU] Отображаемое имя элемента списка.<br/>[EN] The display name of the list item.</param>
+            <param name="itemImage">[RU] Изображение для данного элемента списка, когда он не выбран.<br/>[EN] The image for this list item when it is not selected.</param>
+            <param name="selectedItemImage">[RU] Изображение для данного элемента списка, когда он выбран.<br/>[EN] The image for this list item when it is selected.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomListBoxItem.#ctor(System.String,System.Drawing.Image,System.Drawing.Image,System.Object)">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента списка, используя отображаемое имя элемента в виде строки <paramref name="readableName"/>, изображение <paramref name="itemImage"/> для невыбранного элемента, изображение <paramref name="selectedItemImage"/> для выбранного элемента списка и ассоциированный, связанный с элементом списка объект <paramref name="object"/>.<br/>
+            [EN] Constructor, creates an instance of a list item using the item's display name as a string <paramref name="readableName"/>, an image <paramref name="itemImage"/> for an unselected item, an image <paramref name="selectedItemImage"/> for a selected one list element and the associated <paramref name="object"/> object associated with the list element.
+            </summary>
+            <param name="readableName"></param>
+            <param name="itemImage"></param>
+            <param name="selectedItemImage"></param>
+            <param name="object"></param>
+        </member>
+        <member name="T:AINFormControls.AINCustomTextBox">
+            <summary>
+            [RU] Элемент управления, представляющий собой текстовое поле для ввода.<br/>
+            [EN] A control that represents a text input field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.LeftBorderWidth">
+            <summary>
+            [RU] Ширина левой границы, в пикселях.<br/>
+            [EN] Left border width, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.Status">
+            <summary>
+            [RU] Внутренний статус, ассоциированный с данным текстовым полем и предназначенный для возможностей индикации корректности введённых данных в текстовое поле.<br/>
+            [EN] Internal status associated with this text field and intended to indicate the correctness of the data entered into the text field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorText">
+            <summary>
+            [RU] Текст с описанием ошибки ввода данных в текстовое поле. Используйте установку значения для свойства, если необходимо отображать пользователю ошибку после валидация данных, введённых в текстовое поле.<br/>
+            [EN] Text describing the error when entering data into the text field. Use setting a value for a property if you want to display an error to the user after validating data entered into a text field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorToolTipTitle">
+            <summary>
+            [RU] Заголовок окна для всплывающей подсказки с ошибкой. Используется, если для поля установлено значение свойство Status, равное Error, а также значение свойства ErrorText имеет ненулевую длину.<br/>
+            [EN] Window title for the error tooltip. Used if the field's Status property is set to Error and the ErrorText property has a non-zero length.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.TextBoxPadding">
+            <summary>
+            [RU] Свойство задаёт или возвращает внутренний отступ текстового поля ввода от краёв элемента управления.<br/>
+            [EN] The property sets or returns the padding of the text input field from the edges of the control.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ReadOnlyBackColor">
+            <summary>
+            [RU] Цвет фона элемента управления, когда свойство ReadOnly выставлено в True.<br/>
+            [EN] The background color of the control when the ReadOnly property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.DisabledBackColor">
+            <summary>
+            [RU] Цвет фона элемента управления, когда свойство Enabled выставлено в False, т.е. элемент управления недоступен.<br/>
+            [EN] The background color of the control when the Enabled property is set to False, i.e. the control is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.FocusBackColor">
+            <summary>
+            [RU] Цвет фона элемента управления, когда текстовое поле получает фокус. Используется, когда свойство UseFocusEffectWhenNonReadOnly выставлено в True, и ReadOnly свойство имеет значение False, либо когда свойство UseFocusEffectWhenReadOnly выставлено в True, и ReadOnly свойство имеет значение True.<br/>
+            [EN] The background color of the control when the text box receives focus. Used when the UseFocusEffectWhenNonReadOnly property is set to True and the ReadOnly property is set to False, or when the UseFocusEffectWhenReadOnly property is set to True and the ReadOnly property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorBackColor">
+            <summary>
+            [RU] Цвет фона элемента управления, когда присутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение Error. Применяется, если свойство ReadOnly имеет значение False. Для текстового поля в режиме "только для чтения" не применяется.<br/>
+            [EN] The control's background color when there is a text field input error and the Status property is set to Error. Applies if the ReadOnly property is False. Does not apply to a text field in read-only mode.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorInnerTextColor">
+            <summary>
+            [RU] Цвет текста в текстовом поле, когда присутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение Error.<br/>
+            [EN] The color of the text in the text field when there is an error when entering data into the text field and the Status property is set to Error.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.OkBackColor">
+            <summary>
+            [RU] Цвет фона элемента управления, когда отсутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение OK.<br/>
+            [EN] The control's background color when there is no input error in the text field and the Status property is set to OK.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.OkInnerTextColor">
+            <summary>
+            [RU] Цвет текста в текстовом поле, когда отсутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение OK.<br/>
+            [EN] The color of the text in a text box when there is no data entry error in the text box and the Status property is set to OK.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.LeftBorderColor">
+            <summary>
+            [RU] Цвет левой границы текстового поля для ввода.<br/>
+            [EN] The color of the left border of the text input field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.FocusLeftBorderColor">
+            <summary>
+            [RU] Цвет левой границы текстового поля для ввода, когда получен фокус для элемента управления.<br/>
+            [EN] The color of the left border of the text input field when the control receives focus.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.OkLeftBorderColor">
+            <summary>
+            [RU] Цвет левой границы текстового поля для ввода, когда отсутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение OK.<br/>
+            [EN] The color of the left border of a text input field when there is no error when entering data into the text field and the Status property is set to OK.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorLeftBorderColor">
+            <summary>
+            [RU] Цвет левой границы текстового поля для ввода, когда присутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение Error.<br/>
+            [EN] The color of the left border of the text input field when there is an error entering data into the text field and the Status property is set to Error.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ReadOnlyLeftBorderColor">
+            <summary>
+            [RU] Цвет левой границы текстового поля для ввода, когда свойство ReadOnly выставлено в True.<br/>
+            [EN] The color of the left border of the text input field when the ReadOnly property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.DisabledLeftBorderColor">
+            <summary>
+            [RU] Цвет левой границы текстового поля для ввода, когда свойство Enabled выставлено в False, т.е. элемент управления недоступен.<br/>
+            [EN] The color of the left border of the text input field when the Enabled property is set to False, i.e. the control is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.TopBorderColor">
+            <summary>
+            [RU] Цвет верхней границы текстового поля для ввода.<br/>
+            [EN] The color of the top border of the text input field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.FocusTopBorderColor">
+            <summary>
+            [RU] Цвет верхней границы текстового поля для ввода, когда получен фокус для элемента управления.<br/>
+            [EN] The color of the top border of the text input field when the control receives focus.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.OkTopBorderColor">
+            <summary>
+            [RU] Цвет верхней границы текстового поля для ввода, когда отсутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение OK.<br/>
+            [EN] The color of the top border of a text input field when there is no error when entering data into the text field and the Status property is set to OK.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorTopBorderColor">
+            <summary>
+            [RU] Цвет верхней границы текстового поля для ввода, когда присутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение Error.<br/>
+            [EN] The color of the top border of the text input field when there is an error entering data into the text field and the Status property is set to Error.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ReadOnlyTopBorderColor">
+            <summary>
+            [RU] Цвет верхней границы текстового поля для ввода, когда свойство ReadOnly выставлено в True.<br/>
+            [EN] The color of the top border of the text input field when the ReadOnly property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.DisabledTopBorderColor">
+            <summary>
+            [RU] Цвет верхней границы текстового поля для ввода, когда свойство Enabled выставлено в False, т.е. элемент управления недоступен.<br/>
+            [EN] The color of the top border of the text input field when the Enabled property is set to False, i.e. the control is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.RightBorderColor">
+            <summary>
+            [RU] Цвет правой границы текстового поля для ввода.<br/>
+            [EN] The color of the right border of the text input field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.FocusRightBorderColor">
+            <summary>
+            [RU] Цвет правой границы текстового поля для ввода, когда получен фокус для элемента управления.<br/>
+            [EN] The color of the right border of the text input field when the control receives focus.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.OkRightBorderColor">
+            <summary>
+            [RU] Цвет правой границы текстового поля для ввода, когда отсутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение OK.<br/>
+            [EN] The color of the right border of a text input field when there is no error when entering data into the text field and the Status property is set to OK.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorRightBorderColor">
+            <summary>
+            [RU] Цвет правой границы текстового поля для ввода, когда присутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение Error.<br/>
+            [EN] The color of the right border of the text input field when there is an error entering data into the text field and the Status property is set to Error.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ReadOnlyRightBorderColor">
+            <summary>
+            [RU] Цвет правой границы текстового поля для ввода, когда свойство ReadOnly выставлено в True.<br/>
+            [EN] The color of the right border of the text input field when the ReadOnly property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.DisabledRightBorderColor">
+            <summary>
+            [RU] Цвет правой границы текстового поля для ввода, когда свойство Enabled выставлено в False, т.е. элемент управления недоступен.<br/>
+            [EN] The color of the right border of the text input field when the Enabled property is set to False, i.e. the control is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.TextBoxBackColor">
+            <summary>
+            [RU] Цвет фона для текстового поля.<br/>
+            [EN] Background color for the text field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.BottomBorderColor">
+            <summary>
+            [RU] Цвет нижней границы текстового поля для ввода.<br/>
+            [EN] The color of the bottom border of the text input field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.FocusBottomBorderColor">
+            <summary>
+            [RU] Цвет нижней границы текстового поля для ввода, когда получен фокус для элемента управления.<br/>
+            [EN] The color of the bottom border of the text input field when the control receives focus.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.OkBottomBorderColor">
+            <summary>
+            [RU] Цвет нижней границы текстового поля для ввода, когда отсутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение OK.<br/>
+            [EN] The color of the bottom border of a text input field when there is no error when entering data into the text field and the Status property is set to OK.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ErrorBottomBorderColor">
+            <summary>
+            [RU] Цвет нижней границы текстового поля для ввода, когда присутствует ошибка ввода данных в текстовое поле, и свойство Status имеет значение Error.<br/>
+            [EN] The color of the bottom border of the text input field when there is an error entering data into the text field and the Status property is set to Error.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ReadOnlyBottomBorderColor">
+            <summary>
+            [RU] Цвет нижней границы текстового поля для ввода, когда свойство ReadOnly выставлено в True.<br/>
+            [EN] The color of the bottom border of the text input field when the ReadOnly property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.DisabledBottomBorderColor">
+            <summary>
+            [RU] Цвет нижней границы текстового поля для ввода, когда свойство Enabled выставлено в False, т.е. элемент управления недоступен.<br/>
+            [EN] The color of the bottom border of the text input field when the Enabled property is set to False, i.e. the control is disabled.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.TopBorderWidth">
+            <summary>
+            [RU] Ширина верхней границы, в пикселях.<br/>
+            [EN] Top border width, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.RightBorderWidth">
+            <summary>
+            [RU] Ширина правой границы, в пикселях.<br/>
+            [EN] Right border width, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.BottomBorderWidth">
+            <summary>
+            [RU] Ширина нижней границы, в пикселях.<br/>
+            [EN] Bottom border width, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.InnerText">
+            <summary>
+            [RU] Внутренний текст, отображаемый в текстовом поле или вводимый в текстовое поле.<br/>
+            [EN] Inner text displayed in a text box or typed into a text box.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.InnerTextColor">
+            <summary>
+            [RU] Цвет внутреннего текста, отображаемого в текстовом поле или вводимого в текстовое поле.<br/>
+            [EN] The color of the inner text displayed in a text field or entered into a text field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.InnerTextFocusColor">
+            <summary>
+            [RU] Цвет внутреннего текста, отображаемого в текстовом поле или вводимого в текстовое поле, когда элемент управления получает фокус ввода.<br/>
+            [EN] The color of the inner text that is displayed in a text box or entered into a text box when the control receives input focus.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.UsePlaceholderText">
+            <summary>
+            [RU] Свойство возвращает или задаёт, следует ли использовать текст-заполнитель ("плейсхолдер") для данного текстового поля.<br/>
+            [EN] The property returns or sets whether placeholder text should be used for this text field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.PlaceholderText">
+            <summary>
+            [RU] Возвращает или задаёт текст-заполнитель ("плейсхолдер") для данного текстового поля. Свойство применяется, при условии, что UsePlaceholderText имеет значение True.<br/>
+            [EN] Returns or sets the placeholder text for this text field. The property is applied provided that UsePlaceholderText is True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.PlaceholderTextColor">
+            <summary>
+            [RU] Возвращает или задаёт цвет для текста-заполнителя ("плейсхолдера") для данного текстового поля. Свойство применяется, при условии, что UsePlaceholderText имеет значение True.<br/>
+            [EN] Gets or sets the color for the placeholder text for this text field. The property is applied provided that UsePlaceholderText is True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.Multiline">
+            <summary>
+            [RU] Получает или задаёт значение, показывающее, является ли данный элемент управления многострочным.<br/>
+            [EN] Gets or sets a value indicating whether this control is multiline.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ScrollBars">
+            <summary>
+            [RU] Возвращает или задаёт, какие полосы прокрутки должны присутствовать в многострочном текстовом поле для данного элемента управления.<br/>
+            [EN] Gets or sets which scrollbars should be present in a multiline text field for this control.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.WordWrap">
+            <summary>
+            [RU] Возвращает или задаёт, поддерживается ли для многострочного текстового поля автоматический перенос по словам в начало следующей строки.<br/>
+            [EN] Gets or sets whether a multiline text field supports automatic word wrapping to the beginning of the next line.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.AcceptsReturn">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, приводит ли нажатие клавиши ВВОД в многострочном текстовом поле к созданию новой строки или активируется кнопка по умолчанию для формы.<br/>
+            [EN] Gets or sets a value indicating whether pressing ENTER in a multiline text box creates a new line or activates the default button for the form.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.AcceptsTab">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, что происходит при нажатии клавиши TAB в многострочном текстовом поле: вводится знак табуляции, или фокус ввода в форме передаётся следующему элементу управления.<br/>
+            [EN] Gets or sets a value indicating what happens when the TAB key is pressed in a multiline text box: a tab character is entered, or the form's input focus is transferred to the next control.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.TextBoxAllowDrop">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, может ли элемент управления принимать данные, перетаскиваемые в него пользователем.<br/>
+            [EN] Gets or sets a value indicating whether the control can accept data that the user drags onto it.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.CharacterCasing">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, изменяет ли текстовое поле регистр знаков, вводимых в поле.<br/>
+            [EN] Gets or sets a value indicating whether the text field changes the case of characters entered into the field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.MaxLength">
+            <summary>
+            [RU] Возвращает или задаёт максимальное число символов, которое разрешается вводить или вставлять в текстовое поле.<br/>
+            [EN] Returns or sets the maximum number of characters that can be entered or inserted into a text field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.PasswordChar">
+            <summary>
+            [RU] Возвращает или задаёт символ, используемый для символов маски пароля в однострочное текстовое поле.<br/>
+            [EN] Returns or sets the character used for password mask characters in a single-line text field.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.ReadOnly">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, является ли текст в текстовом поле доступным только для чтения.<br/>
+            [EN] Gets or sets a value indicating whether the text in the text box is read-only.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.UseFocusEffectWhenReadOnly">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, следует ли применять эффекты при получении фокуса ввода элементом управления, когда его свойство ReadOnly установлено в True, т.е. текстовое поле содержит текст только для чтения.<br/>
+            [EN] Gets or sets a value indicating whether effects should be applied when the control gains input focus when its ReadOnly property is set to True, that is, the text box contains read-only text.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomTextBox.UseFocusEffectWhenNonReadOnly">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, следует ли применять эффекты при получении фокуса ввода элементом управления, когда его свойство ReadOnly установлено в False, т.е. текстовое поле содержит текст, доступный как для чтения, так и для изменения.<br/>
+            [EN] Gets or sets a value indicating whether effects should be applied when the control gains input focus when its ReadOnly property is set to False, that is, The text field contains text that can be read or edited.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.InnerTextChanged">
+            <summary>
+            [RU] Событие возникает, когда внутренний текст в текстовом поле был изменён.<br/>
+            [EN] The event occurs when the inner text in a text field has been changed.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxClick">
+            <summary>
+            [RU] Событие возникает, когда был произведён щелчок по элементу управления.<br/>
+            [EN] The event occurs when a control is clicked.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxDoubleClick">
+            <summary>
+            [RU] Событие возникает, когда был произведён двойной щелчок по элементу управления.<br/>
+            [EN] The event occurs when a control is double-clicked.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseClick">
+            <summary>
+            [RU] Событие возникает при щелчке мышью по элементу управления.<br/>
+            [EN] The event occurs when the mouse clicks on a control.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseDoubleClick">
+            <summary>
+            [RU] Событие возникает при двойном щелчке мышью по элементу управления.<br/>
+            [EN] The event occurs when the mouse double-clicks on a control.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxKeyDown">
+            <summary>
+            [RU] Событие происходит в момент первого нажатия клавиши в текстовом поле.<br/>
+            [EN] The event occurs the first time a key is pressed in a text field.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxKeyUp">
+            <summary>
+            [RU] Событие происходит в момент отпускания клавиши в текстовом поле.<br/>
+            [EN] The event occurs when a key is released in a text field.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxKeyPress">
+            <summary>
+            [RU] Событие возникает, когда текстовое поле находится в фокусе и пользователь нажимает и отпускает клавишу.<br/>
+            [EN] The event occurs when the text field has focus and the user presses and releases a key.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseDown">
+            <summary>
+            [RU] Событие возникает в момент нажатия кнопки мыши, когда указатель мыши находится над текстовым полем для ввода.<br/>
+            [EN] The event occurs when a mouse button is pressed while the mouse pointer is over a text input field.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseUp">
+            <summary>
+            [RU] Событие возникает в момент отпускания кнопки мыши, когда указатель мыши находится над текстовым полем для ввода.<br/>
+            [EN] The event occurs when the mouse button is released while the mouse pointer is over the text input field.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseMove">
+            <summary>
+            [RU] Событие возникает при наведении указателя мыши на текстовое поле для ввода.<br/>
+            [EN] The event occurs when the mouse pointer hovers over a text input field.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseEnter">
+            <summary>
+            [RU] Событие возникает, когда указатель мыши входит в видимую часть текстового поля для ввода.<br/>
+            [EN] The event occurs when the mouse pointer enters the visible part of the text input field.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseHover">
+            <summary>
+            [RU] Событие возникает, когда указатель мыши остаётся неподвижным некоторое время в пределах текстового поля для ввода.<br/>
+            [EN] The event occurs when the mouse pointer remains stationary for some time within a text input field.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomTextBox.TextBoxMouseLeave">
+            <summary>
+            [RU] Событие возникает, когда указатель мыши выходит за пределы видимой части текстового поля для ввода.<br/>
+            [EN] The event occurs when the mouse pointer moves beyond the visible portion of the text input field.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomTextBox.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента AINCustomTextBox.<br/>
+            [EN] Constructor, creates an instance of the AINCustomTextBox element.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomTextBox.ResetStatus">
+            <summary>
+            [RU] Производит сброс внутреннего статуса (свойство Status) для текстового поля в значение Normal, а также очищает текст с ошибкой, устанавливая свойство ErrorText, равным пустой строке. После этого обновляет цвет фона для элемента управления и текстового поля и устанавливает текст-заполнитель ("плейсхолдер"), если текущее значение свойства InnerText имеет нулевую длину.<br/>
+            [EN] Resets the internal status (Status property) for the text field to Normal, and also clears the error text by setting the ErrorText property to the empty string. It then updates the background color of the control and text box and sets the placeholder text if the current value of the InnerText property is zero length.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomTextBox.IsContainsNonEmptyPlaceholderText">
+            <summary>
+            [RU] Возвращает true в том случае, если свойство InnerText имеет ненулевую длину и в точности совпадает со значением свойства PlaceholderText.<br/>
+            [EN] Returns true if the InnerText property has a non-zero length and is exactly the same as the PlaceholderText property value.
+            </summary>
+            <returns>[RU] Возвращает true, если длина свойства InnerText ненулевая, а также значение InnerText совпадает со значением свойства PlaceholderText, иначе возвращает false;<br/>[EN] Returns true if the length of the InnerText property is non-zero and the InnerText value matches the value of the PlaceholderText property, otherwise returns false</returns>
+        </member>
+        <member name="F:AINFormControls.AINCustomTextBox.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomTextBox.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomTextBox.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomTextBoxStatus">
+            <summary>
+            [RU] Перечисление определяет возможные значения для внутреннего статуса текстового поля.<br/>
+            [EN] The enumeration defines the possible values for the internal status of a text box.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomTextBoxStatus.Normal">
+            <summary>
+            [RU] Значение по умолчанию, обычный статус текстового поля.<br/>
+            [EN] Default value, normal text box status.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomTextBoxStatus.OK">
+            <summary>
+            [RU] Значение указывает, что в текстовом поле обеспечена корректность ввода ожидаемых данных.<br/>
+            [EN] The value indicates that the text field has been entered correctly as expected.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomTextBoxStatus.Error">
+            <summary>
+            [RU] Значение указывает, что в текстовом поле не обеспечена корректность ввода ожидаемых данных (есть ошибка).<br/>
+            [EN] The value indicates that the expected data is not entered correctly in the text field (there is an error).
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINDropdownButton">
+            <summary>
+            [RU] Элемент управления, представляющий собой кнопку с поддержкой связанного выпадающего меню.<br/>
+            [EN] A control that is a button with support for an associated drop-down menu.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonWidth">
+            <summary>
+            [RU] Ширина выпадающей кнопки.<br/>
+            [EN] Dropdown button width.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.Value">
+            <summary>
+            [RU] Внутреннее значение для кнопки. Может быть любым объектом, связанным с кнопкой.<br/>
+            [EN] Internal value for the button. Can be any object associated with a button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.ButtonsHeight">
+            <summary>
+            [RU] Высота основной и выпадающей кнопок.<br/>
+            [EN] The height of the main and drop-down buttons.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonEnabled">
+            <summary>
+            [RU] Свойство определят, доступна ли основная кнопка.<br/>
+            [EN] The property will determine whether the primary button is available.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonEnabled">
+            <summary>
+            [RU] Свойство определят, доступна ли выпадающая кнопка.<br/>
+            [EN] The property will determine whether the dropdown button is available.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonVisible">
+            <summary>
+            [RU] Свойство определят, видима ли основная кнопка.<br/>
+            [EN] The property will determine whether the main button is visible.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonVisible">
+            <summary>
+            [RU] Свойство определят, видима ли выпадающая кнопка.<br/>
+            [EN] The property will determine whether the dropdown button is visible.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonRightToLeft">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, выровнены ли компоненты основной кнопки для поддержки языков, использующих шрифты с написанием справа налево.<br/>
+            [EN] Gets or sets a value indicating whether the main button components are aligned to support languages that use right-to-left fonts.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonRightToLeft">
+            <summary>
+            [RU] Возвращает или задаёт значение, указывающее, выровнены ли компоненты выпадающей кнопки для поддержки языков, использующих шрифты с написанием справа налево.<br/>
+            [EN] Gets or sets a value indicating whether the dropdown button components are aligned to support languages that use right-to-left fonts.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonTextImageRelation">
+            <summary>
+            [RU] Возвращает или задаёт расположение текста и изображения для основной кнопки относительно друг друга.<br/>
+            [EN] Gets or sets the relative position of the text and image for the main button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonTextImageRelation">
+            <summary>
+            [RU] Возвращает или задаёт расположение текста и изображения для выпадающей кнопки относительно друг друга.<br/>
+            [EN] Gets or sets the relative position of the text and image for the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonFont">
+            <summary>
+            [RU] Возвращает или задаёт шрифт, используемый для основной кнопки.<br/>
+            [EN] Gets or sets the font used for the main button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonFont">
+            <summary>
+            [RU] Возвращает или задаёт шрифт, используемый для выпадающей кнопки.<br/>
+            [EN] Gets or sets the font used for the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonFlatStyle">
+            <summary>
+            [RU] Возвращает или задаёт плоский внешний вид для основной кнопки.<br/>
+            [EN] Returns or sets the flat appearance for the main button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonFlatStyle">
+            <summary>
+            [RU] Возвращает или задаёт плоский внешний вид для выпадающей кнопки.<br/>
+            [EN] Returns or sets the flat appearance for the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonBackColor">
+            <summary>
+            [RU] Возвращает или задаёт цвет фона для основной кнопки.<br/>
+            [EN] Gets or sets the background color for the main button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonBackColor">
+            <summary>
+            [RU] Возвращает или задаёт цвет фона для выпадающей кнопки.<br/>
+            [EN] Gets or sets the background color for the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonForeColor">
+            <summary>
+            [RU] Возвращает или задаёт цвет шрифта для основной кнопки.<br/>
+            [EN] Gets or sets the font color for the main button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonForeColor">
+            <summary>
+            [RU] Возвращает или задаёт цвет шрифта для выпадающей кнопки.<br/>
+            [EN] Gets or sets the font color for the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonTextAlign">
+            <summary>
+            [RU] Возвращает или задаёт способ выравнивания текста на основной кнопке.<br/>
+            [EN] Gets or sets how the text on the main button is aligned.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonTextAlign">
+            <summary>
+            [RU] Возвращает или задаёт способ выравнивания текста на выпадающей кнопке.<br/>
+            [EN] Gets or sets how the text on the dropdown button is aligned.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonImageAlign">
+            <summary>
+            [RU] Возвращает или задаёт способ выравнивания изображения на основной кнопке.<br/>
+            [EN] Gets or sets how the image on the main button is aligned.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonImageAlign">
+            <summary>
+            [RU] Возвращает или задаёт способ выравнивания изображения на выпадающей кнопке.<br/>
+            [EN] Gets or sets how the image on the dropdown button is aligned.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonBackgroundImage">
+            <summary>
+            [RU] Возвращает или задаёт фоновое изображение, отображаемое на основной кнопке.<br/>
+            [EN] Gets or sets the background image displayed on the main button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonBackgroundImage">
+            <summary>
+            [RU] Возвращает или задаёт фоновое изображение, отображаемое на выпадающей кнопке.<br/>
+            [EN] Gets or sets the background image displayed on the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonImage">
+            <summary>
+            [RU] Возвращает или задаёт изображение, отображаемое на основной кнопке.<br/>
+            [EN] Gets or sets the image displayed on the main button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonImage">
+            <summary>
+            [RU] Возвращает или задаёт изображение, отображаемое на выпадающей кнопке.<br/>
+            [EN] Gets or sets the image displayed on the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownContextMenu">
+            <summary>
+            [RU] Возвращает или задаёт контекстное меню, используемое при нажатии на выпадающую кнопку.<br/>
+            [EN] Gets or sets the context menu used when clicking the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownMenuOffsetX">
+            <summary>
+            [RU] Смещение выпадающего контекстного меню по оси X.<br/>
+            [EN] Offset of the drop-down context menu along the X axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownMenuOffsetY">
+            <summary>
+            [RU] Смещение выпадающего контекстного меню по оси Y.<br/>
+            [EN] Offset of the drop-down context menu along the Y axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.DropdownButtonText">
+            <summary>
+            [RU] Текст для выпадающей кнопки.<br/>
+            [EN] Text for the dropdown button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonWidth">
+            <summary>
+            [RU] Возвращает или задаёт ширину для основной кнопки, в пикселях.<br/>
+            [EN] Returns or sets the width of the main button, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINDropdownButton.MainButtonText">
+            <summary>
+            [RU] Текст для основной кнопки.<br/>
+            [EN] Text for the main button.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINDropdownButton.MainButtonClick">
+            <summary>
+            [RU] Событие клика по главной кнопке.<br/>
+            [EN] Click event on the main button.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINDropdownButton.DropdownButtonClick">
+            <summary>
+            [RU] Событие клика по выпадающей кнопке.<br/>
+            [EN] Click event on the dropdown button.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINDropdownButton.BeforeShowDropdownMenu">
+            <summary>
+            [RU] Событие возникает до момента отображения выпадающего меню при клике на выпадающую кнопку.<br/>
+            [EN] The event occurs before the drop-down menu is displayed when the drop-down button is clicked.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINDropdownButton.AfterShowDropdownMenu">
+            <summary>
+            [RU] Событие возникает после момента отображения выпадающего меню при клике на выпадающую кнопку.<br/>
+            [EN] The event occurs after the drop-down menu is displayed when the drop-down button is clicked.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINDropdownButton.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр выпадающей кнопки.<br/>
+            [EN] Constructor, creates an instance of a drop-down button.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINDropdownButton.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINDropdownButton.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINDropdownButton.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINCustomRadioButton">
+            <summary>
+            [RU] Элемент управления, представляющий собой радиокнопку с возможностью одиночного выбора значения в группе радиокнопок.<br/>
+            [EN] A control element that is a radio button with the ability to select a single value in a group of radio buttons.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINCustomRadioButton.isChecked">
+            <summary>
+            [RU] Определяет, отмечен ли элемент управления или нет.<br/>
+            [EN] Determines whether a control is checked or not.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleDiameter">
+            <summary>
+            [RU] Диаметр, в пикселях, круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] The diameter, in pixels, of the circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PointDiameter">
+            <summary>
+            [RU] Диаметр, в пикселях, внутренней точки, которая отрисовывается в круге для радиокнопки, когда радиокнопка выбрана.<br/>
+            [EN] The diameter, in pixels, of the inner point that is drawn within the radio button's circle when the radio button is selected.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleOffsetX">
+            <summary>
+            [RU] Смещение, в пикселях, по оси X для круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] The offset, in pixels, along the X axis for the circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleOffsetY">
+            <summary>
+            [RU] Смещение, в пикселях, по оси Y для круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] The offset, in pixels, along the Y axis for the circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleBackColor">
+            <summary>
+            [RU] Цвет фона для круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] The background color for the circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleShadowColor">
+            <summary>
+            [RU] Цвет тени для круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] The shadow color for the circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleBorderColor">
+            <summary>
+            [RU] Цвет границы для круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] The border color for the circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.DisabledCircleBackColor">
+            <summary>
+            [RU] Цвет фона для круга, который представляет собой переключатель радиокнопки, когда радиокнопка недоступна, т.е. её свойство Enabled равно False.<br/>
+            [EN] The background color for the circle that represents the radio button's toggle when the radio button is disabled, i.e. its Enabled property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.DisabledCircleShadowColor">
+            <summary>
+            [RU] Цвет тени для круга, который представляет собой переключатель радиокнопки, когда радиокнопка недоступна, т.е. её свойство Enabled равно False.<br/>
+            [EN] The shadow color for the circle that represents the radio button toggle when the radio button is disabled, i.e. its Enabled property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.DisabledCircleBorderColor">
+            <summary>
+            [RU] Цвет границы для круга, который представляет собой переключатель радиокнопки, когда радиокнопка недоступна, т.е. её свойство Enabled равно False.<br/>
+            [EN] The border color for the circle that represents the radio button toggle when the radio button is disabled, i.e. its Enabled property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PointColor">
+            <summary>
+            [RU] Цвет внутренней точки, которая отрисовывается в круге для радиокнопки, когда радиокнопка выбрана.<br/>
+            [EN] The color of the inner dot that is drawn in the circle for the radio button when the radio button is selected.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.DisabledPointColor">
+            <summary>
+            [RU] Цвет внутренней точки, которая отрисовывается в круге для радиокнопки, когда радиокнопка выбрана, но является недоступной, т.е. её свойство Enabled равно False.<br/>
+            [EN] The color of the inner dot that is drawn in the circle for a radio button when the radio button is selected but is disabled, i.e. its Enabled property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.TextOffsetX">
+            <summary>
+            [RU] Смещение текста, выводимого для радиокнопки, относительно оси X, в пикселях.<br/>
+            [EN] The offset of the text displayed for the radio button relative to the X axis, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.TextOffsetY">
+            <summary>
+            [RU] Смещение текста, выводимого для радиокнопки, относительно оси Y, в пикселях.<br/>
+            [EN] The offset of the text displayed for the radio button relative to the Y axis, in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.RadioButtonText">
+            <summary>
+            [RU] Текст, выводимый для радиокнопки.<br/>
+            [EN] The text displayed for the radio button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.Checked">
+            <summary>
+            [RU] Возвращает или задаёт значение, выбрана ли радиокнопка.<br/>
+            [EN] Gets or sets whether the radio button is selected.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.MouseOverBackColor">
+            <summary>
+            [RU] Цвет фона для радиокнопки при наведении указателя мыши на область элемента управления.<br/>
+            [EN] The background color for the radio button when you hover over the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.MouseOverForeColor">
+            <summary>
+            [RU] Цвет текста для радиокнопки при наведении указателя мыши на область элемента управления.<br/>
+            [EN] The text color for a radio button when the mouse hovers over the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.MousePressBackColor">
+            <summary>
+            [RU] Цвет фона для радиокнопки во время нажатия мышью на элемент управления.<br/>
+            [EN] The background color for the radio button when the mouse is clicked on the control.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.MouseOverFont">
+            <summary>
+            [RU] Шрифт, используемый для радиокнопки при наведении указателя мыши на область элемента управления.<br/>
+            [EN] The font used for the radio button when the mouse hovers over the control area.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.DisabledForeColor">
+            <summary>
+            [RU] Цвет текста для радиокнопки, когда она недоступна, т.е. её свойство Enabled равно False.<br/>
+            [EN] The text color for the radio button when it is not available, i.e. its Enabled property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.DisabledBackColor">
+            <summary>
+            [RU] Цвет фона для радиокнопки, когда она недоступна, т.е. её свойство Enabled равно False.<br/>
+            [EN] Background color for the radio button when it is not available, i.e. its Enabled property is False.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PressTextOffsetX">
+            <summary>
+            [RU] Смещение текста, выводимого для радиокнопки, относительно оси X, в пикселях. Применяется во время нажатия на радиокнопку, если свойство UsePressEffects выставлено в True.<br/>
+            [EN] The offset of the text displayed for the radio button relative to the X axis, in pixels. Applies when a radio button is clicked if the UsePressEffects property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PressTextOffsetY">
+            <summary>
+            [RU] Смещение текста, выводимого для радиокнопки, относительно оси Y, в пикселях. Применяется во время нажатия на радиокнопку, если свойство UsePressEffects выставлено в True.<br/>
+            [EN] The offset of the text displayed for the radio button relative to the Y axis, in pixels. Applies when a radio button is clicked if the UsePressEffects property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PressCircleOffsetX">
+            <summary>
+            [RU] Смещение в пикселях по оси X для круга, который представляет собой переключатель радиокнопки. Применяется во время нажатия на радиокнопку, если свойство UsePressEffects выставлено в True.<br/>
+            [EN] The X-axis offset in pixels for the circle that represents the radio button toggle. Applies when a radio button is clicked if the UsePressEffects property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PressCircleOffsetY">
+            <summary>
+            [RU] Смещение в пикселях по оси Y для круга, который представляет собой переключатель радиокнопки. Применяется во время нажатия на радиокнопку, если свойство UsePressEffects выставлено в True.<br/>
+            [EN] The Y-axis offset in pixels for the circle that represents the radio button toggle. Applies when a radio button is clicked if the UsePressEffects property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.UseMouseOverEffects">
+            <summary>
+            [RU] Следует ли применять специальные эффекты при наведении курсора на элемент управления.<br/>
+            [EN] Regulates whether to apply or not special effects when mouse is over the control.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.UsePressEffects">
+            <summary>
+            [RU] Следует ли применять специальные эффекты при нажатии на элемент управления.<br/>
+            [EN] Regulates whether to apply or not special effects when control is pressed.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.UsePointGradientFill">
+            <summary>
+            [RU] Свойство возвращает или задаёт, следует ли использовать градиентную заливку для внутренней точки в основном круге, представляющем собой переключатель радиокнопки.<br/>
+            [EN] The property returns or sets whether to use a gradient fill for the inner point in the main circle representing the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.UseCircleGradientFill">
+            <summary>
+            [RU] Свойство возвращает или задаёт, следует ли использовать градиентную заливку для основного круга, представляющего собой переключатель радиокнопки.<br/>
+            [EN] The property returns or sets whether to use a gradient fill for the main circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleGradientStartColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки для основного круга, представляющего собой переключатель радиокнопки.<br/>
+            [EN] The start gradient fill color for the main circle representing the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleGradientEndColor">
+            <summary>
+            [RU] Конечный цвет градиентной заливки для основного круга, представляющего собой переключатель радиокнопки.<br/>
+            [EN] The end gradient fill color for the main circle representing the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.CircleGradientAngle">
+            <summary>
+            [RU] Угол градиента для заливки основного круга радиокнопки.<br/>
+            [EN] Gradient angle for filling the main circle of the radio button.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.IsCircleGradientAngleScalable">
+            <summary>
+            [RU] Является ли угол градиента для заливки основного круга радиокнопки масштабируемым.<br/>
+            [EN] Is the gradient angle for the fill of the radio button's main circle scalable.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PointGradientStartColor">
+            <summary>
+            [RU] Начальный цвет градиентной заливки для внутренней точки круга, представляющего собой переключатель радиокнопки.<br/>
+            [EN] The start gradient fill color for the inner point of the circle representing the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PointGradientEndColor">
+            <summary>
+            [RU] Конечный цвет градиентной заливки для внутренней точки круга, представляющего собой переключатель радиокнопки.<br/>
+            [EN] The end gradient fill color for the inner point of the circle representing the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PointGradientAngle">
+            <summary>
+            [RU] Угол градиента для заливки внутренней точки для круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] The gradient angle to fill the inner point for the circle that is the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.IsPointGradientAngleScalable">
+            <summary>
+            [RU] Является ли угол градиента для заливки внутренней точки для круга, который представляет собой переключатель радиокнопки, масштабируемым.<br/>
+            [EN] Is the gradient angle to fill the inner point for the circle that is the radio button toggle scalable.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.UseCircleShadow">
+            <summary>
+            [RU] Свойство возвращает или задаёт признак, следует ли отображать тень для основного круга, который представляет собой переключатель радиокнопки.<br/>
+            [EN] Property returns or sets whether to display a shadow for the main circle that represents the radio button toggle.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PointOffsetX">
+            <summary>
+            [RU] Смещение внутренней точки в пикселях по оси X, которая отрисовывается в круге для радиокнопки, когда радиокнопка выбрана.<br/>
+            [EN] The X-axis offset of the interior point that is drawn in the circle for the radio button when the radio button is selected.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINCustomRadioButton.PointOffsetY">
+            <summary>
+            [RU] Смещение внутренней точки в пикселях по оси Y, которая отрисовывается в круге для радиокнопки, когда радиокнопка выбрана.<br/>
+            [EN] The Y-axis offset of the interior point that is drawn in the circle for the radio button when the radio button is selected.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINCustomRadioButton.CheckedChanged">
+            <summary>
+            [RU] Событие возникает, когда изменяется состояние радиокнопки.<br/>
+            [EN] The event occurs when the state of a radio button changes.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента AINCustomRadioButton.<br/>
+            [EN] Constructor, creates an instance of the AINCustomRadioButton element.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.ResetCheckedStateForOtherRadioButtons">
+            <summary>
+            [RU] Сброс флага отмеченности со всех других элементов управления AINCustomRadioButton, которые находятся на одном уровне с текущим элементом управления.<br/>
+            [EN] Resets the checked flag of all other AINCustomRadioButton controls that are at the same level as the current control.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.DrawControlBackground(System.Drawing.Graphics)">
+            <summary>
+            [RU] Отрисовка фона элемента управления.<br/>
+            [EN] Drawing the background of the control.
+            </summary>
+            <param name="g">[RU] Экземпляр класса Graphics, используемый для отрисовки.<br/>[EN] An instance of the Graphics class used for rendering.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.DrawControlText(System.Drawing.Graphics)">
+            <summary>
+            [RU] Отрисовка текста элемента управления.<br/>
+            [EN] Rendering the control's text.
+            </summary>
+            <param name="g">[RU] Экземпляр класса Graphics, используемый для отрисовки.<br/>[EN] An instance of the Graphics class used for rendering.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.DrawRadioButtonShadow(System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            [RU] Отрисовка тени для главного круга<br/>
+            [EN] Drawing a shadow for the main circle
+            </summary>
+            <param name="g">[RU] Экземпляр класса Graphics, используемый для отрисовки.<br/>[EN] An instance of the Graphics class used for rendering.</param>
+            <param name="targetOffsetX"></param>
+            <param name="targetOffsetY"></param>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.DrawRadioButtonCircle(System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            [RU] Отрисовка главного круга.<br/>
+            [EN] Drawing the main circle.
+            </summary>
+            <param name="g">[RU] Экземпляр класса Graphics, используемый для отрисовки.<br/>[EN] An instance of the Graphics class used for rendering.</param>
+            <param name="targetOffsetX"></param>
+            <param name="targetOffsetY"></param>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.DrawRadioButtonCircleBorder(System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            [RU] Отрисовка границы для главного круга.<br/>
+            [EN] Drawing a border for the main circle.
+            </summary>
+            <param name="g">[RU] Экземпляр класса Graphics, используемый для отрисовки.<br/>[EN] An instance of the Graphics class used for rendering.</param>
+            <param name="targetOffsetX"></param>
+            <param name="targetOffsetY"></param>
+        </member>
+        <member name="F:AINFormControls.AINCustomRadioButton.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINCustomRadioButton.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINShadowedLabel">
+            <summary>
+            [RU] Элемент управления, представляющий собой текст (метку) с поддержкой тени.<br/>
+            [EN] A control that is text (label) with shadow support. 
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.ShadowColor">
+            <summary>
+            [RU] Задаёт цвет для тени.<br/>
+            [EN] Sets the color for the shadow.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.ShadowHoverColor">
+            <summary>
+            [RU] Задаёт цвет для тени при наведении курсора мыши.<br/>
+            [EN] Sets the hover color for the shadow.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.ForeColorHover">
+            <summary>
+            [RU] Задаёт цвет шрифта при наведении курсора мыши.<br/>
+            [EN] Sets the font color on mouseover.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.IsChangeCursorToHandOnHover">
+            <summary>
+            [RU] Свойство определяет, следует ли автоматически менять курсор мыши на изображение руки при наведении курсора мыши.<br/>
+            [EN] The property determines whether the mouse cursor should automatically change to an image of a hand when hovering the mouse cursor.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.UseMouseOverEffects">
+            <summary>
+            [RU] Свойство определяет, следует ли использовать эффекты при наведении курсора мыши.<br/>
+            [EN] The property determines whether mouseover effects should be used.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.ShadowDistanceX">
+            <summary>
+            [RU] Дистанция тени, по оси X.<br/>
+            [EN] Shadow distance, along the X axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.ShadowDistanceY">
+            <summary>
+            [RU] Дистанция тени, по оси Y.<br/>
+            [EN] Shadow distance, along the Y axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.LabelText">
+            <summary>
+            [RU] Текст для отображения в метке.<br/>
+            [EN] Text to display in the label.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.TextOffsetX">
+            <summary>
+            [RU] Смещение текста метки по оси X.<br/>
+            [EN] Label text offset along the X axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.TextOffsetY">
+            <summary>
+            [RU] Смещение текста метки по оси Y.<br/>
+            [EN] Label text offset along the Y axis.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.PressTextOffsetX">
+            <summary>
+            [RU] Смещение текста метки по оси X во время нажатия на метку.<br/>
+            [EN] Label text offset along the X axis when clicking on the label.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.PressTextOffsetY">
+            <summary>
+            [RU] Смещение текста метки по оси Y во время нажатия на метку.<br/>
+            [EN] Label text offset along the Y axis when clicking on the label.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.UsePressEffects">
+            <summary>
+            [RU] Свойство определяет, следует ли использовать эффекты при нажатии на метку.<br/>
+            [EN] The property determines whether effects should be used when the label is clicked.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINShadowedLabel.HoverFont">
+            <summary>
+            [RU] Шрифт, используемый для текста метки при наведении курсора мыши.<br/>
+            [EN] The font used for the label text on mouseover.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINShadowedLabel.LabelClick">
+            <summary>
+            [RU] Событие клика левой кнопки мыши по тексту метки.<br/>
+            [EN] Left mouse button click event on label text.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINShadowedLabel.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента AINShadowLabel.<br/>
+            [EN] Constructor, creates an instance of AINShadowLabel control.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINShadowedLabel.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINShadowedLabel.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINShadowedLabel.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINStopwatchControl">
+            <summary>
+            [RU] Элемент управления, предоставляющий функциональность секундомера.<br/>
+            [EN] A control that provides stopwatch functionality.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINStopwatchControl.isRunning">
+            <summary>
+            Флаг, определяющий запущен или нет секундомер
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.IsRunning">
+            <summary>
+            Открытое свойство секундомера, возвращает true, если секундомер в данный момент запущен
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.CurrentSeconds">
+            <summary>
+            [RU] Текущее количество секунд на секундомере.<br/>
+            [EN] The current number of seconds on the stopwatch.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.CurrentMinutes">
+            <summary>
+            [RU] Текущее количество минут на секундомере.<br/>
+            [EN] The current number of minutes on the stopwatch.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.CurrentMillis">
+            <summary>
+            [RU] Текущее количество миллисекунд на секундомере.<br/>
+            [EN] The current number of milliseconds on the stopwatch.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.CurrentHundredthsOfASecond">
+            <summary>
+            [RU] Текущее количество сантисекунд на секундомере.<br/>
+            [EN] The current number of centiseconds on the stopwatch.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.LimitSeconds">
+            <summary>
+            [RU] Лимит по количеству секунд.<br/>
+            [EN] Limit on number of seconds.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.LimitMinutes">
+            <summary>
+            [RU] Лимит по количеству минут.<br/>
+            [EN] Limit on number of minutes.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.LimitFontColor">
+            <summary>
+            [RU] Цвет шрифта секундомера в момент достижения лимита по минутам и/или секундам.<br/>
+            [EN] The stopwatch font color when the minutes and/or seconds limit is reached.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.ButtonsBackgroundColor">
+            <summary>
+            [RU] Цвет кнопок секундомера.<br/>
+            [EN] Stopwatch buttons color.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.EnableDeltaButton">
+            <summary>
+            [RU] Разрешить ли кнопку дельты.<br/>
+            [EN] Whether to allow the delta button.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINStopwatchControl.timeFormat">
+            <summary>
+            Задаёт формат времени для его отображения в секундомере
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchControl.IsResetToInitialValues">
+            <summary>
+            Закрытое свойство секундомера. Определяет, следует ли сбросить значения времени в исходные
+            при очередном старте секундомера.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINStopwatchControl.stopWatch">
+            <summary>
+            Объект класса Stopwatch для измерения времени
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINStopwatchControl.StartStopwatch">
+            <summary>
+            [RU] Возникает при нажатии кнопки "Старт" секундомера.<br/>
+            [EN] Occurs when you press the "Start" button of the stopwatch.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINStopwatchControl.PauseStopwatch">
+            <summary>
+            [RU] Возникает при нажатии кнопки "Пауза" секундомера.<br/>
+            [EN] Occurs when you press the "Pause" button of the stopwatch.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINStopwatchControl.StopStopwatch">
+            <summary>
+            [RU] Возникает при нажатии кнопки "Стоп" секундомера.<br/>
+            [EN] Occurs when you press the Stopwatch button.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINStopwatchControl.AINStopwatchDeltaStopwatch">
+            <summary>
+            [RU] Делегат для события DeltaStopwatch.<br/>
+            [EN] Delegate for the DeltaStopwatch event.
+            </summary>
+            <param name="sender">[RU] Экземпляр секундомера, отправивший событие;<br/>[EN] The stopwatch instance that sent the event</param>
+            <param name="e">[RU] Параметры события DeltaStopwatch;<br/>[EN] DeltaStopwatch event parameters</param>
+        </member>
+        <member name="E:AINFormControls.AINStopwatchControl.DeltaStopwatch">
+            <summary>
+            [RU] Возникает при нажатии кнопки "Дельта" секундомера.<br/>
+            [EN] Occurs when you press the "Delta" button of the stopwatch.
+            </summary>
+        </member>
+        <member name="E:AINFormControls.AINStopwatchControl.LimitReached">
+            <summary>
+            [RU] Возникает при достижении установленного лимита времени для минут и/или секунд, задаваыемых свойствами LimitMinutes и LimitSeconds.<br/>
+            [EN] Occurs when the set time limit for minutes and/or seconds, specified by the LimitMinutes and LimitSeconds properties, is reached.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchControl.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента AINStopwatchControl.<br/>
+            [EN] Constructor, creates an instance of the AINStopwatchControl element.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchControl.ResetCurrentValues">
+            <summary>
+            Сброс всех значений секундомера в начальные
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchControl.ResetPreviousValues">
+            <summary>
+            Сброс предыдущих значений секундомера в начальные
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchControl.Pause">
+            <summary>
+            Ставит секундомер на паузу
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchControl.ShowTime">
+            <summary>
+            Отображает текущее время секундомера в метке LabelTimer
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINStopwatchControl.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchControl.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchControl.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINStopwatchDeltaEventArgs">
+            <summary>
+            [RU] Класс представляет собой параметры, которые передаются в событии DeltaStopwatch для секундомера.<br/>
+            [EN] The class represents the parameters that are passed in the DeltaStopwatch event for the stopwatch.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.DeltaNumber">
+            <summary>
+            [RU] Номер дельты (отсечки времени секундомера).<br/>
+            [EN] Delta number (stopwatch time cutoff)
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.Millis">
+            <summary>
+            [RU] Количество миллисекунд на момент отсечки времени секундомера.<br/>
+            [EN] The number of milliseconds at the stopwatch time cutoff.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.Seconds">
+            <summary>
+            [RU] Количество секунд на момент отсечки времени секундомера.<br/>
+            [EN] The number of seconds at the stopwatch time cutoff. 
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.Minutes">
+            <summary>
+            [RU] Количество минут на момент отсечки времени секундомера.<br/>
+            [EN] The number of minutes at the stopwatch time cutoff.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.HundredthsOfASecond">
+            <summary>
+            [RU] Количество сотых секунды (сантисекунд) на момент отсечки времени секундомера.<br/>
+            [EN] The number of hundredths of a second (centiseconds) at the stopwatch time cutoff.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.DeltaMillisTotal">
+            <summary>
+            [RU] Дельта в миллисекундах от предыдущей отсечки времени секундомера.<br/>
+            [EN] Delta in milliseconds from the previous stopwatch time cutoff.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.DeltaMinutes">
+            <summary>
+            [RU] Дельта в минутах от предыдущей отсечки времени секундомера.<br/>
+            [EN] Delta in minutes from the previous stopwatch time cutoff.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.DeltaSeconds">
+            <summary>
+            [RU] Дельта в секундах от предыдущей отсечки времени секундомера.<br/>
+            [EN] Delta in seconds from the previous stopwatch time cutoff.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.DeltaHundredsOfASecond">
+            <summary>
+            [RU] Дельта в сантисекундах от предыдущей отсечки времени секундомера.<br/>
+            [EN] Delta in centisecondsof from the previous stopwatch time cutoff.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.TimeString">
+            <summary>
+            [RU] Формат времени для вывода минут, секунд и сантисекунд.<br/>
+            [EN] Time format for displaying minutes, seconds and centiseconds.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStopwatchDeltaEventArgs.DeltaTimeString">
+            <summary>
+            [RU] Формат времени для вывода минут, секунд и сантисекунд, относящихся к дельте времени.<br/>
+            [EN] Time format for displaying minutes, seconds, and centiseconds related to delta time.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStopwatchDeltaEventArgs.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            [RU] Параметризованный конструктор, создаёт экземпляр класса.<br/>
+            [EN] A parameterized constructor that creates an instance of a class.
+            </summary>
+            <param name="deltaNumber">[RU] Целое число, номер текущей дельты;<br/>[EN] Integer, current delta number</param>
+            <param name="millis">[RU] Количество миллисекунд на секундомере;<br/>[EN] Number of milliseconds on stopwatch</param>
+            <param name="seconds">[RU] Количество секунд на секундомере;<br/>[EN] Number of seconds on stopwatch</param>
+            <param name="minutes">[RU] Количество минут на секундомере;<br/>[EN] Number of minutes on stopwatch</param>
+            <param name="hundredthsOfASecond">[RU] Количество сантисекунд на секундомере;<br/>[EN] Number of centiseconds on a stopwatch</param>
+            <param name="deltaMillisTotal">[RU] Дельта времени, в миллисекундах относительно запуска секундомера (если это первый замер) или относительно предыдущего замера времени;<br/>[EN] Delta time, in milliseconds, relative to the start of the stopwatch (if this is the first measurement) or relative to the previous time measurement</param>
+        </member>
+        <member name="T:AINFormControls.AINStringList">
+            <summary>
+            [RU] Элемент управления, представляющий собой маркированный или нумерованный список из строк, заданных пользователем.<br/>
+            [EN] A control that represents a bulleted or numbered list of strings specified by the user.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINStringList.AINStringListIndexAccessException">
+            <summary>
+            [RU] Исключение, возникающее при некорректном обращении по индексу элемента для массива строк, заданных пользователем.<br/>
+            [EN] An exception that occurs when an element index is incorrectly accessed for an array of user-specified strings.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStringList.AINStringListIndexAccessException.#ctor(System.String)">
+            <summary>
+            [RU] Параметризованный конструктор.<br/>
+            [EN] Parameterized constructor.
+            </summary>
+            <param name="message">[RU] Сообщение, содержащее описание возникшей ошибки при возникновении исключения;<br/>[EN] A message containing a description of the error that occurred when an exception occurred</param>
+        </member>
+        <member name="T:AINFormControls.AINStringList.AINStringListType">
+            <summary>
+            [RU] Тип списка. BulletList - маркированный список строк, NumberedList - нумерованный список строк.<br/>
+            [EN] List type. BulletList is a bulleted list of strings, NumberedList is a numbered list of strings.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINStringList.AINStringListType.BulletList">
+            <summary>
+            [RU] Маркированный список строк.<br/>
+            [EN] Bulleted list of strings.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINStringList.AINStringListType.NumberedList">
+            <summary>
+            [RU] Нумерованный список строк.<br/>
+            [EN] Numbered list of strings.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.StringItems">
+            <summary>
+            [RU] Массив строк, заданных пользователем. Представляют элементы списка.<br/>
+            [EN] An array of user-specified strings. Represent the elements of a list.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.StringListType">
+            <summary>
+            [RU] Свойство задаёт тип списка - маркированный или нумерованный.<br/>
+            [EN] The property specifies the type of list - bulleted or numbered.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.DefaultBulletListMarker">
+            <summary>
+            [RU] Строка, содержащая символ, по умолчанию используемый в качестве маркера для ненумерованного списка.<br/>
+            [EN] A string containing the default character used as a bullet for an unordered list.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.UseBackgroundGradientFill">
+            <summary>
+            [RU] Следует ли использовать градиентную заливку фона для списка.<br/>
+            [EN] Whether to use a gradient background fill for the list.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.BackgroundGradientStartColor">
+            <summary>
+            [RU] Начальный цвет для градиентной заливки фона списка. Используется, если свойство UseBackgroundGradientFill выставлено в True.<br/>
+            [EN] The start color for the gradient fill of the list background. Used if the UseBackgroundGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.BackgroundGradientEndColor">
+            <summary>
+            [RU] Конечный цвет для градиентной заливки фона списка. Используется, если свойство UseBackgroundGradientFill выставлено в True.<br/>
+            [EN] The end color for the gradient fill of the list background. Used if the UseBackgroundGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.BackgroundGradientAngle">
+            <summary>
+            [RU] Угол для градиентной заливки фона списка. Используется, если свойство UseBackgroundGradientFill выставлено в True.<br/>
+            [EN] Angle for gradient fill of the list background. Used if the UseBackgroundGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.IsBackgroundGradientAngleScalable">
+            <summary>
+            [RU] Является ли угол градиента для заливки фона списка масштабируемым. Используется, если свойство UseBackgroundGradientFill выставлено в True.<br/>
+            [EN] Is the gradient angle for the list background fill scalable. Used if the UseBackgroundGradientFill property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.ItemsPadding">
+            <summary>
+            [RU] Расстояние, в пикселях, между элементами списка. Чем больше значение, тем больше расстояние между элементами.<br/>
+            [EN] The distance, in pixels, between list items. The higher the value, the greater the distance between elements.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.ItemsLeftMargin">
+            <summary>
+            [RU] Отступ слева для элементов списка. Значение задаётся в пикселях.<br/>
+            [EN] Left margin for list items. The value is specified in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.ItemsTopMargin">
+            <summary>
+            [RU] Отступ сверху для элементов списка. Значение задаётся в пикселях.<br/>
+            [EN] Top margin for list items. The value is specified in pixels.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.UseCustomBorder">
+            <summary>
+            [RU] Свойство определяет, следует ли использовать пользовательский стиль границы для списка.<br/>
+            [EN] The property determines whether to use a custom border style for the list.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.CustomBorderColor">
+            <summary>
+            [RU] Пользовательский цвет границы для списка. Значение свойства используется, если свойство UseCustomBorder имеет значение True.<br/>
+            [EN] Custom border color for list. The property value is used if the UseCustomBorder property is True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.ItemsImage">
+            <summary>
+            [RU] Изображение, которое следует применить к каждому элементу списка. Если нужно использовать лишь изображение для маркированного списка, то свойство DefaultBulletListMarker можно установить равным пустой строке.<br/>
+            [EN] An image to apply to each list item. If you only need to use an image for a bulleted list, then the DefaultBulletListMarker property can be set to the empty string.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.ItemsImageExtraOffsetX">
+            <summary>
+            [RU] Дополнительный сдвиг изображения для элементов списка, по оси X. Значение задаётся в пикселях. Используется, если задано свойство ItemsImage для элементов списка.<br/>
+            [EN] Additional image shift for list items, along the X axis. The value is specified in pixels. Used if the ItemsImage property is set for list items.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINStringList.ItemsImageExtraOffsetY">
+            <summary>
+            [RU] Дополнительный сдвиг изображения для элементов списка, по оси Y. Значение задаётся в пикселях. Используется, если задано свойство ItemsImage для элементов списка.<br/>
+            [EN] Additional image shift for list items, along the Y axis. The value is specified in pixels. Used if the ItemsImage property is set for list items.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStringList.#ctor">
+            <summary>
+            [RU] Непараметризованный конструктор, создаёт экземпляр класса AINStringList.<br/>
+            [EN] A non-parameterized constructor that creates an instance of the AINStringList class.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStringList.GetItem(System.Int32)">
+            <summary>
+            [RU] Получает элемент списка по заданному индексу <paramref name="index"/>.<br/>
+            [EN] Gets the list element at the given index <paramref name="index"/>
+            </summary>
+            <param name="index">[RU] Индекс элемента списка для возврата;<br/>[EN] List item index to return</param>
+            <returns>[RU] Строка, являющаяся элементом списка по заданному индексу;<br/>[EN] A string that is an element of a list at a given index</returns>
+            <exception cref="T:AINFormControls.AINStringList.AINStringListIndexAccessException">[RU] Исключение может возникнуть, если индекс для элемента списка задан неверно;<br/>[EN] An exception may occur if the index for a list element is set incorrectly</exception>
+        </member>
+        <member name="M:AINFormControls.AINStringList.RemoveFirstMatchingItem(System.String)">
+            <summary>
+            [RU] Удаляет первый элемент списка, совпавший с заданным параметром <paramref name="item"/>.<br/>
+            [EN] Removes the first list element that matches the specified <paramref name="item"/>
+            </summary>
+            <param name="item">[RU] Строка, содержащая текст, идентичный одному из элементов списка, который требуется удалить;<br/>[EN] A string containing text identical to one of the list items that you want to remove</param>
+            <returns>[RU] true, если удаление элемента было успешным, в противном случае false;<br/>[EN] true if the element removal was successful, false otherwise</returns>
+        </member>
+        <member name="M:AINFormControls.AINStringList.RemoveItem(System.Int32)">
+            <summary>
+            [RU] Удаляет элемент списка по индексу <paramref name="index"/>. Не вызывает исключений, если индекс задан некорректно, просто возвращает false в случае неуспешного выполнения операции.<br/>
+            [EN] Removes a list element at index <paramref name="index"/>. Does not throw exceptions if the index is set incorrectly, it simply returns false if the operation is unsuccessful.
+            </summary>
+            <param name="index">[RU] Индекс элемента списка для удаления;<br/>[EN] Index of the list item to delete</param>
+            <returns>[RU] true, если удаление элемента было успешным, в противном случае false;<br/>[EN] true if the element removal was successful, false otherwise</returns>
+        </member>
+        <member name="M:AINFormControls.AINStringList.AddItem(System.String)">
+            <summary>
+            [RU] Добавляет новый элемент в список.<br/>
+            [EN] Adds a new element to the list.
+            </summary>
+            <param name="item">[RU] Строка для добавления к списку в качестве нового элемента списка;<br/>[EN] String to add to the list as a new list item</param>
+        </member>
+        <member name="M:AINFormControls.AINStringList.AddItem(System.String,System.Boolean)">
+            <summary>
+            [RU] Добавляет новый элемент в список с возможностью перерисовки списка.<br/>
+            [EN] Adds a new element to the list with the ability to redraw the list.
+            </summary>
+            <param name="item">[RU] Строка для добавления к списку в качестве нового элемента списка;<br/>[EN] String to add to the list as a new list item</param>
+            <param name="repaintList">[RU] Указывает, нужна ли перерисовка списка;<br/>[EN] Indicates whether the list needs to be redrawn</param>
+        </member>
+        <member name="M:AINFormControls.AINStringList.Clear">
+            <summary>
+            [RU] Очищает список, удаляя из него все элементы.<br/>
+            [EN] Clears a list by removing all elements from it.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStringList.Clear(System.Boolean)">
+            <summary>
+            [RU] Очищает список, удаляя из него все элементы. Поддерживает возможность перерисовки списка.<br/>
+            [EN] Clears a list by removing all elements from it. Supports the ability to redraw the list.
+            </summary>
+            <param name="repaintList">[RU] Указывает, нужна ли перерисовка списка;<br/>[EN] Indicates whether the list needs to be redrawn</param>
+        </member>
+        <member name="F:AINFormControls.AINStringList.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINStringList.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINStringList.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINTicker">
+            <summary>
+            [RU] Элемент управления, представляющий собой бегущую строку.<br/>
+            [EN] A control that represents a ticker.
+            </summary>
+        </member>
+        <member name="T:AINFormControls.AINTicker.TickerDirection">
+            <summary>
+            [RU] Направление движения бегущей строки.<br/>
+            [EN] The direction of ticker movement
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINTicker.TickerDirection.Right">
+            <summary>
+            [RU] Двиижение бегущей строки вправо.<br/>
+            [EN] Movement of the ticker to the right.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINTicker.TickerDirection.Left">
+            <summary>
+            [RU] Двиижение бегущей строки влево.<br/>
+            [EN] Movement of the ticker to the left.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.TickerFont">
+            <summary>
+            [RU] Шрифт, используемый для бегущей строки.<br/>
+            [EN] The font used for the ticker.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.TickerText">
+            <summary>
+            [RU] Текст для отображения в бегущей строке.<br/>
+            [EN] Text to display in the ticker.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.TickerTextTop">
+            <summary>
+            [RU] Отступ сверху для текста, отображаемого в бегущей строке.<br/>
+            [EN] Top margin for text displayed in the ticker.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.TickerTextLeft">
+            <summary>
+            [RU] Отступ слева для текста, отображаемого в бегущей строке.<br/>
+            [EN] Left margin for text displayed in the ticker.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.TickerDelay">
+            <summary>
+            [RU] Задержка для бегущей строки. Чем меньше значение, тем быстрее двигается текст. Чем больше значение, тем медленнее двигается текст.<br/>
+            [EN] Delay for the ticker. The lower the value, the faster the text moves. The higher the value, the slower the text moves.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.TickerStep">
+            <summary>
+            [RU] Сдвиг, в пикселях, текста бегущей строки за одну итерацию. Чем больше значение, тем быстрее будет двигаться текст.<br/>
+            [EN] Shift, in pixels, of the ticker text in one iteration. The higher the value, the faster the text will move.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.Direction">
+            <summary>
+            [RU] Направление движения текста бегущей строки: Left - текст двигается влево, Right - текст двигается вправо.<br/>
+            [EN] Direction of movement of the ticker text: Left - text is moving to the left, Right - text is moving to the right.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.StopOnMouseOver">
+            <summary>
+            [RU] Следует ли останавливать текст бегущей строки при наведении курсора мыши на бегущую строку.<br/>
+            [EN] Whether to stop the ticker text when you hover the mouse over the ticker.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.URLToOpenOnClick">
+            <summary>
+            [RU] URL, по которому будет производиться переход в браузере по умолчанию при клике на бегущую строку. Оставьте значение пустым, если переход по клику не требуется, либо укажите валидный URL.<br/>
+            [EN] URL to which the browser will go by default when clicking on the ticker. Leave the value blank if click-through is not required, or provide a valid URL.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.ShowTooltipWithURL">
+            <summary>
+            [RU] Нужно ли показывать всплывающую подсказку с указанным URL при наведении курсора.<br/>
+            [EN] Whether to show a tooltip with the specified URL on hover.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.BackgroundGradientStartColor">
+            <summary>
+            [RU] Начальный цвет для градиентной заливки фона бегущей строки. Используется, если свойство UseBackgroundGradient выставлено в True.<br/>
+            [EN] The start color for the gradient fill of the ticker background. Used if the UseBackgroundGradient property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.BackgroundGradientEndColor">
+            <summary>
+            [RU] Конечный цвет для градиентной заливки фона бегущей строки. Используется, если свойство UseBackgroundGradient выставлено в True.<br/>
+            [EN] The end color for the gradient fill of the ticker background. Used if the UseBackgroundGradient property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.BackgroundGradientAngle">
+            <summary>
+            [RU] Угол для градиентной заливки фона бегущей строки. Используется, если свойство UseBackgroundGradient выставлено в True.<br/>
+            [EN] Angle for gradient fill of the ticker background. Used if the UseBackgroundGradient property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.IsBackgroundGradientAngleScalable">
+            <summary>
+            [RU] Является ли угол градиента для заливки фона бегущей строки масштабируемым. Используется, если свойство UseBackgroundGradient выставлено в True.<br/>
+            [EN] Is the gradient angle for the ticker background fill scalable. Used if the UseBackgroundGradient property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.UseBackgroundGradient">
+            <summary>
+            [RU] Следует ли использовать градиентную заливку фона для бегущей строки.<br/>
+            [EN] Whether to use a gradient background fill for the ticker.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.ToolTipTitle">
+            <summary>
+            [RU] Заголовок для всплывающей подсказки при наведении курсора мыши на бегущую строку. Используется, если свойство ShowTooltipWithURL выставлено в True.<br/>
+            [EN] Title for the tooltip when hovering the mouse over the ticker. Used if the ShowTooltipWithURL property is set to True.
+            </summary>
+        </member>
+        <member name="P:AINFormControls.AINTicker.ToolTipIcon">
+            <summary>
+            [RU] Иконка, которую нужно использовать для всплывающей подсказки при наведении курсора мыши на бегущую строку. Используется, если свойство ShowTooltipWithURL выставлено в True.<br/>
+            [EN] The icon to be used for a tooltip when hovering the mouse over the ticker. Used if the ShowTooltipWithURL property is set to True.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINTicker.#ctor">
+            <summary>
+            [RU] Конструктор, создаёт экземпляр элемента AINTicker.<br/>
+            [EN] Constructor, creates an instance of the AINTicker element.
+            </summary>
+        </member>
+        <member name="F:AINFormControls.AINTicker.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:AINFormControls.AINTicker.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:AINFormControls.AINTicker.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+    </members>
+</doc>

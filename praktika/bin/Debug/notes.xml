@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ArrayOfNoteClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NoteClass>
+    <Title>ert</Title>
+    <Text>423rtwerew</Text>
+  </NoteClass>
+  <NoteClass>
+    <Title>4234</Title>
+    <Text>sdfgdsfg</Text>
+  </NoteClass>
+  <NoteClass>
+    <Title>52345</Title>
+    <Text>tewrt</Text>
+  </NoteClass>
+  <NoteClass>
+    <Title>tewrt</Title>
+    <Text>ertewrt</Text>
+  </NoteClass>
+</ArrayOfNoteClass>

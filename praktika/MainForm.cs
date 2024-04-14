@@ -1,0 +1,113 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Note;
+using System.Xml.Serialization;
+
+
+namespace praktika
+{
+    public partial class MainForm : Form
+    {
+        int id_user;
+        XmlSerializer serializer;
+        public List<NoteClass> Notes;
+        public Dictionary<int, List<NoteClass>> id_notes;
+
+        public MainForm()
+        {
+            InitializeComponent();
+            
+            Notes = new List<NoteClass>();
+            serializer = new XmlSerializer(Notes.GetType());
+        }
+
+        private void NoteBtn_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void TaskBtn_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditNote editNote = new EditNote(this);
+            editNote.Text = "Создание";
+            editNote.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+           LoadNotes();
+        }
+
+        void LoadNotes()
+        {
+            
+            using (FileStream fs = new FileStream("notes.xml", FileMode.OpenOrCreate))
+            {
+                try
+                {
+                    Notes = (List<NoteClass>)serializer.Deserialize(fs);
+                }
+                catch (InvalidOperationException ex)
+                {
+                    serializer.Serialize(fs, Notes);
+                }
+                if (Notes.Count == 0)
+                {
+                    return;
+                }
+                AddNotes();
+            }
+        }
+
+        void AddNotes()
+        {
+            foreach (NoteClass note in Notes)
+            {
+                NoteElement element = new NoteElement(note);
+                NoteTable.Controls.Add(element);
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveNotes();
+        }
+
+        void SaveNotes()
+        {
+            
+            using (FileStream fs = new FileStream("notes.xml", FileMode.Create))
+            {
+                serializer.Serialize(fs, Notes);
+            }
+
+        }
+
+        public void DeleteNoteElement(NoteElement element)
+        {
+            if (MessageBox.Show("Test", "test", MessageBoxButtons.YesNo, icon: MessageBoxIcon.Warning) != DialogResult.Yes)
+            {
+                return;
+            }
+            NoteTable.Controls.Remove(element);
+        }
+    }
+}
