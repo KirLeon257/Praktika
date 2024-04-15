@@ -31,10 +31,10 @@ namespace praktika
         {
             this.components = new System.ComponentModel.Container();
             this.TitleLable = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OptionMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1.SuspendLayout();
+            this.OptionMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleLable
@@ -47,13 +47,13 @@ namespace praktika
             this.TitleLable.TabIndex = 0;
             this.TitleLable.Text = "label1";
             // 
-            // contextMenuStrip1
+            // OptionMenuStrip
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OptionMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(129, 48);
+            this.OptionMenuStrip.Name = "contextMenuStrip1";
+            this.OptionMenuStrip.Size = new System.Drawing.Size(181, 70);
             // 
             // изменитьToolStripMenuItem
             // 
@@ -74,13 +74,13 @@ namespace praktika
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ContextMenuStrip = this.contextMenuStrip1;
+            this.ContextMenuStrip = this.OptionMenuStrip;
             this.Controls.Add(this.TitleLable);
             this.Name = "NoteElement";
             this.Size = new System.Drawing.Size(242, 131);
             this.Load += new System.EventHandler(this.NoteElement_Load);
             this.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.OptionMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,7 +89,7 @@ namespace praktika
         #endregion
 
         public System.Windows.Forms.Label TitleLable;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip OptionMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
     }

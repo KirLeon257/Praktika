@@ -38,7 +38,7 @@ namespace praktika
             if (Form != null)
             {
                 NoteClass note = new NoteClass(TitleTextBox.Text, NoteRichText.Text);
-                element = new NoteElement(note);
+                element = new NoteElement(note,Form);
                 Form.Notes.Add(note);
                 Form.NoteTable.Controls.Add(element);
                 TitleTextBox.Clear();
@@ -56,6 +56,11 @@ namespace praktika
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        public NoteElement ReturnNoteElement()
+        {
+            return element;
         }
     }
 }

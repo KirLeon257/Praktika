@@ -14,20 +14,15 @@ namespace praktika
     public partial class NoteElement : UserControl
     {
         public NoteClass note;
-        
-        public NoteElement(NoteClass note)
+        public MainForm Form;
+        public NoteElement(NoteClass note, MainForm form)
         {
             InitializeComponent();
             this.note = note;
             TitleLable.Text = note.Title;
-            
+            Form = form;
         }
 
-        public NoteClass GetNoteClass()
-        {
-            return this.note;
-            
-        }
 
         private void NoteElement_DoubleClick(object sender, EventArgs e)
         {
@@ -51,7 +46,9 @@ namespace praktika
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Form.NoteTable.Controls.Remove(this);
+            Form.Notes.Remove(this.note);
+            this.Dispose();
         }
     }
 }

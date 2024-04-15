@@ -16,10 +16,10 @@ namespace praktika
 {
     public partial class MainForm : Form
     {
-        int id_user;
+       //int id_user;
         XmlSerializer serializer;
         public List<NoteClass> Notes;
-        public Dictionary<int, List<NoteClass>> id_notes;
+       // public Dictionary<int, List<NoteClass>> id_notes;
 
         public MainForm()
         {
@@ -81,7 +81,7 @@ namespace praktika
         {
             foreach (NoteClass note in Notes)
             {
-                NoteElement element = new NoteElement(note);
+                NoteElement element = new NoteElement(note, this);
                 NoteTable.Controls.Add(element);
             }
         }
@@ -103,10 +103,7 @@ namespace praktika
 
         public void DeleteNoteElement(NoteElement element)
         {
-            if (MessageBox.Show("Test", "test", MessageBoxButtons.YesNo, icon: MessageBoxIcon.Warning) != DialogResult.Yes)
-            {
-                return;
-            }
+            
             NoteTable.Controls.Remove(element);
         }
     }

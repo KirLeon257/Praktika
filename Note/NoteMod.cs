@@ -9,6 +9,7 @@ namespace Note
     [Serializable]
     public class NoteClass
     {
+        int id_user;
         public string Title { get; set; }
         public string Text { get; set; }
 
