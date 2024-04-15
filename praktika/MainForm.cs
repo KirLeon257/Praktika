@@ -16,15 +16,15 @@ namespace praktika
 {
     public partial class MainForm : Form
     {
-       public int id_user { get;  set; }
+        public int id_user { get; set; }
         XmlSerializer serializer;
         public List<NoteClass> Notes;
-       // public Dictionary<int, List<NoteClass>> id_notes;
+
 
         public MainForm()
         {
             InitializeComponent();
-            
+
             Notes = new List<NoteClass>();
             serializer = new XmlSerializer(Notes.GetType());
         }
@@ -46,19 +46,19 @@ namespace praktika
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditNote editNote = new EditNote(this);
+            EditForm editNote = new EditForm(this);
             editNote.Text = "Создание";
             editNote.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           LoadNotes();
+            LoadNotes();
         }
 
         void LoadNotes()
         {
-            
+
             using (FileStream fs = new FileStream("notes.xml", FileMode.OpenOrCreate))
             {
                 try
@@ -79,24 +79,30 @@ namespace praktika
 
         void AddNotes()
         {
+
             foreach (NoteClass note in Notes)
             {
-                NoteElement element = new NoteElement(note, this);
-                NoteTable.Controls.Add(element);
+                if (note.id_user==id_user)
+                {
+                    NoteElement element = new NoteElement(note, this);
+                    NoteTable.Controls.Add(element);
+                }
             }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveNotes();
-            
+            Application.Exit();
+
         }
 
         void SaveNotes()
         {
-            
+
             using (FileStream fs = new FileStream("notes.xml", FileMode.Create))
             {
+
                 serializer.Serialize(fs, Notes);
             }
 
@@ -104,7 +110,7 @@ namespace praktika
 
         public void DeleteNoteElement(NoteElement element)
         {
-            
+
             NoteTable.Controls.Remove(element);
         }
     }

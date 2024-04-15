@@ -17,6 +17,7 @@ namespace praktika
         SqlConnection sqlConnection;
         SqlCommand command;
         SqlDataAdapter sqlData;
+        DataTable users;
         public AuthorizationForm()
         {
             InitializeComponent();
@@ -64,7 +65,7 @@ namespace praktika
             command.Parameters.AddWithValue("login", textBox1.Text);
             command.Parameters.AddWithValue("pwd", textBox2.Text);
             sqlData = new SqlDataAdapter(command);
-            DataTable users = new DataTable();
+            users = new DataTable();
             sqlData.Fill(users);
 
             if (users.Rows.Count != 1)
@@ -72,9 +73,7 @@ namespace praktika
                 return false;
             }
 
-            MainForm mainForm = new MainForm();
-            mainForm.id_user =(int)users.Rows[0]["id"];
-            mainForm.Show();
+            LoginUser();
             
 
             return true;
@@ -83,6 +82,28 @@ namespace praktika
         private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox2.Text.Length < 8)
+            {
+                return;
+            }
+
+            RegistrationeUser();
+        }
+
+        void RegistrationeUser()
+        {
+
+        }
+
+        void LoginUser()
+        {
+            MainForm mainForm = new MainForm();
+            mainForm.id_user = (int)users.Rows[0]["id"];
+            mainForm.Show();
         }
     }
 }

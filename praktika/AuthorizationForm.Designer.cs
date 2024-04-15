@@ -29,22 +29,18 @@ namespace praktika
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.digitalBookDataSet = new praktika.DigitalBookDataSet();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.digitalBookDataSet)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 40);
+            this.label1.Location = new System.Drawing.Point(48, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +48,7 @@ namespace praktika
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 56);
+            this.textBox1.Location = new System.Drawing.Point(48, 60);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
@@ -67,37 +63,38 @@ namespace praktika
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 91);
+            this.label2.Location = new System.Drawing.Point(48, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Pwd";
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.digitalBookDataSet;
-            this.bindingSource1.Position = 0;
-            // 
-            // digitalBookDataSet
-            // 
-            this.digitalBookDataSet.DataSetName = "DigitalBookDataSet";
-            this.digitalBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(47, 165);
+            this.button1.Location = new System.Drawing.Point(49, 165);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 30);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
+            this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(34, 201);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 27);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Зарегистрироваться";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(216, 254);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -107,8 +104,6 @@ namespace praktika
             this.Text = "AuthorizationForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AuthorizationForm_FormClosing);
             this.Load += new System.EventHandler(this.AuthorizationForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.digitalBookDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,8 +115,7 @@ namespace praktika
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private DigitalBookDataSet digitalBookDataSet;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

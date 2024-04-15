@@ -9,7 +9,7 @@ namespace Note
     [Serializable]
     public class NoteClass
     {
-        int id_user;
+        public int id_user { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
 
@@ -18,15 +18,17 @@ namespace Note
 
         }
 
-        public NoteClass(string title)
+        public NoteClass(string title, int id)
         {
             this.Title = title;
+            this.id_user = id;
         }
 
-        public NoteClass(string title, string text)
+        public NoteClass(string title, string text,int id)
         {
             this.Title = title;
             this.Text = text;
+            this.id_user = id;
         }
     }
 }

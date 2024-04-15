@@ -11,17 +11,17 @@ using Note;
 
 namespace praktika
 {
-    public partial class EditNote : Form
+    public partial class EditForm : Form
     {
         MainForm Form;
         NoteElement element;
-        public EditNote(MainForm form)
+        public EditForm(MainForm form)
         {
             InitializeComponent();
             Form = form;
         }
 
-        public EditNote(NoteElement noteElement)
+        public EditForm(NoteElement noteElement)
         {
             InitializeComponent();
             element = noteElement;
@@ -37,20 +37,11 @@ namespace praktika
 
             if (this.Text == "Создание")
             {
-                NoteClass note = new NoteClass(TitleTextBox.Text, NoteRichText.Text);
-                element = new NoteElement(note, Form);
-                Form.Notes.Add(note);
-                Form.NoteTable.Controls.Add(element);
-                TitleTextBox.Clear();
-                NoteRichText.Clear();
-                this.Hide();
+                CreateNote();
             }
             else if (this.Text == "Редактирование: ")
             {
-                element.note.Title = TitleTextBox.Text;
-                element.note.Text = NoteRichText.Text;
-                element.TitleLable.Text = element.note.Title;
-                this.Hide();
+                EditNote();
             }
         }
 
@@ -62,6 +53,25 @@ namespace praktika
         public NoteElement ReturnNoteElement()
         {
             return element;
+        }
+
+        void CreateNote()
+        {
+            NoteClass note = new NoteClass(TitleTextBox.Text, NoteRichText.Text,Form.id_user);
+            element = new NoteElement(note, Form);
+            Form.Notes.Add(note);
+            Form.NoteTable.Controls.Add(element);
+            TitleTextBox.Clear();
+            NoteRichText.Clear();
+            this.Hide();
+        }
+
+        void EditNote()
+        {
+            element.note.Title = TitleTextBox.Text;
+            element.note.Text = NoteRichText.Text;
+            element.TitleLable.Text = element.note.Title;
+            this.Hide();
         }
     }
 }

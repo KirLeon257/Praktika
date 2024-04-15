@@ -1,7 +1,7 @@
 ﻿
 namespace praktika
 {
-    partial class EditNote
+    partial class EditForm
     {
         /// <summary>
         /// Required designer variable.

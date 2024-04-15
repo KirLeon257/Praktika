@@ -27,7 +27,7 @@ namespace praktika
         private void NoteElement_DoubleClick(object sender, EventArgs e)
         {
             
-            EditNote editNote = new EditNote(this);
+            EditForm editNote = new EditForm(this);
             editNote.Text = "Редактирование: ";
             editNote.TitleTextBox.Text = this.note.Title;
             editNote.NoteRichText.Text = this.note.Text;

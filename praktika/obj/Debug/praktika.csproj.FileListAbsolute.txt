@@ -14,5 +14,5 @@ D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktik
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktika\praktika\bin\Debug\Note.dll
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktika\praktika\bin\Debug\Note.pdb
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktika\praktika\obj\Debug\praktika.MainForm.resources
-D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktika\praktika\obj\Debug\praktika.EditNote.resources
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktika\praktika\obj\Debug\praktika.AuthorizationForm.resources
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktika\praktika\obj\Debug\praktika.EditForm.resources
