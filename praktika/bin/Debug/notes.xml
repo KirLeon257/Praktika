@@ -7,7 +7,22 @@
   </NoteClass>
   <NoteClass>
     <id_user>1</id_user>
-    <Title>Настя</Title>
-    <Text>Настя</Text>
+    <Title>Тест</Title>
+    <Text>Тест</Text>
+  </NoteClass>
+  <NoteClass>
+    <id_user>1</id_user>
+    <Title>dfsgsdfgsdfgt</Title>
+    <Text>rty</Text>
+  </NoteClass>
+  <NoteClass>
+    <id_user>1</id_user>
+    <Title>wertyuiop</Title>
+    <Text>wertyuio</Text>
+  </NoteClass>
+  <NoteClass>
+    <id_user>1</id_user>
+    <Title>HDFJGKUHjlkiolp[</Title>
+    <Text>osdfih;j'okvlsjdfkvhl;ckl</Text>
   </NoteClass>
 </ArrayOfNoteClass>

@@ -46,6 +46,7 @@ namespace praktika
             this.TitleLable.Size = new System.Drawing.Size(88, 43);
             this.TitleLable.TabIndex = 0;
             this.TitleLable.Text = "label1";
+            this.TitleLable.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
             // 
             // OptionMenuStrip
             // 
@@ -53,19 +54,19 @@ namespace praktika
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.OptionMenuStrip.Name = "contextMenuStrip1";
-            this.OptionMenuStrip.Size = new System.Drawing.Size(181, 70);
+            this.OptionMenuStrip.Size = new System.Drawing.Size(129, 48);
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.NoteElement_DoubleClick);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 

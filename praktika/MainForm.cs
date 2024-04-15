@@ -53,6 +53,7 @@ namespace praktika
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.DoubleBuffered = true;
             LoadNotes();
         }
 
@@ -88,6 +89,8 @@ namespace praktika
                     NoteTable.Controls.Add(element);
                 }
             }
+
+            NoteTable.Update();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

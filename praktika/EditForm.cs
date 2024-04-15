@@ -71,6 +71,7 @@ namespace praktika
             element.note.Title = TitleTextBox.Text;
             element.note.Text = NoteRichText.Text;
             element.TitleLable.Text = element.note.Title;
+            
             this.Hide();
         }
     }

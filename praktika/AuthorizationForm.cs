@@ -61,7 +61,7 @@ namespace praktika
                 return false;
             }
 
-            command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd] = @pwd",sqlConnection);
+            command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd",sqlConnection);
             command.Parameters.AddWithValue("login", textBox1.Text);
             command.Parameters.AddWithValue("pwd", textBox2.Text);
             sqlData = new SqlDataAdapter(command);
@@ -91,12 +91,20 @@ namespace praktika
                 return;
             }
 
-            RegistrationeUser();
+            //RegistrationeUser();
         }
 
         void RegistrationeUser()
         {
+            try
+            {
+                command = new SqlCommand("");
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
         }
 
         void LoginUser()
