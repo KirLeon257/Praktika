@@ -35,16 +35,17 @@ namespace praktika
                 return;
             }
 
-            if (Form != null)
+            if (this.Text == "Создание")
             {
                 NoteClass note = new NoteClass(TitleTextBox.Text, NoteRichText.Text);
-                element = new NoteElement(note,Form);
+                element = new NoteElement(note, Form);
                 Form.Notes.Add(note);
                 Form.NoteTable.Controls.Add(element);
                 TitleTextBox.Clear();
                 NoteRichText.Clear();
                 this.Hide();
-            }else if (element != null)
+            }
+            else if (this.Text == "Редактирование: ")
             {
                 element.note.Title = TitleTextBox.Text;
                 element.note.Text = NoteRichText.Text;

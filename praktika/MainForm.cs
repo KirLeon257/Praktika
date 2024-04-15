@@ -16,7 +16,7 @@ namespace praktika
 {
     public partial class MainForm : Form
     {
-       //int id_user;
+       public int id_user { get;  set; }
         XmlSerializer serializer;
         public List<NoteClass> Notes;
        // public Dictionary<int, List<NoteClass>> id_notes;
@@ -89,6 +89,7 @@ namespace praktika
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveNotes();
+            
         }
 
         void SaveNotes()

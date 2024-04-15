@@ -1,7 +1,2 @@
 <?xml version="1.0"?>
-<ArrayOfNoteClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <NoteClass>
-    <Title>Послать Игоря</Title>
-    <Text>афваыфавАФ</Text>
-  </NoteClass>
-</ArrayOfNoteClass>
+<ArrayOfNoteClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
