@@ -15,6 +15,7 @@ namespace praktika
     {
         public NoteClass note;
         public MainForm Form;
+        EditForm editNote;
         Color DefaultColor;
         public NoteElement(NoteClass note, MainForm form)
         {
@@ -24,14 +25,16 @@ namespace praktika
             TextNoteRichTextBox.Text = note.Text;
             Form = form;
             DefaultColor = this.BackColor;
+            editNote = new EditForm(Form, this);
         }
 
 
         private void NoteElement_DoubleClick(object sender, EventArgs e)
         {
+
             
-            EditForm editNote = new EditForm(this);
-            editNote.Text = "Редактирование: ";
+            editNote.Text = "Редактирование";
+            editNote.mode = EditFormMode.Edit;
             editNote.TitleTextBox.Text = this.note.Title;
             editNote.NoteRichText.Text = this.note.Text;
             editNote.ShowDialog();
@@ -49,8 +52,7 @@ namespace praktika
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form.NoteTable.Controls.Remove(this);
-            Form.Notes.Remove(this.note);
+            Form.DeleteNoteElement(this);
             this.Dispose();
         }
 

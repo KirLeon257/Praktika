@@ -48,6 +48,7 @@ namespace praktika
         {
             
             editNote.Text = "Создание";
+            editNote.mode = EditFormMode.Create;
             editNote.Show();
         }
 
@@ -112,8 +113,13 @@ namespace praktika
 
         public void DeleteNoteElement(NoteElement element)
         {
-
+            Notes.Remove(element.note);
             NoteTable.Controls.Remove(element);
+        }
+
+        private void NoteTable_ControlAdded(object sender, ControlEventArgs e)
+        {
+            
         }
     }
 }
