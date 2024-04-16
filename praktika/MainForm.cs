@@ -9,16 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Note;
-using System.Xml.Serialization;
-
+using Newtonsoft.Json;
 
 namespace praktika
 {
     public partial class MainForm : Form
     {
-        public int id_user { get; set; }
-        XmlSerializer serializer;
+        public int id_user;
+        JsonSerializer serializer;
         public List<NoteClass> Notes;
+        Dictionary<int, List<NoteClass>> id_users;
         EditForm editNote;
 
         public MainForm()
@@ -26,12 +26,14 @@ namespace praktika
             InitializeComponent();
             editNote = new EditForm(this);
             Notes = new List<NoteClass>();
-            serializer = new XmlSerializer(Notes.GetType());
+            serializer = new JsonSerializer();
+            id_users = new Dictionary<int, List<NoteClass>>();
         }
 
         private void NoteBtn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,14 +64,16 @@ namespace praktika
             try
             {
 
-                using (FileStream fs = new FileStream("notes.xml", FileMode.Open))
+                using (JsonTextReader fs = new JsonTextReader(new StreamReader("notes.json")))
                 {
-                    Notes = (List<NoteClass>)serializer.Deserialize(fs);
-                    if (Notes.Count == 0)
+                    id_users = serializer.Deserialize<Dictionary<int, List<NoteClass>>>(fs);
+                    if (id_users == null)
                     {
+                        id_users = new Dictionary<int, List<NoteClass>>();
                         return;
                     }
                     AddNotes();
+
                 }
             }
             catch (Exception ex)
@@ -80,14 +84,15 @@ namespace praktika
 
         void AddNotes()
         {
-
+            Notes = id_users[id_user];
+            if (Notes.Count == 0)
+            {
+                return;
+            }
             foreach (NoteClass note in Notes)
             {
-                if (note.id_user == id_user)
-                {
-                    NoteElement element = new NoteElement(note, this);
-                    NoteTable.Controls.Add(element);
-                }
+                NoteElement element = new NoteElement(note, this);
+                NoteTable.Controls.Add(element);
             }
 
 
@@ -102,11 +107,18 @@ namespace praktika
 
         void SaveNotes()
         {
-
-            using (FileStream fs = new FileStream("notes.xml", FileMode.Create))
+            if (id_users.ContainsKey(id_user))
+            {
+                id_users[id_user] = Notes;
+            }
+            else
+            {
+                id_users.Add(id_user, Notes);
+            }
+            using (StreamWriter fs = new StreamWriter("notes.json"))
             {
 
-                serializer.Serialize(fs, Notes);
+                serializer.Serialize(fs, id_users);
             }
 
         }

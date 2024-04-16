@@ -40,10 +40,12 @@ namespace praktika
             // 
             // TitleLable
             // 
+            this.TitleLable.AutoEllipsis = true;
             this.TitleLable.AutoSize = true;
             this.TitleLable.BackColor = System.Drawing.Color.Snow;
             this.TitleLable.ContextMenuStrip = this.OptionMenuStrip;
             this.TitleLable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TitleLable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TitleLable.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLable.Location = new System.Drawing.Point(3, 9);
             this.TitleLable.Name = "TitleLable";
@@ -58,19 +60,19 @@ namespace praktika
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.OptionMenuStrip.Name = "contextMenuStrip1";
-            this.OptionMenuStrip.Size = new System.Drawing.Size(181, 70);
+            this.OptionMenuStrip.Size = new System.Drawing.Size(129, 48);
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
             this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить";
-            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.NoteElement_Click);
+            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.NoteElement_DoubleClick);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
@@ -103,7 +105,7 @@ namespace praktika
             this.DoubleBuffered = true;
             this.Name = "NoteElement";
             this.Size = new System.Drawing.Size(238, 146);
-            this.Click += new System.EventHandler(this.NoteElement_Click);
+            this.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
             this.OptionMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

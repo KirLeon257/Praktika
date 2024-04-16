@@ -15,8 +15,13 @@ namespace praktika
     {
         public NoteClass note;
         public MainForm Form;
-        EditForm editNote;
+        //EditForm editNote;
         Color DefaultColor;
+
+        Size EditSize, DefaultSize;
+        TextBox TitleTextBox;
+        RichTextBox NoteTextRich;
+        Button ConfirmBtn;
         public NoteElement(NoteClass note, MainForm form)
         {
             InitializeComponent();
@@ -25,18 +30,36 @@ namespace praktika
             TextNoteRichTextBox.Text = note.Text;
             Form = form;
             DefaultColor = this.BackColor;
-            editNote = new EditForm(Form, this);
+            // editNote = new EditForm(Form, this);
+            DefaultSize = Size;
+            EditSize = new Size(DefaultSize.Width, DefaultSize.Height + 50);
+            TitleTextBox = new TextBox();
+            NoteTextRich = new RichTextBox();
+            ConfirmBtn = new Button();
+            ConfirmBtn.Click += ConfirmBtn_Click;
         }
 
-        public void Update()
+        private void ConfirmBtn_Click(object sender, EventArgs e)
         {
-            TitleLable.Text = note.Title;
-        }
-
-        private void NoteElement_Load(object sender, EventArgs e)
-        {
+            if (TitleTextBox.Text.Length == 0 && NoteTextRich.Text.Length!=0)
+            {
+                note.Title = "Нет названия";
+                note.Text = NoteTextRich.Text;
+            }
+            else
+            {
+                note.Title = TitleTextBox.Text;
+                note.Text = NoteTextRich.Text;
+            }
             
+            HideEditComponents();
+            this.ValidateChildren();
+            ShowDefaultComponents();
+
+            Size = DefaultSize;
         }
+
+        
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -56,11 +79,82 @@ namespace praktika
 
         private void NoteElement_Click(object sender, EventArgs e)
         {
-            editNote.Text = "Редактирование";
-            editNote.mode = EditFormMode.Edit;
-            editNote.TitleTextBox.Text = this.note.Title;
-            editNote.NoteRichText.Text = this.note.Text;
-            editNote.ShowDialog();
+            
+        }
+
+        void HideDefaultComponents()
+        {
+            TitleLable.Hide();
+            TextNoteRichTextBox.Hide();
+        }
+
+        void ShowDefaultComponents()
+        {
+            TitleLable.Show();
+            TextNoteRichTextBox.Show();
+        }
+
+        void HideEditComponents()
+        {
+            ConfirmBtn.Hide();
+            TitleTextBox.Hide();
+            NoteTextRich.Hide();
+        }
+
+        void ShowEditComponents()
+        {
+            ConfirmBtn.Show();
+            TitleTextBox.Show();
+            NoteTextRich.Show();
+        }
+
+        private void NoteElement_DoubleClick(object sender, EventArgs e)
+        {
+            //editNote.Text = "Редактирование";
+            //editNote.mode = EditFormMode.Edit;
+            //editNote.TitleTextBox.Text = this.note.Title;
+            //editNote.NoteRichText.Text = this.note.Text;
+            //editNote.ShowDialog();
+            if (Controls.Contains(ConfirmBtn) && Controls.Contains(NoteTextRich) && Controls.Contains(TitleTextBox))
+            {
+                HideDefaultComponents();
+                ShowEditComponents();
+                Size = EditSize;
+
+                TitleTextBox.Text = note.Title;
+                NoteTextRich.Text = note.Text;
+                return;
+            }
+            CreatEditComponents();
+            TitleTextBox.Text = TitleLable.Text;
+            NoteTextRich.Text = TextNoteRichTextBox.Text;
+        }
+
+        void CreatEditComponents()
+        {
+            Size = EditSize;
+            TitleTextBox.Location = TitleLable.Location;
+            if (TitleLable.Size.Width > Size.Width)
+            {
+                TitleTextBox.Size = new Size(Size.Height, Size.Width - 10);
+            }
+            else
+            {
+                TitleTextBox.Size = new Size(200, TitleLable.Size.Width);
+            }
+            TitleLable.Visible = false;
+
+            NoteTextRich.Location = TextNoteRichTextBox.Location;
+            NoteTextRich.Size = TextNoteRichTextBox.Size;
+            TextNoteRichTextBox.Visible = false;
+
+            ConfirmBtn.Location = new Point(NoteTextRich.Location.X, NoteTextRich.Location.Y + NoteTextRich.Size.Height + 30);
+            ConfirmBtn.Size = new Size(100, 35);
+            ConfirmBtn.Text = "Изменить";
+
+            Controls.Add(TitleTextBox);
+            Controls.Add(NoteTextRich);
+            Controls.Add(ConfirmBtn);
         }
     }
 }
