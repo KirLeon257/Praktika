@@ -29,12 +29,6 @@ namespace praktika
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (TitleTextBox.Text == "")
-            {
-                MessageBox.Show("Введите название заметки!");
-                return;
-            }
-
             if (this.Text == "Создание")
             {
                 CreateNote();
@@ -57,7 +51,13 @@ namespace praktika
 
         void CreateNote()
         {
-            NoteClass note = new NoteClass(TitleTextBox.Text, NoteRichText.Text,Form.id_user);
+            if (TitleTextBox.Text == "" && NoteRichText.Text == "")
+            {
+                new Task(ShowMsg).Start();
+                this.Hide();
+                return;
+            }
+            NoteClass note = new NoteClass(TitleTextBox.Text, NoteRichText.Text, Form.id_user);
             element = new NoteElement(note, Form);
             Form.Notes.Add(note);
             Form.NoteTable.Controls.Add(element);
@@ -71,8 +71,14 @@ namespace praktika
             element.note.Title = TitleTextBox.Text;
             element.note.Text = NoteRichText.Text;
             element.TitleLable.Text = element.note.Title;
-            
+            element.TextNoteRichTextBox.Text = element.note.Text;
+
             this.Hide();
+        }
+
+        void ShowMsg()
+        {
+            MessageBox.Show("Ничего не изменилось :(");
         }
     }
 }

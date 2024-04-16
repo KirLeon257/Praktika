@@ -44,6 +44,13 @@ namespace praktika
                 {
                     throw new FormatException("Введите корректные данные!");
                 }
+
+                if (!LoginUser())
+                {
+                    MessageBox.Show("Неверный логин и/или пароль!");
+                    return;
+                }
+
                 this.Hide();
 
             }
@@ -60,22 +67,7 @@ namespace praktika
             {
                 return false;
             }
-
-            command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd",sqlConnection);
-            command.Parameters.AddWithValue("login", textBox1.Text);
-            command.Parameters.AddWithValue("pwd", textBox2.Text);
-            sqlData = new SqlDataAdapter(command);
-            users = new DataTable();
-            sqlData.Fill(users);
-
-            if (users.Rows.Count != 1)
-            {
-                return false;
-            }
-
-            LoginUser();
-            
-
+           
             return true;
         }
 
@@ -107,11 +99,32 @@ namespace praktika
             }
         }
 
-        void LoginUser()
+        bool LoginUser()
         {
-            MainForm mainForm = new MainForm();
-            mainForm.id_user = (int)users.Rows[0]["id"];
-            mainForm.Show();
+            try
+            {
+                command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
+                command.Parameters.AddWithValue("login", textBox1.Text);
+                command.Parameters.AddWithValue("pwd", textBox2.Text);
+                sqlData = new SqlDataAdapter(command);
+                users = new DataTable();
+                sqlData.Fill(users);
+
+                if (users.Rows.Count != 1)
+                {
+                    return false;
+                }
+
+                MainForm mainForm = new MainForm();
+                mainForm.id_user = (int)users.Rows[0]["id"];
+                mainForm.Show();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

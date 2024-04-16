@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfNoteClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NoteClass>
+    <id_user>1</id_user>
+    <Title>JDGHdfkjgh</Title>
+    <Text>dfs;uglk;dfjlkg</Text>
+  </NoteClass>
+  <NoteClass>
+    <id_user>1</id_user>
+    <Title>dgsdfg</Title>
+    <Text>sdfgsdfg</Text>
+  </NoteClass>
+</ArrayOfNoteClass>

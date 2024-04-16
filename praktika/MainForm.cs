@@ -19,12 +19,12 @@ namespace praktika
         public int id_user { get; set; }
         XmlSerializer serializer;
         public List<NoteClass> Notes;
-
+        EditForm editNote;
 
         public MainForm()
         {
             InitializeComponent();
-
+            editNote = new EditForm(this);
             Notes = new List<NoteClass>();
             serializer = new XmlSerializer(Notes.GetType());
         }
@@ -46,14 +46,13 @@ namespace praktika
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditForm editNote = new EditForm(this);
+            
             editNote.Text = "Создание";
             editNote.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.DoubleBuffered = true;
             LoadNotes();
         }
 
@@ -90,7 +89,7 @@ namespace praktika
                 }
             }
 
-            NoteTable.Update();
+            
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -34,19 +34,23 @@ namespace praktika
             this.OptionMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TextNoteRichTextBox = new System.Windows.Forms.RichTextBox();
             this.OptionMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleLable
             // 
             this.TitleLable.AutoSize = true;
-            this.TitleLable.Font = new System.Drawing.Font("Myanmar Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLable.Location = new System.Drawing.Point(12, 34);
+            this.TitleLable.BackColor = System.Drawing.Color.Snow;
+            this.TitleLable.ContextMenuStrip = this.OptionMenuStrip;
+            this.TitleLable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TitleLable.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLable.Location = new System.Drawing.Point(3, 9);
             this.TitleLable.Name = "TitleLable";
-            this.TitleLable.Size = new System.Drawing.Size(88, 43);
+            this.TitleLable.Size = new System.Drawing.Size(72, 28);
             this.TitleLable.TabIndex = 0;
             this.TitleLable.Text = "label1";
-            this.TitleLable.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
+            this.TitleLable.Click += new System.EventHandler(this.NoteElement_DoubleClick);
             // 
             // OptionMenuStrip
             // 
@@ -70,17 +74,37 @@ namespace praktika
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
+            // TextNoteRichTextBox
+            // 
+            this.TextNoteRichTextBox.BackColor = System.Drawing.Color.Coral;
+            this.TextNoteRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextNoteRichTextBox.ContextMenuStrip = this.OptionMenuStrip;
+            this.TextNoteRichTextBox.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextNoteRichTextBox.Location = new System.Drawing.Point(8, 56);
+            this.TextNoteRichTextBox.Multiline = false;
+            this.TextNoteRichTextBox.Name = "TextNoteRichTextBox";
+            this.TextNoteRichTextBox.ReadOnly = true;
+            this.TextNoteRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TextNoteRichTextBox.Size = new System.Drawing.Size(218, 72);
+            this.TextNoteRichTextBox.TabIndex = 1;
+            this.TextNoteRichTextBox.Text = "";
+            this.TextNoteRichTextBox.ZoomFactor = 1.5F;
+            this.TextNoteRichTextBox.Click += new System.EventHandler(this.NoteElement_DoubleClick);
+            // 
             // NoteElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.Coral;
             this.ContextMenuStrip = this.OptionMenuStrip;
+            this.Controls.Add(this.TextNoteRichTextBox);
             this.Controls.Add(this.TitleLable);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DoubleBuffered = true;
             this.Name = "NoteElement";
-            this.Size = new System.Drawing.Size(242, 131);
+            this.Size = new System.Drawing.Size(238, 146);
             this.Load += new System.EventHandler(this.NoteElement_Load);
-            this.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
+            this.Click += new System.EventHandler(this.NoteElement_DoubleClick);
             this.OptionMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -93,5 +117,6 @@ namespace praktika
         private System.Windows.Forms.ContextMenuStrip OptionMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
+        public System.Windows.Forms.RichTextBox TextNoteRichTextBox;
     }
 }

@@ -31,7 +31,7 @@ namespace praktika
         {
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.NoteRichText = new System.Windows.Forms.RichTextBox();
-            this.OKBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -50,15 +50,15 @@ namespace praktika
             this.NoteRichText.TabIndex = 1;
             this.NoteRichText.Text = "";
             // 
-            // OKBtn
+            // AddBtn
             // 
-            this.OKBtn.Location = new System.Drawing.Point(26, 244);
-            this.OKBtn.Name = "OKBtn";
-            this.OKBtn.Size = new System.Drawing.Size(102, 23);
-            this.OKBtn.TabIndex = 2;
-            this.OKBtn.Text = "Добавить";
-            this.OKBtn.UseVisualStyleBackColor = true;
-            this.OKBtn.Click += new System.EventHandler(this.button1_Click);
+            this.AddBtn.Location = new System.Drawing.Point(26, 244);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(102, 23);
+            this.AddBtn.TabIndex = 2;
+            this.AddBtn.Text = "Добавить";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // CancelBtn
             // 
@@ -70,17 +70,18 @@ namespace praktika
             this.CancelBtn.UseVisualStyleBackColor = true;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
-            // EditNote
+            // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 301);
             this.ControlBox = false;
             this.Controls.Add(this.CancelBtn);
-            this.Controls.Add(this.OKBtn);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.NoteRichText);
             this.Controls.Add(this.TitleTextBox);
-            this.Name = "EditNote";
+            this.DoubleBuffered = true;
+            this.Name = "EditForm";
             this.Text = "EditNote";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -88,7 +89,7 @@ namespace praktika
         }
 
         #endregion
-        private System.Windows.Forms.Button OKBtn;
+        private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button CancelBtn;
         public System.Windows.Forms.TextBox TitleTextBox;
         public System.Windows.Forms.RichTextBox NoteRichText;

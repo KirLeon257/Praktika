@@ -15,12 +15,15 @@ namespace praktika
     {
         public NoteClass note;
         public MainForm Form;
+        Color DefaultColor;
         public NoteElement(NoteClass note, MainForm form)
         {
             InitializeComponent();
             this.note = note;
             TitleLable.Text = note.Title;
+            TextNoteRichTextBox.Text = note.Text;
             Form = form;
+            DefaultColor = this.BackColor;
         }
 
 
@@ -49,6 +52,16 @@ namespace praktika
             Form.NoteTable.Controls.Remove(this);
             Form.Notes.Remove(this.note);
             this.Dispose();
+        }
+
+        private void NoteElement_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Color.OrangeRed;
+        }
+
+        private void NoteElement_MouseLeave(object sender, EventArgs e)
+        {
+            BackColor = DefaultColor;
         }
     }
 }
