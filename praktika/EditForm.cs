@@ -17,8 +17,8 @@ namespace praktika
         Create = 1,
         Edit = 2
     }
-        
-        
+
+
     public partial class EditForm : Form
     {
         MainForm Form;
@@ -39,11 +39,11 @@ namespace praktika
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (mode==EditFormMode.Create)
+            if (mode == EditFormMode.Create)
             {
                 CreateNote();
             }
-            else if (mode==EditFormMode.Edit)
+            else if (mode == EditFormMode.Edit)
             {
                 EditNote();
             }
@@ -80,13 +80,15 @@ namespace praktika
 
         void EditNote()
         {
+
             Form.NoteTable.SuspendLayout();
             element.note.Title = TitleTextBox.Text;
             element.note.Text = NoteRichText.Text;
             element.TitleLable.Text = element.note.Title;
             element.TextNoteRichTextBox.Text = element.note.Text;
-            Form.NoteTable.ResumeLayout();
+            Form.NoteTable.ResumeLayout(true);
             this.Hide();
+
         }
 
         void ShowMsg()

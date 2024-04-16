@@ -46,7 +46,7 @@ namespace praktika
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             editNote.Text = "Создание";
             editNote.mode = EditFormMode.Create;
             editNote.Show();
@@ -59,22 +59,22 @@ namespace praktika
 
         void LoadNotes()
         {
-
-            using (FileStream fs = new FileStream("notes.xml", FileMode.OpenOrCreate))
+            try
             {
-                try
+
+                using (FileStream fs = new FileStream("notes.xml", FileMode.Open))
                 {
                     Notes = (List<NoteClass>)serializer.Deserialize(fs);
+                    if (Notes.Count == 0)
+                    {
+                        return;
+                    }
+                    AddNotes();
                 }
-                catch (InvalidOperationException ex)
-                {
-                    serializer.Serialize(fs, Notes);
-                }
-                if (Notes.Count == 0)
-                {
-                    return;
-                }
-                AddNotes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.HResult.ToString());
             }
         }
 
@@ -83,14 +83,14 @@ namespace praktika
 
             foreach (NoteClass note in Notes)
             {
-                if (note.id_user==id_user)
+                if (note.id_user == id_user)
                 {
                     NoteElement element = new NoteElement(note, this);
                     NoteTable.Controls.Add(element);
                 }
             }
 
-            
+
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -115,11 +115,6 @@ namespace praktika
         {
             Notes.Remove(element.note);
             NoteTable.Controls.Remove(element);
-        }
-
-        private void NoteTable_ControlAdded(object sender, ControlEventArgs e)
-        {
-            
         }
     }
 }

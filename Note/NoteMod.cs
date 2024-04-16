@@ -20,15 +20,15 @@ namespace Note
 
         public NoteClass(string title, int id)
         {
-            this.Title = title;
-            this.id_user = id;
+            Title = title;
+            id_user = id;
         }
 
         public NoteClass(string title, string text,int id)
         {
-            this.Title = title;
-            this.Text = text;
-            this.id_user = id;
+            Title = title;
+            Text = text;
+            id_user = id;
         }
     }
 }

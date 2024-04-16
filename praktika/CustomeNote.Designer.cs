@@ -50,7 +50,7 @@ namespace praktika
             this.TitleLable.Size = new System.Drawing.Size(72, 28);
             this.TitleLable.TabIndex = 0;
             this.TitleLable.Text = "label1";
-            this.TitleLable.Click += new System.EventHandler(this.NoteElement_DoubleClick);
+            this.TitleLable.Click += new System.EventHandler(this.NoteElement_Click);
             // 
             // OptionMenuStrip
             // 
@@ -58,19 +58,19 @@ namespace praktika
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.OptionMenuStrip.Name = "contextMenuStrip1";
-            this.OptionMenuStrip.Size = new System.Drawing.Size(129, 48);
+            this.OptionMenuStrip.Size = new System.Drawing.Size(181, 70);
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить";
-            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.NoteElement_DoubleClick);
+            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.NoteElement_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
@@ -89,7 +89,7 @@ namespace praktika
             this.TextNoteRichTextBox.TabIndex = 1;
             this.TextNoteRichTextBox.Text = "";
             this.TextNoteRichTextBox.ZoomFactor = 1.5F;
-            this.TextNoteRichTextBox.Click += new System.EventHandler(this.NoteElement_DoubleClick);
+            this.TextNoteRichTextBox.Click += new System.EventHandler(this.NoteElement_Click);
             // 
             // NoteElement
             // 
@@ -103,8 +103,7 @@ namespace praktika
             this.DoubleBuffered = true;
             this.Name = "NoteElement";
             this.Size = new System.Drawing.Size(238, 146);
-            this.Load += new System.EventHandler(this.NoteElement_Load);
-            this.Click += new System.EventHandler(this.NoteElement_DoubleClick);
+            this.Click += new System.EventHandler(this.NoteElement_Click);
             this.OptionMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

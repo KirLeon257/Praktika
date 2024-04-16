@@ -28,18 +28,6 @@ namespace praktika
             editNote = new EditForm(Form, this);
         }
 
-
-        private void NoteElement_DoubleClick(object sender, EventArgs e)
-        {
-
-            
-            editNote.Text = "Редактирование";
-            editNote.mode = EditFormMode.Edit;
-            editNote.TitleTextBox.Text = this.note.Title;
-            editNote.NoteRichText.Text = this.note.Text;
-            editNote.ShowDialog();
-        }
-
         public void Update()
         {
             TitleLable.Text = note.Title;
@@ -64,6 +52,15 @@ namespace praktika
         private void NoteElement_MouseLeave(object sender, EventArgs e)
         {
             BackColor = DefaultColor;
+        }
+
+        private void NoteElement_Click(object sender, EventArgs e)
+        {
+            editNote.Text = "Редактирование";
+            editNote.mode = EditFormMode.Edit;
+            editNote.TitleTextBox.Text = this.note.Title;
+            editNote.NoteRichText.Text = this.note.Text;
+            editNote.ShowDialog();
         }
     }
 }

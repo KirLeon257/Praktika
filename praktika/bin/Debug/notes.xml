@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ArrayOfNoteClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <NoteClass>
-    <id_user>0</id_user>
-    <Title>Настя</Title>
-    <Text>НАстя</Text>
+    <id_user>1</id_user>
+    <Title>4234</Title>
+    <Text>gfhjhgjhgdfg</Text>
   </NoteClass>
 </ArrayOfNoteClass>

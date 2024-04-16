@@ -139,7 +139,6 @@ namespace praktika
             this.NoteTable.Name = "NoteTable";
             this.NoteTable.Size = new System.Drawing.Size(617, 389);
             this.NoteTable.TabIndex = 2;
-            this.NoteTable.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.NoteTable_ControlAdded);
             // 
             // NotesMenuStrip1
             // 
