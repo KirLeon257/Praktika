@@ -15,7 +15,6 @@ namespace praktika
     {
         public NoteClass note;
         public MainForm Form;
-        //EditForm editNote;
         Color DefaultColor;
 
         Size EditSize, DefaultSize;
@@ -30,7 +29,6 @@ namespace praktika
             TextNoteRichTextBox.Text = note.Text;
             Form = form;
             DefaultColor = this.BackColor;
-            // editNote = new EditForm(Form, this);
             DefaultSize = Size;
             EditSize = new Size(DefaultSize.Width, DefaultSize.Height + 50);
             TitleTextBox = new TextBox();
@@ -53,7 +51,7 @@ namespace praktika
                 note.Text = NoteTextRich.Text;
                 ExceptChanges();
             }
-            else
+            else if(TitleTextBox.Text.Length == 0 && NoteTextRich.Text.Length == 0)
             {
                 if (MessageBox.Show($"Вы хотите удалить заметку {TitleLable.Text}", "Предупреждение", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
@@ -62,7 +60,6 @@ namespace praktika
             }
             
             HideEditComponents();
-            //this.ValidateChildren();
             ShowDefaultComponents();
 
             Size = DefaultSize;
@@ -86,10 +83,7 @@ namespace praktika
             BackColor = DefaultColor;
         }
 
-        private void NoteElement_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         void HideDefaultComponents()
         {
@@ -119,11 +113,6 @@ namespace praktika
 
         private void NoteElement_DoubleClick(object sender, EventArgs e)
         {
-            //editNote.Text = "Редактирование";
-            //editNote.mode = EditFormMode.Edit;
-            //editNote.TitleTextBox.Text = this.note.Title;
-            //editNote.NoteRichText.Text = this.note.Text;
-            //editNote.ShowDialog();
             if (Controls.Contains(ConfirmBtn) && Controls.Contains(NoteTextRich) && Controls.Contains(TitleTextBox))
             {
                 HideDefaultComponents();

@@ -9,7 +9,7 @@ namespace Note
     [Serializable]
     public class NoteClass
     {
-        public int id_user { get; set; }
+
         public string Title { get; set; }
         public string Text { get; set; }
 
@@ -18,17 +18,24 @@ namespace Note
 
         }
 
-        public NoteClass(string title, int id)
+        public NoteClass(string text)
         {
-            Title = title;
-            id_user = id;
+            Text = text;
+            Title = "Нет названия";
         }
 
-        public NoteClass(string title, string text,int id)
+        public NoteClass(string text, string title)
         {
-            Title = title;
+            if (title == "")
+            {
+                Title = "Нет названия";
+            }
+            else
+            {
+                Title = title;
+            }
             Text = text;
-            id_user = id;
+
         }
     }
 }

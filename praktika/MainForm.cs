@@ -18,7 +18,7 @@ namespace praktika
         public int id_user;
         JsonSerializer serializer;
         public List<NoteClass> Notes;
-        Dictionary<int, List<NoteClass>> id_users;
+        Dictionary<int, List<NoteClass>> DicUsers;
         EditForm editNote;
 
         public MainForm()
@@ -27,7 +27,7 @@ namespace praktika
             editNote = new EditForm(this);
             Notes = new List<NoteClass>();
             serializer = new JsonSerializer();
-            id_users = new Dictionary<int, List<NoteClass>>();
+            DicUsers = new Dictionary<int, List<NoteClass>>();
         }
 
         private void NoteBtn_Click(object sender, EventArgs e)
@@ -66,10 +66,10 @@ namespace praktika
 
                 using (JsonTextReader fs = new JsonTextReader(new StreamReader("notes.json")))
                 {
-                    id_users = serializer.Deserialize<Dictionary<int, List<NoteClass>>>(fs);
-                    if (id_users == null)
+                    DicUsers = serializer.Deserialize<Dictionary<int, List<NoteClass>>>(fs);
+                    if (DicUsers == null)
                     {
-                        id_users = new Dictionary<int, List<NoteClass>>();
+                        DicUsers = new Dictionary<int, List<NoteClass>>();
                         return;
                     }
                     AddNotes();
@@ -84,7 +84,7 @@ namespace praktika
 
         void AddNotes()
         {
-            Notes = id_users[id_user];
+            Notes = DicUsers[id_user];
             if (Notes.Count == 0)
             {
                 return;
@@ -107,18 +107,18 @@ namespace praktika
 
         void SaveNotes()
         {
-            if (id_users.ContainsKey(id_user))
+            if (DicUsers.ContainsKey(id_user))
             {
-                id_users[id_user] = Notes;
+                DicUsers[id_user] = Notes;
             }
             else
             {
-                id_users.Add(id_user, Notes);
+                DicUsers.Add(id_user, Notes);
             }
             using (StreamWriter fs = new StreamWriter("notes.json"))
             {
 
-                serializer.Serialize(fs, id_users);
+                serializer.Serialize(fs, DicUsers);
             }
 
         }

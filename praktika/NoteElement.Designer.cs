@@ -52,7 +52,7 @@ namespace praktika
             this.TitleLable.Size = new System.Drawing.Size(72, 28);
             this.TitleLable.TabIndex = 0;
             this.TitleLable.Text = "label1";
-            this.TitleLable.Click += new System.EventHandler(this.NoteElement_Click);
+            this.TitleLable.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
             // 
             // OptionMenuStrip
             // 
@@ -78,9 +78,10 @@ namespace praktika
             // 
             // TextNoteRichTextBox
             // 
-            this.TextNoteRichTextBox.BackColor = System.Drawing.Color.Coral;
-            this.TextNoteRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextNoteRichTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TextNoteRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextNoteRichTextBox.ContextMenuStrip = this.OptionMenuStrip;
+            this.TextNoteRichTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TextNoteRichTextBox.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextNoteRichTextBox.Location = new System.Drawing.Point(8, 56);
             this.TextNoteRichTextBox.Name = "TextNoteRichTextBox";
@@ -90,7 +91,7 @@ namespace praktika
             this.TextNoteRichTextBox.TabIndex = 1;
             this.TextNoteRichTextBox.Text = "";
             this.TextNoteRichTextBox.ZoomFactor = 1.2F;
-            this.TextNoteRichTextBox.Click += new System.EventHandler(this.NoteElement_Click);
+            this.TextNoteRichTextBox.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
             // 
             // NoteElement
             // 

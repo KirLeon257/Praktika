@@ -67,14 +67,9 @@ namespace praktika
                 this.Hide();
                 return;
             }
-            NoteClass note = new NoteClass(TitleTextBox.Text, NoteRichText.Text, Form.id_user);
+            NoteClass note = new NoteClass(NoteRichText.Text, TitleTextBox.Text);
             element = new NoteElement(note, Form);
-            Form.Notes.Add(note);
-            Form.NoteTable.SuspendLayout();
-            Form.NoteTable.Controls.Add(element);
-            Form.NoteTable.ResumeLayout(true);
-            TitleTextBox.Clear();
-            NoteRichText.Clear();
+            InsertElement(element,note);
             this.Hide();
         }
 
@@ -94,6 +89,17 @@ namespace praktika
         void ShowMsg()
         {
             MessageBox.Show("Ничего не изменилось :(");
+        }
+
+        void InsertElement(NoteElement element,NoteClass note)
+        {
+            Form.Notes.Insert(0, note);
+            Form.NoteTable.SuspendLayout();
+            Form.NoteTable.Controls.Add(element);
+            Form.NoteTable.Controls.SetChildIndex(element, 0);
+            Form.NoteTable.ResumeLayout(true);
+            TitleTextBox.Clear();
+            NoteRichText.Clear();
         }
     }
 }
