@@ -30,9 +30,13 @@ namespace praktika
             {
                 sqlConnection.Open();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Data.ToString());
+                if(ex.ErrorCode == -2146232060)
+                {
+                    MessageBox.Show("Упс... Нет подключения... Я так не могу работать =(");
+                    Application.Exit();
+                }
             }
         }
 
@@ -120,10 +124,11 @@ namespace praktika
                 mainForm.Show();
                 return true;
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message + ex.ErrorCode.ToString());
+                return false;
             }
         }
     }

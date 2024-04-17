@@ -75,11 +75,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomeNote.cs">
+    <Compile Include="NoteElement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomeNote.Designer.cs">
-      <DependentUpon>CustomeNote.cs</DependentUpon>
+    <Compile Include="NoteElement.Designer.cs">
+      <DependentUpon>NoteElement.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,8 +92,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomeNote.resx">
-      <DependentUpon>CustomeNote.cs</DependentUpon>
+    <EmbeddedResource Include="NoteElement.resx">
+      <DependentUpon>NoteElement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -42,7 +42,7 @@ namespace praktika
             // 
             this.TitleLable.AutoEllipsis = true;
             this.TitleLable.AutoSize = true;
-            this.TitleLable.BackColor = System.Drawing.Color.Snow;
+            this.TitleLable.BackColor = System.Drawing.Color.MistyRose;
             this.TitleLable.ContextMenuStrip = this.OptionMenuStrip;
             this.TitleLable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TitleLable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -65,7 +65,7 @@ namespace praktika
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.NoteElement_DoubleClick);
             // 
@@ -83,14 +83,13 @@ namespace praktika
             this.TextNoteRichTextBox.ContextMenuStrip = this.OptionMenuStrip;
             this.TextNoteRichTextBox.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextNoteRichTextBox.Location = new System.Drawing.Point(8, 56);
-            this.TextNoteRichTextBox.Multiline = false;
             this.TextNoteRichTextBox.Name = "TextNoteRichTextBox";
             this.TextNoteRichTextBox.ReadOnly = true;
             this.TextNoteRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.TextNoteRichTextBox.Size = new System.Drawing.Size(218, 72);
             this.TextNoteRichTextBox.TabIndex = 1;
             this.TextNoteRichTextBox.Text = "";
-            this.TextNoteRichTextBox.ZoomFactor = 1.5F;
+            this.TextNoteRichTextBox.ZoomFactor = 1.2F;
             this.TextNoteRichTextBox.Click += new System.EventHandler(this.NoteElement_Click);
             // 
             // NoteElement
@@ -98,13 +97,15 @@ namespace praktika
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ContextMenuStrip = this.OptionMenuStrip;
             this.Controls.Add(this.TextNoteRichTextBox);
             this.Controls.Add(this.TitleLable);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;
             this.Name = "NoteElement";
-            this.Size = new System.Drawing.Size(238, 146);
+            this.Size = new System.Drawing.Size(234, 142);
             this.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
             this.OptionMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
