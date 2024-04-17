@@ -21,6 +21,7 @@ namespace praktika
         public AuthorizationForm()
         {
             InitializeComponent();
+            sqlData = new SqlDataAdapter();
         }
 
         private void AuthorizationForm_Load(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace praktika
             }
             catch (SqlException ex)
             {
-                if(ex.ErrorCode == -2146232060)
+                if (ex.ErrorCode == -2146232060)
                 {
                     MessageBox.Show("Упс... Нет подключения... Я так не могу работать =(");
                     Application.Exit();
@@ -67,11 +68,11 @@ namespace praktika
 
         bool CheckValidation()
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox2.Text.Length < 8)
+            if (LoginTextBox.Text == "" || PwdTextBox.Text == "" || PwdTextBox.Text.Length < 8)
             {
                 return false;
             }
-           
+
             return true;
         }
 
@@ -82,19 +83,36 @@ namespace praktika
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox2.Text.Length < 8)
+            if (LoginTextBox.Text == "" || PwdTextBox.Text == "" || PwdTextBox.Text.Length < 8)
             {
+                MessageBox.Show("Введите данные для регистрации");
                 return;
             }
 
-            //RegistrationeUser();
+            RegistrationeUser();
         }
 
         void RegistrationeUser()
         {
             try
             {
-                command = new SqlCommand("");
+                command = new SqlCommand("INSERT INTO [users]([login],[pwd]) VALUES (@login,@pwd)", sqlConnection);
+                command.Parameters.AddWithValue("login", LoginTextBox.Text);
+                command.Parameters.AddWithValue("pwd", PwdTextBox.Text);
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    int NewUserId = GetUserId(LoginTextBox.Text, PwdTextBox.Text);
+                    if (NewUserId == -1)
+                    {
+                        MessageBox.Show("Регистрация завершилась с ошибкой");
+                        return;
+                    }
+
+                    MainForm mainForm = new MainForm();
+                    mainForm.id_user = NewUserId;
+                    mainForm.Show();
+                    this.Hide();
+                }
             }
             catch (Exception)
             {
@@ -107,9 +125,9 @@ namespace praktika
         {
             try
             {
-                command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
-                command.Parameters.AddWithValue("login", textBox1.Text);
-                command.Parameters.AddWithValue("pwd", textBox2.Text);
+                command = new SqlCommand("SELECT * FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
+                command.Parameters.AddWithValue("login", LoginTextBox.Text);
+                command.Parameters.AddWithValue("pwd", PwdTextBox.Text);
                 sqlData = new SqlDataAdapter(command);
                 users = new DataTable();
                 sqlData.Fill(users);
@@ -121,6 +139,7 @@ namespace praktika
 
                 MainForm mainForm = new MainForm();
                 mainForm.id_user = (int)users.Rows[0]["id"];
+                mainForm.UserLogin = (string)users.Rows[0]["login"];
                 mainForm.Show();
                 return true;
             }
@@ -129,6 +148,32 @@ namespace praktika
 
                 MessageBox.Show(ex.Message + ex.ErrorCode.ToString());
                 return false;
+            }
+        }
+
+
+        int GetUserId(string login, string pwd)
+        {
+            try
+            {
+                command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
+                command.Parameters.AddWithValue("login", login);
+                command.Parameters.AddWithValue("pwd", pwd);
+                sqlData.SelectCommand = command;
+                users = new DataTable();
+                sqlData.Fill(users);
+
+                if (users.Rows.Count != 1)
+                {
+                    return -1;
+                }
+
+                return (int)users.Rows[0]["id"];
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

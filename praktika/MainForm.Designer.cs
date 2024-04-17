@@ -30,6 +30,8 @@ namespace praktika
         private void InitializeComponent()
         {
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TaskBtn = new System.Windows.Forms.Button();
             this.RemindBtn = new System.Windows.Forms.Button();
@@ -44,6 +46,7 @@ namespace praktika
             this.TaskPage = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.MenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.NotePage.SuspendLayout();
             this.NotesMenuStrip1.SuspendLayout();
@@ -54,6 +57,8 @@ namespace praktika
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.MenuPanel.Controls.Add(this.UserNameLabel);
+            this.MenuPanel.Controls.Add(this.pictureBox1);
             this.MenuPanel.Controls.Add(this.label1);
             this.MenuPanel.Controls.Add(this.TaskBtn);
             this.MenuPanel.Controls.Add(this.RemindBtn);
@@ -63,6 +68,26 @@ namespace praktika
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(169, 450);
             this.MenuPanel.TabIndex = 0;
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.Location = new System.Drawing.Point(44, 125);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(70, 25);
+            this.UserNameLabel.TabIndex = 5;
+            this.UserNameLabel.Text = "label4";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::praktika.Properties.Resources.avatardefault_92824__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -76,7 +101,7 @@ namespace praktika
             // 
             // TaskBtn
             // 
-            this.TaskBtn.Location = new System.Drawing.Point(37, 252);
+            this.TaskBtn.Location = new System.Drawing.Point(36, 317);
             this.TaskBtn.Name = "TaskBtn";
             this.TaskBtn.Size = new System.Drawing.Size(94, 35);
             this.TaskBtn.TabIndex = 2;
@@ -86,7 +111,7 @@ namespace praktika
             // 
             // RemindBtn
             // 
-            this.RemindBtn.Location = new System.Drawing.Point(37, 193);
+            this.RemindBtn.Location = new System.Drawing.Point(36, 258);
             this.RemindBtn.Name = "RemindBtn";
             this.RemindBtn.Size = new System.Drawing.Size(94, 35);
             this.RemindBtn.TabIndex = 1;
@@ -96,7 +121,7 @@ namespace praktika
             // 
             // NoteBtn
             // 
-            this.NoteBtn.Location = new System.Drawing.Point(37, 136);
+            this.NoteBtn.Location = new System.Drawing.Point(36, 201);
             this.NoteBtn.Name = "NoteBtn";
             this.NoteBtn.Size = new System.Drawing.Size(94, 35);
             this.NoteBtn.TabIndex = 0;
@@ -213,6 +238,7 @@ namespace praktika
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuPanel.ResumeLayout(false);
             this.MenuPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.NotePage.ResumeLayout(false);
             this.NotePage.PerformLayout();
@@ -242,6 +268,8 @@ namespace praktika
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.FlowLayoutPanel NoteTable;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label UserNameLabel;
     }
 }
 

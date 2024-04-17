@@ -15,12 +15,12 @@ namespace praktika
 {
     public partial class MainForm : Form
     {
-        public int id_user;
+        public int id_user { get; set; }
         JsonSerializer serializer;
         public List<NoteClass> Notes;
         Dictionary<int, List<NoteClass>> DicUsers;
         EditForm editNote;
-
+        public string UserLogin { get; set; }
         public MainForm()
         {
             InitializeComponent();
@@ -57,6 +57,7 @@ namespace praktika
         private void MainForm_Load(object sender, EventArgs e)
         {
             LoadNotes();
+            UserNameLabel.Text = UserLogin;
         }
 
         void LoadNotes()
