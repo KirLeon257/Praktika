@@ -101,17 +101,11 @@ namespace praktika
                 command.Parameters.AddWithValue("pwd", PwdTextBox.Text);
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    int NewUserId = GetUserId(LoginTextBox.Text, PwdTextBox.Text);
-                    if (NewUserId == -1)
+                    if (LoginUser())
                     {
-                        MessageBox.Show("Регистрация завершилась с ошибкой");
-                        return;
+                        this.Hide();
                     }
-
-                    MainForm mainForm = new MainForm();
-                    mainForm.id_user = NewUserId;
-                    mainForm.Show();
-                    this.Hide();
+                    
                 }
             }
             catch (Exception)
@@ -146,35 +140,35 @@ namespace praktika
             catch (SqlException ex)
             {
 
-                MessageBox.Show(ex.Message + ex.ErrorCode.ToString());
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }
 
 
-        int GetUserId(string login, string pwd)
-        {
-            try
-            {
-                command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
-                command.Parameters.AddWithValue("login", login);
-                command.Parameters.AddWithValue("pwd", pwd);
-                sqlData.SelectCommand = command;
-                users = new DataTable();
-                sqlData.Fill(users);
+        //int GetUserId(string login, string pwd)
+        //{
+        //    try
+        //    {
+        //        command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
+        //        command.Parameters.AddWithValue("login", login);
+        //        command.Parameters.AddWithValue("pwd", pwd);
+        //        sqlData.SelectCommand = command;
+        //        users = new DataTable();
+        //        sqlData.Fill(users);
 
-                if (users.Rows.Count != 1)
-                {
-                    return -1;
-                }
+        //        if (users.Rows.Count != 1)
+        //        {
+        //            return -1;
+        //        }
 
-                return (int)users.Rows[0]["id"];
-            }
-            catch (Exception)
-            {
+        //        return (int)users.Rows[0]["id"];
+        //    }
+        //    catch (Exception)
+        //    {
 
-                throw;
-            }
-        }
+        //        throw;
+        //    }
+        //}
     }
 }

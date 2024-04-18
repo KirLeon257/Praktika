@@ -93,9 +93,49 @@ namespace praktika.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap font_icon_199162 {
+            get {
+                object obj = ResourceManager.GetObject("font_icon_199162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap italic_icon_icons_com_48282 {
+            get {
+                object obj = ResourceManager.GetObject("italic_icon-icons.com_48282", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_gross_interface_symbol_icon_icons_com_72988 {
             get {
                 object obj = ResourceManager.GetObject("menu-gross-interface-symbol_icon-icons.com_72988", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap text_icon_194671 {
+            get {
+                object obj = ResourceManager.GetObject("text_icon_194671", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Underline_icon_icons_com_55789 {
+            get {
+                object obj = ResourceManager.GetObject("Underline_icon-icons.com_55789", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

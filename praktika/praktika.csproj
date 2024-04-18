@@ -75,6 +75,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NoteEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoteEditForm.Designer.cs">
+      <DependentUpon>NoteEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NoteElement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoteEditForm.resx">
+      <DependentUpon>NoteEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NoteElement.resx">
       <DependentUpon>NoteElement.cs</DependentUpon>
@@ -130,6 +139,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avatardefault_92824 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic_icon-icons.com_48282.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font_icon_199162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_icon_194671.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Underline_icon-icons.com_55789.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

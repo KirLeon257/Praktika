@@ -21,6 +21,7 @@ namespace praktika
         Dictionary<int, List<NoteClass>> DicUsers;
         EditForm editNote;
         public string UserLogin { get; set; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -48,7 +49,6 @@ namespace praktika
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             editNote.Text = "Создание";
             editNote.mode = EditFormMode.Create;
             editNote.Show();
@@ -85,6 +85,11 @@ namespace praktika
 
         void AddNotes()
         {
+            if (!DicUsers.ContainsKey(id_user))
+            {
+                return;
+            }
+
             Notes = DicUsers[id_user];
             if (Notes.Count == 0)
             {
