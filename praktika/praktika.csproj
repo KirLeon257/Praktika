@@ -152,5 +152,8 @@
   <ItemGroup>
     <None Include="Resources\Underline_icon-icons.com_55789.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844444-dot-menu-more-option_110318.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

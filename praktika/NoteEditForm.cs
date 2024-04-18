@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Note;
 
 namespace praktika
 {
@@ -50,7 +51,37 @@ namespace praktika
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FontConverter fontConverter = new FontConverter();
+            EditElement.Note.Text = NoteTextRich.Text;
+            EditElement.Note.Title = TitleTextBox.Text;
+            NoteTextRich.SelectAll();
+            EditElement.Note.FontInfo = fontConverter.ConvertToInvariantString(NoteTextRich.SelectionFont);
+            EditElement.ExceptChanges();
+            EditElement.HideEditComponents();
+            EditElement.ShowDefaultComponents();
+            EditElement.Size = EditElement.GetDefaultSize();
+            this.Dispose();
+        }
 
+        private void NoteEditForm_Load(object sender, EventArgs e)
+        {
+            TitleTextBox.Text = EditElement.Note.Title;
+            NoteTextRich.Text = EditElement.Note.Text;
+            if (EditElement.Note.FontInfo != null)
+            {
+                FontConverter converter = new FontConverter();
+                Font noteFont =(Font)converter.ConvertFromInvariantString(EditElement.Note.FontInfo);
+                NoteTextRich.SelectAll();
+                NoteTextRich.Font = noteFont;
+            }
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            if(fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                NoteTextRich.SelectionFont = fontDialog1.Font;
+            }
         }
     }
 }

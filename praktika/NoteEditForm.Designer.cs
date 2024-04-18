@@ -39,6 +39,8 @@ namespace praktika
             this.BoldToolStrip = new System.Windows.Forms.ToolStripButton();
             this.UnderlineTollStrip = new System.Windows.Forms.ToolStripButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +92,8 @@ namespace praktika
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.KyrcivToolStrip,
             this.BoldToolStrip,
-            this.UnderlineTollStrip});
+            this.UnderlineTollStrip,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(507, 25);
@@ -140,6 +143,16 @@ namespace praktika
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::praktika.Properties.Resources._3844444_dot_menu_more_option_110318;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
             // NoteEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +166,7 @@ namespace praktika
             this.Controls.Add(this.TitleTextBox);
             this.Name = "NoteEditForm";
             this.Text = "NoteEditForm";
+            this.Load += new System.EventHandler(this.NoteEditForm_Load);
             this.panel1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -173,5 +187,7 @@ namespace praktika
         private System.Windows.Forms.ToolStripButton BoldToolStrip;
         private System.Windows.Forms.ToolStripButton UnderlineTollStrip;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }

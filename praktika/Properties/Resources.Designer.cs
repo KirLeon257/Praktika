@@ -73,6 +73,16 @@ namespace praktika.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3844444_dot_menu_more_option_110318 {
+            get {
+                object obj = ResourceManager.GetObject("3844444-dot-menu-more-option_110318", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap avatardefault_92824 {
             get {
                 object obj = ResourceManager.GetObject("avatardefault_92824", resourceCulture);

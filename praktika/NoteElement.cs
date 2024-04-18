@@ -13,18 +13,18 @@ namespace praktika
 {
     public partial class NoteElement : UserControl
     {
-        public NoteClass note;
+        public NoteClass Note;
         public MainForm Form;
         Color DefaultColor;
 
         Size EditSize, DefaultSize;
         TextBox TitleTextBox;
         RichTextBox NoteTextRich;
-        Button ConfirmBtn;
+        public Button ConfirmBtn,EditFormBtn;
         public NoteElement(NoteClass note, MainForm form)
         {
             InitializeComponent();
-            this.note = note;
+            this.Note = note;
             TitleLable.Text = note.Title;
             TextNoteRichTextBox.Text = note.Text;
             Form = form;
@@ -32,23 +32,34 @@ namespace praktika
             DefaultSize = Size;
             EditSize = new Size(DefaultSize.Width, DefaultSize.Height + 50);
             TitleTextBox = new TextBox();
+            TitleTextBox.Modified = true;
             NoteTextRich = new RichTextBox();
+            NoteTextRich.Modified = true;
             ConfirmBtn = new Button();
+            EditFormBtn = new Button();
             ConfirmBtn.Click += ConfirmBtn_Click;
+            EditFormBtn.Click += EditFormBtn_Click;
+        }
+
+        private void EditFormBtn_Click(object sender, EventArgs e)
+        {
+            NoteEditForm editForm = new NoteEditForm(this);
+            editForm.Text = "Редактирование";
+            editForm.Show();
         }
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
             if (TitleTextBox.Text.Length == 0 && NoteTextRich.Text.Length != 0)
             {
-                note.Title = "Нет названия";
-                note.Text = NoteTextRich.Text;
+                Note.Title = "Нет названия";
+                Note.Text = NoteTextRich.Text;
                 ExceptChanges();
             }
             else if (TitleTextBox.Text.Length != 0 && NoteTextRich.Text.Length != 0)
             {
-                note.Title = TitleTextBox.Text;
-                note.Text = NoteTextRich.Text;
+                Note.Title = TitleTextBox.Text;
+                Note.Text = NoteTextRich.Text;
                 ExceptChanges();
             }
             else if(TitleTextBox.Text.Length == 0 && NoteTextRich.Text.Length == 0)
@@ -83,30 +94,35 @@ namespace praktika
             BackColor = DefaultColor;
         }
 
-       
+        public Size GetDefaultSize()
+        {
+            return DefaultSize;
+        }
 
-        void HideDefaultComponents()
+        public void HideDefaultComponents()
         {
             TitleLable.Hide();
             TextNoteRichTextBox.Hide();
         }
 
-        void ShowDefaultComponents()
+        public void ShowDefaultComponents()
         {
             TitleLable.Show();
             TextNoteRichTextBox.Show();
         }
 
-        void HideEditComponents()
+        public void HideEditComponents()
         {
             ConfirmBtn.Hide();
+            EditFormBtn.Hide();
             TitleTextBox.Hide();
             NoteTextRich.Hide();
         }
 
-        void ShowEditComponents()
+        public void ShowEditComponents()
         {
             ConfirmBtn.Show();
+            EditFormBtn.Show();
             TitleTextBox.Show();
             NoteTextRich.Show();
         }
@@ -119,8 +135,8 @@ namespace praktika
                 ShowEditComponents();
                 Size = EditSize;
 
-                TitleTextBox.Text = note.Title;
-                NoteTextRich.Text = note.Text;
+                TitleTextBox.Text = Note.Title;
+                NoteTextRich.Text = Note.Text;
                 return;
             }
             CreatEditComponents();
@@ -151,15 +167,21 @@ namespace praktika
             ConfirmBtn.Text = "Изменить";
             ConfirmBtn.BackColor = Color.White;
 
+            EditFormBtn.Location = new Point(ConfirmBtn.Location.X+ConfirmBtn.Size.Width+20,ConfirmBtn.Location.Y);
+            EditFormBtn.Size = ConfirmBtn.Size;
+            EditFormBtn.Text = "Больше...";
+            EditFormBtn.BackColor = Color.White;
+
             Controls.Add(TitleTextBox);
             Controls.Add(NoteTextRich);
             Controls.Add(ConfirmBtn);
+            Controls.Add(EditFormBtn);
         }
 
-        void ExceptChanges()
+        public void ExceptChanges()
         {
-            TitleLable.Text = note.Title;
-            TextNoteRichTextBox.Text = note.Text;
+            TitleLable.Text = Note.Title;
+            TextNoteRichTextBox.Text = Note.Text;
         }
     }
 }

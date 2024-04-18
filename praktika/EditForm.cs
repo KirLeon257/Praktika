@@ -77,10 +77,10 @@ namespace praktika
         {
 
             Form.NoteTable.SuspendLayout();
-            element.note.Title = TitleTextBox.Text;
-            element.note.Text = NoteRichText.Text;
-            element.TitleLable.Text = element.note.Title;
-            element.TextNoteRichTextBox.Text = element.note.Text;
+            element.Note.Title = TitleTextBox.Text;
+            element.Note.Text = NoteRichText.Text;
+            element.TitleLable.Text = element.Note.Title;
+            element.TextNoteRichTextBox.Text = element.Note.Text;
             Form.NoteTable.ResumeLayout(true);
             this.Hide();
 

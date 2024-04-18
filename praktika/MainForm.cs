@@ -71,7 +71,7 @@ namespace praktika
                     if (DicUsers == null)
                     {
                         DicUsers = new Dictionary<int, List<NoteClass>>();
-                        return;
+                        
                     }
                     AddNotes();
 
@@ -131,7 +131,7 @@ namespace praktika
 
         public void DeleteNoteElement(NoteElement element)
         {
-            Notes.Remove(element.note);
+            Notes.Remove(element.Note);
             NoteTable.Controls.Remove(element);
         }
     }

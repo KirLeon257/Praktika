@@ -16,7 +16,7 @@ namespace praktika
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NoteEditForm());
+            Application.Run(new AuthorizationForm());
         }
     }
 }
