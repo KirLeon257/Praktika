@@ -14,12 +14,32 @@ namespace praktika
     public partial class NoteEditForm : Form
     {
 
-        NoteElement EditElement;
+        NoteElement EditElement, NewElement;
+        MainForm MainForm;
+       public EditFormMode Mode { get; set; }
+
+        public enum EditFormMode
+        {
+            Create = 1,
+            Edit = 2
+        }
+
+        public NoteEditForm(MainForm form, NoteElement element)
+        {
+            InitializeComponent();
+            EditElement = element;
+            MainForm = form;
+        }
         public NoteEditForm(NoteElement element)
         {
             InitializeComponent();
             EditElement = element;
+        }
 
+        public NoteEditForm(MainForm form)
+        {
+            InitializeComponent();
+            MainForm = form;
         }
 
         private void KyrcivToolStrip_Click(object sender, EventArgs e)
@@ -51,6 +71,72 @@ namespace praktika
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
+            if (Mode == EditFormMode.Create)
+            {
+                CreateNote();
+            }
+            else if (Mode == EditFormMode.Edit)
+            {
+                EditNote();
+            }
+
+            this.Dispose();
+        }
+
+        private void NoteEditForm_Load(object sender, EventArgs e)
+        {
+            if (Mode == EditFormMode.Edit)
+            {
+                LoadElement();
+            }
+
+            NoteTextRich.Focus();
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            if(fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                NoteTextRich.SelectionFont = fontDialog1.Font;
+            }
+        }
+
+        void CreateNote()
+        {
+            if (TitleTextBox.Text == "" && NoteTextRich.Text == "")
+            {
+                new Task(ShowMsg).Start();
+                this.Hide();
+                return;
+            }
+            NoteClass note = new NoteClass(NoteTextRich.Text, TitleTextBox.Text);
+            NoteTextRich.SelectAll();
+            note.FontInfo = new FontConverter().ConvertToInvariantString(NoteTextRich.SelectionFont);
+            NewElement = new NoteElement(note, MainForm);
+            InsertElement(NewElement, note);
+            this.Hide();
+        }
+
+        void ShowMsg()
+        {
+            MessageBox.Show("Ничего нет!");
+        }
+
+        void InsertElement(NoteElement element, NoteClass note)
+        {
+            MainForm.Notes.Insert(0, note);
+            MainForm.NoteTable.SuspendLayout();
+            MainForm.NoteTable.Controls.Add(element);
+            MainForm.NoteTable.Controls.SetChildIndex(element, 0);
+            MainForm.NoteTable.ResumeLayout(true);
+            TitleTextBox.Clear();
+            NoteTextRich.Clear();
+        }
+
+        void EditNote()
+        {
             FontConverter fontConverter = new FontConverter();
             EditElement.Note.Text = NoteTextRich.Text;
             EditElement.Note.Title = TitleTextBox.Text;
@@ -60,27 +146,18 @@ namespace praktika
             EditElement.HideEditComponents();
             EditElement.ShowDefaultComponents();
             EditElement.Size = EditElement.GetDefaultSize();
-            this.Dispose();
         }
 
-        private void NoteEditForm_Load(object sender, EventArgs e)
+        void LoadElement()
         {
             TitleTextBox.Text = EditElement.Note.Title;
             NoteTextRich.Text = EditElement.Note.Text;
             if (EditElement.Note.FontInfo != null)
             {
                 FontConverter converter = new FontConverter();
-                Font noteFont =(Font)converter.ConvertFromInvariantString(EditElement.Note.FontInfo);
+                Font noteFont = (Font)converter.ConvertFromInvariantString(EditElement.Note.FontInfo);
                 NoteTextRich.SelectAll();
                 NoteTextRich.Font = noteFont;
-            }
-        }
-
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
-            if(fontDialog1.ShowDialog() == DialogResult.OK)
-            {
-                NoteTextRich.SelectionFont = fontDialog1.Font;
             }
         }
     }

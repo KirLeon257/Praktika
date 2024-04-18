@@ -19,13 +19,13 @@ namespace praktika
         JsonSerializer serializer;
         public List<NoteClass> Notes;
         Dictionary<int, List<NoteClass>> DicUsers;
-        EditForm editNote;
+        NoteEditForm editNote;
         public string UserLogin { get; set; }
 
         public MainForm()
         {
             InitializeComponent();
-            editNote = new EditForm(this);
+            editNote = new NoteEditForm(this);
             Notes = new List<NoteClass>();
             serializer = new JsonSerializer();
             DicUsers = new Dictionary<int, List<NoteClass>>();
@@ -50,7 +50,7 @@ namespace praktika
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             editNote.Text = "Создание";
-            editNote.mode = EditFormMode.Create;
+            editNote.Mode = NoteEditForm.EditFormMode.Create;
             editNote.Show();
         }
 

@@ -16,11 +16,12 @@ namespace praktika
         public NoteClass Note;
         public MainForm Form;
         Color DefaultColor;
-
         Size EditSize, DefaultSize;
         TextBox TitleTextBox;
+        NoteEditForm NoteEditForm;
         RichTextBox NoteTextRich;
         public Button ConfirmBtn,EditFormBtn;
+
         public NoteElement(NoteClass note, MainForm form)
         {
             InitializeComponent();
@@ -45,6 +46,7 @@ namespace praktika
         {
             NoteEditForm editForm = new NoteEditForm(this);
             editForm.Text = "Редактирование";
+            editForm.Mode = NoteEditForm.EditFormMode.Edit;
             editForm.Show();
         }
 
@@ -142,6 +144,12 @@ namespace praktika
             CreatEditComponents();
             TitleTextBox.Text = TitleLable.Text;
             NoteTextRich.Text = TextNoteRichTextBox.Text;
+
+
+            //NoteEditForm = new NoteEditForm(this);
+            //NoteEditForm.Mode = NoteEditForm.EditFormMode.Edit;
+            //NoteEditForm.Text = "Редактирование";
+            //NoteEditForm.ShowDialog();
         }
 
         void CreatEditComponents()
@@ -167,7 +175,7 @@ namespace praktika
             ConfirmBtn.Text = "Изменить";
             ConfirmBtn.BackColor = Color.White;
 
-            EditFormBtn.Location = new Point(ConfirmBtn.Location.X+ConfirmBtn.Size.Width+20,ConfirmBtn.Location.Y);
+            EditFormBtn.Location = new Point(ConfirmBtn.Location.X + ConfirmBtn.Size.Width + 20, ConfirmBtn.Location.Y);
             EditFormBtn.Size = ConfirmBtn.Size;
             EditFormBtn.Text = "Больше...";
             EditFormBtn.BackColor = Color.White;

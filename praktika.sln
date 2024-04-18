@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "praktika", "praktika\prakti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Note", "Note\Note.csproj", "{669AF921-DF5A-4C0D-8BD7-1C5C4EFE710C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reminder", "Reminder\Reminder.csproj", "{A723DAA8-2CA6-44F3-85D1-012A859777E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReminderElements", "ReminderElements\ReminderElements.csproj", "{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{669AF921-DF5A-4C0D-8BD7-1C5C4EFE710C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669AF921-DF5A-4C0D-8BD7-1C5C4EFE710C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669AF921-DF5A-4C0D-8BD7-1C5C4EFE710C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A723DAA8-2CA6-44F3-85D1-012A859777E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A723DAA8-2CA6-44F3-85D1-012A859777E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A723DAA8-2CA6-44F3-85D1-012A859777E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A723DAA8-2CA6-44F3-85D1-012A859777E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
