@@ -82,7 +82,7 @@ namespace praktika
                 EditNote();
             }
 
-            this.Dispose();
+            this.Hide();
         }
 
         private void NoteEditForm_Load(object sender, EventArgs e)

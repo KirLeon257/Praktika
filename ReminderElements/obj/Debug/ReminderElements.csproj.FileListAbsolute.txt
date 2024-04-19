@@ -1,0 +1,11 @@
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\bin\Debug\ReminderElements.dll
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\bin\Debug\ReminderElements.pdb
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\bin\Debug\Reminder.dll
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\bin\Debug\Reminder.pdb
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.csproj.AssemblyReference.cache
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.ReminderElement.resources
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.csproj.GenerateResource.cache
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.csproj.CoreCompileInputs.cache
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.csproj.CopyComplete
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.dll
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.pdb

@@ -134,5 +134,11 @@ namespace praktika
             Notes.Remove(element.Note);
             NoteTable.Controls.Remove(element);
         }
+
+        private void создатьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            editNote = new NoteEditForm(this);
+
+        }
     }
 }
