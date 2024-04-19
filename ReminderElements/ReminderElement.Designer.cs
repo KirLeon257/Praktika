@@ -37,20 +37,20 @@
             // TitleLable
             // 
             this.TitleLable.AutoSize = true;
-            this.TitleLable.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLable.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLable.Location = new System.Drawing.Point(19, 22);
             this.TitleLable.Name = "TitleLable";
-            this.TitleLable.Size = new System.Drawing.Size(76, 36);
+            this.TitleLable.Size = new System.Drawing.Size(82, 36);
             this.TitleLable.TabIndex = 0;
             this.TitleLable.Text = "label1";
             // 
             // DateTimeLabel
             // 
             this.DateTimeLabel.AutoSize = true;
-            this.DateTimeLabel.Font = new System.Drawing.Font("Miriam Libre", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimeLabel.Font = new System.Drawing.Font("Miriam Libre", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateTimeLabel.Location = new System.Drawing.Point(14, 104);
             this.DateTimeLabel.Name = "DateTimeLabel";
-            this.DateTimeLabel.Size = new System.Drawing.Size(167, 63);
+            this.DateTimeLabel.Size = new System.Drawing.Size(111, 42);
             this.DateTimeLabel.TabIndex = 1;
             this.DateTimeLabel.Text = "label2";
             // 
@@ -63,19 +63,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OrangeRed;
             this.Controls.Add(this.DateTimeLabel);
             this.Controls.Add(this.TitleLable);
             this.Name = "ReminderElement";
             this.Size = new System.Drawing.Size(343, 213);
+            this.Load += new System.EventHandler(this.ReminderElement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label TitleLable;
-        private System.Windows.Forms.Label DateTimeLabel;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Label TitleLable;
+        public System.Windows.Forms.Label DateTimeLabel;
     }
 }

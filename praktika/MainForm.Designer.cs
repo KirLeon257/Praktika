@@ -38,7 +38,7 @@ namespace praktika
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.NotePage = new System.Windows.Forms.TabPage();
             this.NoteTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.NotesMenuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.NotesMenuStrip = new System.Windows.Forms.MenuStrip();
             this.RemindPage = new System.Windows.Forms.TabPage();
             this.TaskPage = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ namespace praktika
             this.MenuPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.NotePage.SuspendLayout();
-            this.NotesMenuStrip1.SuspendLayout();
+            this.NotesMenuStrip.SuspendLayout();
             this.RemindPage.SuspendLayout();
             this.TaskPage.SuspendLayout();
             this.RemindeMenuStrip.SuspendLayout();
@@ -140,7 +140,7 @@ namespace praktika
             // NotePage
             // 
             this.NotePage.Controls.Add(this.NoteTable);
-            this.NotePage.Controls.Add(this.NotesMenuStrip1);
+            this.NotePage.Controls.Add(this.NotesMenuStrip);
             this.NotePage.Location = new System.Drawing.Point(4, 27);
             this.NotePage.Name = "NotePage";
             this.NotePage.Padding = new System.Windows.Forms.Padding(3);
@@ -158,15 +158,15 @@ namespace praktika
             this.NoteTable.Size = new System.Drawing.Size(617, 389);
             this.NoteTable.TabIndex = 2;
             // 
-            // NotesMenuStrip1
+            // NotesMenuStrip
             // 
-            this.NotesMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.NotesMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.создатьToolStripMenuItem});
-            this.NotesMenuStrip1.Location = new System.Drawing.Point(3, 3);
-            this.NotesMenuStrip1.Name = "NotesMenuStrip1";
-            this.NotesMenuStrip1.Size = new System.Drawing.Size(617, 24);
-            this.NotesMenuStrip1.TabIndex = 1;
-            this.NotesMenuStrip1.Text = "menuStrip1";
+            this.NotesMenuStrip.Location = new System.Drawing.Point(3, 3);
+            this.NotesMenuStrip.Name = "NotesMenuStrip";
+            this.NotesMenuStrip.Size = new System.Drawing.Size(617, 24);
+            this.NotesMenuStrip.TabIndex = 1;
+            this.NotesMenuStrip.Text = "menuStrip1";
             // 
             // RemindPage
             // 
@@ -252,7 +252,7 @@ namespace praktika
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.MenuPanel);
             this.DoubleBuffered = true;
-            this.MainMenuStrip = this.NotesMenuStrip1;
+            this.MainMenuStrip = this.NotesMenuStrip;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -262,8 +262,8 @@ namespace praktika
             this.tabControl1.ResumeLayout(false);
             this.NotePage.ResumeLayout(false);
             this.NotePage.PerformLayout();
-            this.NotesMenuStrip1.ResumeLayout(false);
-            this.NotesMenuStrip1.PerformLayout();
+            this.NotesMenuStrip.ResumeLayout(false);
+            this.NotesMenuStrip.PerformLayout();
             this.RemindPage.ResumeLayout(false);
             this.RemindPage.PerformLayout();
             this.TaskPage.ResumeLayout(false);
@@ -286,7 +286,7 @@ namespace praktika
         private System.Windows.Forms.TabPage NotePage;
         private System.Windows.Forms.TabPage RemindPage;
         private System.Windows.Forms.TabPage TaskPage;
-        private System.Windows.Forms.MenuStrip NotesMenuStrip1;
+        private System.Windows.Forms.MenuStrip NotesMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.FlowLayoutPanel NoteTable;
@@ -294,7 +294,7 @@ namespace praktika
         private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.MenuStrip RemindeMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem1;
-        private System.Windows.Forms.FlowLayoutPanel ReminedTable;
+        public System.Windows.Forms.FlowLayoutPanel ReminedTable;
     }
 }
 

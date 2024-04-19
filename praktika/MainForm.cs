@@ -20,11 +20,13 @@ namespace praktika
         public List<NoteClass> Notes;
         Dictionary<int, List<NoteClass>> DicUsers;
         NoteEditForm editNote;
+        EditReminde editReminde;
         public string UserLogin { get; set; }
 
         public MainForm()
         {
             InitializeComponent();
+            editReminde = new EditReminde(this);
             editNote = new NoteEditForm(this);
             Notes = new List<NoteClass>();
             serializer = new JsonSerializer();
@@ -137,8 +139,9 @@ namespace praktika
 
         private void создатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            editNote = new NoteEditForm(this);
-
+            editReminde.Mode = EditFormMode.Create;
+            editReminde.ShowDialog();
+            
         }
     }
 }
