@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Reminder;
+using praktika;
 
 namespace ReminderElements
 {
     public partial class ReminderElement : UserControl
     {
-        RemindeClass Reminde;
-        public ReminderElement(RemindeClass reminde)
+        public RemindeClass Reminde { get;}
+        MainForm mainForm;
+        EditReminde EditReminde;
+        public ReminderElement(RemindeClass reminde,MainForm mainForm)
         {
             InitializeComponent();
             Reminde = reminde;
+            this.mainForm = mainForm;
+            EditReminde = new EditReminde(this);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -26,8 +32,9 @@ namespace ReminderElements
             {
                 return;
             }
-            Reminde.StartReminde();
             timer1.Enabled = false;
+            Reminde.StartReminde();
+            mainForm.DeleteReminedElement(this);
             this.Dispose();
         }
 
@@ -39,9 +46,20 @@ namespace ReminderElements
 
         private void ReminderElement_Load(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+            
         }
 
-        
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainForm.DeleteReminedElement(this);
+            mainForm.Remindes.Remove(Reminde);
+            this.Dispose();
+        }
+
+        private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditReminde.Mode = EditFormMode.Edit;
+            EditReminde.Show();
+        }
     }
 }

@@ -83,7 +83,7 @@ namespace praktika
             this.TextNoteRichTextBox.ContextMenuStrip = this.OptionMenuStrip;
             this.TextNoteRichTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TextNoteRichTextBox.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextNoteRichTextBox.Location = new System.Drawing.Point(8, 56);
+            this.TextNoteRichTextBox.Location = new System.Drawing.Point(8, 58);
             this.TextNoteRichTextBox.Name = "TextNoteRichTextBox";
             this.TextNoteRichTextBox.ReadOnly = true;
             this.TextNoteRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;

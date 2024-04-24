@@ -42,6 +42,9 @@ namespace praktika
             if(Mode == EditFormMode.Create)
             {
                 CreateRemined();
+            }else if (Mode == EditFormMode.Edit)
+            {
+                EditR();
             }
         }
 
@@ -59,38 +62,45 @@ namespace praktika
 
         void CreateRemined()
         {
+            if (!CheckValidation() || textBox1.Text==""){
+                new Task(() => MessageBox.Show("Введены некоректные значения!"));
+                return;
+            }
             DateTime dateTime = DateTime.Parse(dateTimePicker1.Text);
             RemindeClass reminde = new RemindeClass(textBox1.Text, dateTime);
-            ReminderElement element = new ReminderElement(reminde);
+            ReminderElement element = new ReminderElement(reminde,Form);
             element.Change();
+            Form.Remindes.Add(reminde);
             Form.ReminedTable.Controls.Add(element);
             Form.ReminedTable.Controls.SetChildIndex(element, 0);
+            textBox1.Clear();
             this.Hide();
         }
 
-        //bool CheckValidation()
-        //{
-        //    if (textBox1.Text == "" || dateTimePicker1.Value < DateTime.Now)
-        //    {
-        //        return false;
-        //    }
-        //    return true;
-        //}
+        bool CheckValidation()
+        {
+            if (DateTime.Parse(dateTimePicker1.Text) < DateTime.Now)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        void EditR()
+        {
+            reminderElement.Reminde.Title = textBox1.Text;
+            reminderElement.Reminde.TimeOfReminde = DateTime.Parse(dateTimePicker1.Text);
+            reminderElement.Change();
+            this.Hide();
+        }
 
         private void EditReminde_Load(object sender, EventArgs e)
         {
-            //dateTimePicker1.Value = DateTime.Now;
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            
+            if (Mode==EditFormMode.Edit)
+            {
+                textBox1.Text = reminderElement.Reminde.Title;
+                dateTimePicker1.Value = reminderElement.Reminde.TimeOfReminde;
+            }
         }
     }
 }

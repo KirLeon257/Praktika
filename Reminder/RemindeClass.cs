@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace Reminder
 {
@@ -22,7 +23,15 @@ namespace Reminder
 
         public void StartReminde()
         {
-            MessageBox.Show(Title);
+            // Requires Microsoft.Toolkit.Uwp.Notifications NuGet package version 7.0 or greater
+            new ToastContentBuilder()
+                .AddArgument("action", "viewConversation")
+                .AddArgument("ReminedId", 9813)
+                .AddText("Напоминание!!!")
+                .AddText(Title)
+                .SetToastDuration(ToastDuration.Long)
+                .SetToastScenario(ToastScenario.Reminder)
+                .Show();
         }
     }
 }

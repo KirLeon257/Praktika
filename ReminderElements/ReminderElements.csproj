@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,9 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReminderElement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="ReminderElement.cs" />
     <Compile Include="ReminderElement.Designer.cs">
       <DependentUpon>ReminderElement.cs</DependentUpon>
     </Compile>
@@ -58,6 +58,17 @@
     <EmbeddedResource Include="ReminderElement.resx">
       <DependentUpon>ReminderElement.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\praktika\DigitalBook.csproj">
+      <Project>{359816ca-0d6c-47b6-a2db-26aaaa52b8c4}</Project>
+      <Name>DigitalBook</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.1.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

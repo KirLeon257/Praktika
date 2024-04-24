@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Note;
+using ReminderElements;
+using Reminder;
 using Newtonsoft.Json;
 
 namespace praktika
@@ -18,9 +20,11 @@ namespace praktika
         public int id_user { get; set; }
         JsonSerializer serializer;
         public List<NoteClass> Notes;
-        Dictionary<int, List<NoteClass>> DicUsers;
+        public List<RemindeClass> Remindes;
+        public Dictionary<int, List<NoteClass>> DicNoteUsers;
+        public Dictionary<int, List<RemindeClass>> DicReminedUsers;
         NoteEditForm editNote;
-        EditReminde editReminde;
+        public EditReminde editReminde;
         public string UserLogin { get; set; }
 
         public MainForm()
@@ -29,8 +33,10 @@ namespace praktika
             editReminde = new EditReminde(this);
             editNote = new NoteEditForm(this);
             Notes = new List<NoteClass>();
+            Remindes = new List<RemindeClass>();
             serializer = new JsonSerializer();
-            DicUsers = new Dictionary<int, List<NoteClass>>();
+            DicNoteUsers = new Dictionary<int, List<NoteClass>>();
+            DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
         }
 
         private void NoteBtn_Click(object sender, EventArgs e)
@@ -53,12 +59,13 @@ namespace praktika
         {
             editNote.Text = "Создание";
             editNote.Mode = NoteEditForm.EditFormMode.Create;
-            editNote.Show();
+            editNote.ShowDialog();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             LoadNotes();
+            LoadRemined();
             UserNameLabel.Text = UserLogin;
         }
 
@@ -69,11 +76,11 @@ namespace praktika
 
                 using (JsonTextReader fs = new JsonTextReader(new StreamReader("notes.json")))
                 {
-                    DicUsers = serializer.Deserialize<Dictionary<int, List<NoteClass>>>(fs);
-                    if (DicUsers == null)
+                    DicNoteUsers = serializer.Deserialize<Dictionary<int, List<NoteClass>>>(fs);
+                    if (DicNoteUsers == null)
                     {
-                        DicUsers = new Dictionary<int, List<NoteClass>>();
-                        
+                        DicNoteUsers = new Dictionary<int, List<NoteClass>>();
+
                     }
                     AddNotes();
 
@@ -87,12 +94,12 @@ namespace praktika
 
         void AddNotes()
         {
-            if (!DicUsers.ContainsKey(id_user))
+            if (!DicNoteUsers.ContainsKey(id_user))
             {
                 return;
             }
 
-            Notes = DicUsers[id_user];
+            Notes = DicNoteUsers[id_user];
             if (Notes.Count == 0)
             {
                 return;
@@ -101,6 +108,7 @@ namespace praktika
             {
                 NoteElement element = new NoteElement(note, this);
                 NoteTable.Controls.Add(element);
+                
             }
 
 
@@ -109,24 +117,25 @@ namespace praktika
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveNotes();
+            SaveRemineds();
             Application.Exit();
 
         }
 
         void SaveNotes()
         {
-            if (DicUsers.ContainsKey(id_user))
+            if (DicNoteUsers.ContainsKey(id_user))
             {
-                DicUsers[id_user] = Notes;
+                DicNoteUsers[id_user] = Notes;
             }
             else
             {
-                DicUsers.Add(id_user, Notes);
+                DicNoteUsers.Add(id_user, Notes);
             }
             using (StreamWriter fs = new StreamWriter("notes.json"))
             {
 
-                serializer.Serialize(fs, DicUsers);
+                serializer.Serialize(fs, DicNoteUsers);
             }
 
         }
@@ -137,11 +146,85 @@ namespace praktika
             NoteTable.Controls.Remove(element);
         }
 
+        public void DeleteReminedElement(ReminderElement reminderElement)
+        {
+            Remindes.Remove(reminderElement.Reminde);
+            ReminedTable.Controls.Remove(reminderElement);
+        }
+
         private void создатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             editReminde.Mode = EditFormMode.Create;
             editReminde.ShowDialog();
-            
+        }
+
+        void LoadRemined()
+        {
+            try
+            {
+                using (JsonTextReader fs = new JsonTextReader(new StreamReader("remineds.json")))
+                {
+                    DicReminedUsers = serializer.Deserialize<Dictionary<int, List<RemindeClass>>>(fs);
+                    if (DicReminedUsers == null)
+                    {
+                        DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
+
+                    }
+                    AddRemites();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        void AddRemites()
+        {
+            if (!DicReminedUsers.ContainsKey(id_user))
+            {
+                return;
+            }
+
+            Remindes = DicReminedUsers[id_user];
+            if (Remindes.Count == 0)
+            {
+                return;
+            }
+            foreach (RemindeClass reminde in Remindes)
+            {
+                ReminderElement element = new ReminderElement(reminde, this);
+                element.Change();
+                ReminedTable.Controls.Add(element);
+                ReminedTable.Controls.SetChildIndex(element, 0);
+            }
+        }
+
+        void SaveRemineds()
+        {
+            try
+            {
+                if (DicReminedUsers.ContainsKey(id_user))
+                {
+                    DicReminedUsers[id_user] = Remindes;
+                }
+                else
+                {
+                    DicReminedUsers.Add(id_user, Remindes);
+                }
+                using (StreamWriter fs = new StreamWriter("remineds.json"))
+                {
+
+                    serializer.Serialize(fs, DicReminedUsers);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
