@@ -38,8 +38,8 @@ namespace praktika
             this.KyrcivToolStrip = new System.Windows.Forms.ToolStripButton();
             this.BoldToolStrip = new System.Windows.Forms.ToolStripButton();
             this.UnderlineTollStrip = new System.Windows.Forms.ToolStripButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -133,16 +133,6 @@ namespace praktika
             this.UnderlineTollStrip.ToolTipText = "Подчеркнутый";
             this.UnderlineTollStrip.Click += new System.EventHandler(this.UnderlineTollStrip_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Подтвердить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -152,6 +142,16 @@ namespace praktika
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 330);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Подтвердить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NoteEditForm
             // 
@@ -166,6 +166,7 @@ namespace praktika
             this.Controls.Add(this.TitleTextBox);
             this.Name = "NoteEditForm";
             this.Text = "NoteEditForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NoteEditForm_FormClosing_1);
             this.Load += new System.EventHandler(this.NoteEditForm_Load);
             this.panel1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);

@@ -71,8 +71,6 @@ namespace praktika
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
             if (Mode == EditFormMode.Create)
             {
                 CreateNote();
@@ -146,6 +144,23 @@ namespace praktika
             EditElement.HideEditComponents();
             EditElement.ShowDefaultComponents();
             EditElement.Size = EditElement.GetDefaultSize();
+        }
+
+        private void NoteEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            EditElement.HideEditComponents();
+            EditElement.ShowDefaultComponents();
+            EditElement.Size = EditElement.GetDefaultSize();
+        }
+
+        private void NoteEditForm_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if (Mode == EditFormMode.Edit)
+            {
+                EditElement.HideEditComponents();
+                EditElement.ShowDefaultComponents();
+                EditElement.Size = EditElement.GetDefaultSize();
+            }
         }
 
         void LoadElement()

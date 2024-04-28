@@ -98,6 +98,7 @@ namespace praktika
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "EditReminde";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditReminde";
             this.Load += new System.EventHandler(this.EditReminde_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

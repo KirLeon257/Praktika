@@ -59,7 +59,7 @@ namespace ReminderElements
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditReminde.Mode = EditFormMode.Edit;
-            EditReminde.Show();
+            EditReminde.ShowDialog();
         }
     }
 }

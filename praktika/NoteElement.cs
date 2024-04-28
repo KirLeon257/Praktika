@@ -18,7 +18,6 @@ namespace praktika
         Color DefaultColor;
         Size EditSize, DefaultSize;
         TextBox TitleTextBox;
-        NoteEditForm NoteEditForm;
         RichTextBox NoteTextRich;
         public Button ConfirmBtn,EditFormBtn;
 
@@ -47,7 +46,7 @@ namespace praktika
             NoteEditForm editForm = new NoteEditForm(this);
             editForm.Text = "Редактирование";
             editForm.Mode = NoteEditForm.EditFormMode.Edit;
-            editForm.Show();
+            editForm.ShowDialog();
         }
 
         private void ConfirmBtn_Click(object sender, EventArgs e)

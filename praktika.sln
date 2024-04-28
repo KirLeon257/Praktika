@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reminder", "Reminder\Remind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReminderElements", "ReminderElements\ReminderElements.csproj", "{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj", "{8E53ACB3-81BF-4F7F-9A56-7466ACEF6DAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE9B8CC8-343B-4DC8-B445-FEF438831ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E53ACB3-81BF-4F7F-9A56-7466ACEF6DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E53ACB3-81BF-4F7F-9A56-7466ACEF6DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E53ACB3-81BF-4F7F-9A56-7466ACEF6DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E53ACB3-81BF-4F7F-9A56-7466ACEF6DAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
