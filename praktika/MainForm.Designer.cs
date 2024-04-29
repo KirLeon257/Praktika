@@ -47,6 +47,8 @@ namespace praktika
             this.создатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.TaskPage = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.TaskMenuStreap = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -55,6 +57,7 @@ namespace praktika
             this.RemindPage.SuspendLayout();
             this.RemindeMenuStrip.SuspendLayout();
             this.TaskPage.SuspendLayout();
+            this.TaskMenuStreap.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuPanel
@@ -226,6 +229,7 @@ namespace praktika
             // 
             // TaskPage
             // 
+            this.TaskPage.Controls.Add(this.TaskMenuStreap);
             this.TaskPage.Controls.Add(this.label3);
             this.TaskPage.Location = new System.Drawing.Point(4, 27);
             this.TaskPage.Name = "TaskPage";
@@ -243,6 +247,24 @@ namespace praktika
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Задачи";
+            // 
+            // TaskMenuStreap
+            // 
+            this.TaskMenuStreap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.TaskMenuStreap.Location = new System.Drawing.Point(3, 3);
+            this.TaskMenuStreap.Name = "TaskMenuStreap";
+            this.TaskMenuStreap.Size = new System.Drawing.Size(617, 24);
+            this.TaskMenuStreap.TabIndex = 2;
+            this.TaskMenuStreap.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::praktika.Properties.Resources._1491254405_plusaddmoredetail_82972;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(78, 20);
+            this.toolStripMenuItem1.Text = "Создать";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MainForm
             // 
@@ -271,6 +293,8 @@ namespace praktika
             this.RemindeMenuStrip.PerformLayout();
             this.TaskPage.ResumeLayout(false);
             this.TaskPage.PerformLayout();
+            this.TaskMenuStreap.ResumeLayout(false);
+            this.TaskMenuStreap.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -295,6 +319,8 @@ namespace praktika
         private System.Windows.Forms.MenuStrip RemindeMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem1;
         public System.Windows.Forms.FlowLayoutPanel ReminedTable;
+        private System.Windows.Forms.MenuStrip TaskMenuStreap;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

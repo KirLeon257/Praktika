@@ -26,3 +26,8 @@ D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktik
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\DigitalBook.csproj.CopyComplete
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\praktika.exe
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\praktika.pdb
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\bin\Debug\TaskElement.dll
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\bin\Debug\TaskElement.pdb
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\bin\Debug\Task.dll
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\bin\Debug\Task.pdb
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\praktika.EditTask.resources

@@ -1,0 +1,6 @@
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Task\bin\Debug\Task.dll
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Task\bin\Debug\Task.pdb
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Task\obj\Debug\Task.csproj.AssemblyReference.cache
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Task\obj\Debug\Task.csproj.CoreCompileInputs.cache
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Task\obj\Debug\Task.dll
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Task\obj\Debug\Task.pdb

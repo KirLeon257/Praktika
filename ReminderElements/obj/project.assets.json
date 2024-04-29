@@ -179,13 +179,23 @@
         "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "Task": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DigitalBook.dll": {}
         },
         "runtime": {
           "bin/placeholder/DigitalBook.dll": {}
+        }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
         }
       }
     },
@@ -367,13 +377,23 @@
         "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "Task": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DigitalBook.dll": {}
         },
         "runtime": {
           "bin/placeholder/DigitalBook.dll": {}
+        }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
         }
       }
     },
@@ -555,13 +575,23 @@
         "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "Task": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DigitalBook.dll": {}
         },
         "runtime": {
           "bin/placeholder/DigitalBook.dll": {}
+        }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
         }
       }
     },
@@ -743,13 +773,23 @@
         "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "Task": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DigitalBook.dll": {}
         },
         "runtime": {
           "bin/placeholder/DigitalBook.dll": {}
+        }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
         }
       }
     }
@@ -1591,6 +1631,11 @@
       "type": "project",
       "path": "../praktika/DigitalBook.csproj",
       "msbuildProject": "../praktika/DigitalBook.csproj"
+    },
+    "Task/1.0.0": {
+      "type": "project",
+      "path": "../Task/Task.csproj",
+      "msbuildProject": "../Task/Task.csproj"
     }
   },
   "projectFileDependencyGroups": {

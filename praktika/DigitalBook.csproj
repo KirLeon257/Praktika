@@ -60,6 +60,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TaskElement">
+      <HintPath>..\TaskElement\bin\Debug\TaskElement.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthorizationForm.cs">
@@ -79,6 +82,12 @@
     </Compile>
     <Compile Include="EditReminde.Designer.cs">
       <DependentUpon>EditReminde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTask.Designer.cs">
+      <DependentUpon>EditTask.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -108,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditReminde.resx">
       <DependentUpon>EditReminde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTask.resx">
+      <DependentUpon>EditTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -175,6 +187,12 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Task\Task.csproj">
+      <Project>{7e5b6cdb-74d9-465c-b23f-6178095b12c1}</Project>
+      <Name>Task</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -173,6 +173,15 @@
         "runtime": {
           "lib/net47/System.ValueTuple.dll": {}
         }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.8/win": {
@@ -346,6 +355,15 @@
         },
         "runtime": {
           "lib/net47/System.ValueTuple.dll": {}
+        }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
         }
       }
     },
@@ -521,6 +539,15 @@
         "runtime": {
           "lib/net47/System.ValueTuple.dll": {}
         }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.8/win-x86": {
@@ -694,6 +721,15 @@
         },
         "runtime": {
           "lib/net47/System.ValueTuple.dll": {}
+        }
+      },
+      "Task/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Task.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.dll": {}
         }
       }
     }
@@ -1530,12 +1566,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Task/1.0.0": {
+      "type": "project",
+      "path": "../Task/Task.csproj",
+      "msbuildProject": "../Task/Task.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
       "Microsoft.Toolkit.Uwp.Notifications >= 7.1.3",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "Task >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1564,7 +1606,11 @@
       },
       "frameworks": {
         "net48": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\Task\\Task.csproj": {
+              "projectPath": "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\Task\\Task.csproj"
+            }
+          }
         }
       }
     },

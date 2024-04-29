@@ -27,7 +27,11 @@
         },
         "frameworks": {
           "net48": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\Task\\Task.csproj": {
+                "projectPath": "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\Task\\Task.csproj"
+              }
+            }
           }
         }
       },
@@ -108,6 +112,21 @@
         "win-x86": {
           "#import": []
         }
+      }
+    },
+    "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\Task\\Task.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\Task\\Task.csproj",
+        "projectName": "Task",
+        "projectPath": "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\Task\\Task.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

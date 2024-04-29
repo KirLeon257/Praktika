@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using Note;
 using ReminderElements;
 using Reminder;
+using Task;
+using TaskElement;
 using Newtonsoft.Json;
 
 namespace praktika
@@ -225,6 +227,11 @@ namespace praktika
 
                 throw;
             }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
