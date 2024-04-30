@@ -111,7 +111,9 @@ namespace praktika
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "EditTask";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditTask";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditTask_FormClosing);
             this.Load += new System.EventHandler(this.EditTask_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

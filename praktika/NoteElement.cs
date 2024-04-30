@@ -16,7 +16,7 @@ namespace praktika
         public NoteClass Note;
         public MainForm Form;
         Color DefaultColor;
-        Size EditSize, DefaultSize;
+        Size EditSize, DefSize;
         TextBox TitleTextBox;
         RichTextBox NoteTextRich;
         public Button ConfirmBtn,EditFormBtn;
@@ -29,8 +29,8 @@ namespace praktika
             TextNoteRichTextBox.Text = note.Text;
             Form = form;
             DefaultColor = this.BackColor;
-            DefaultSize = Size;
-            EditSize = new Size(DefaultSize.Width, DefaultSize.Height + 50);
+            DefSize = Size;
+            EditSize = new Size(DefSize.Width, DefSize.Height + 50);
             TitleTextBox = new TextBox();
             TitleTextBox.Modified = true;
             NoteTextRich = new RichTextBox();
@@ -74,7 +74,7 @@ namespace praktika
             HideEditComponents();
             ShowDefaultComponents();
 
-            Size = DefaultSize;
+            Size = DefSize;
         }
 
 
@@ -97,7 +97,7 @@ namespace praktika
 
         public Size GetDefaultSize()
         {
-            return DefaultSize;
+            return DefSize;
         }
 
         public void HideDefaultComponents()

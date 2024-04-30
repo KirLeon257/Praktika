@@ -32,17 +32,14 @@ namespace TaskElement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void TitleCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TaskElement_DoubleClick(object sender, EventArgs e)
-        {
-
+            if (textBox1.Text == "")
+            {
+                return;
+            }
+            SmallTaskClass smallTask = new SmallTaskClass(textBox1.Text);
+            Task.smallTasks.Add(smallTask);
+            checkedListBox1.Items.Add(smallTask.SmallTitle);
+            textBox1.Clear();
         }
 
         private void TaskElement_Load(object sender, EventArgs e)
@@ -60,7 +57,7 @@ namespace TaskElement
 
             foreach (SmallTaskClass smallTask in task.smallTasks)
             {
-                checkedListBox1.Items.Add(smallTask);
+                checkedListBox1.Items.Add(smallTask.SmallTitle);
                 if (smallTask.SmallStatus)
                 {
                     checkedListBox1.SetItemChecked(checkedListBox1.Items.IndexOf(smallTask), true);
@@ -77,6 +74,42 @@ namespace TaskElement
         {
             SmallTaskClass smallTask = new SmallTaskClass(title);
             Task.smallTasks.Add(smallTask);
+        }
+
+        public void ExceptChange()
+        {
+            TitleCheckBox.Text = Task.Title;
+            LoadSmallTasks(Task);
+        }
+
+        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            
+        }
+
+        private void TitleCheckBox_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (TitleCheckBox.Checked)
+            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, true);
+                }
+                Font font = TitleCheckBox.Font;
+                
+            }
+            else
+            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                }
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

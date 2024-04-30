@@ -60,7 +60,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TaskElement">
+    <Reference Include="TaskElement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\TaskElement\bin\Debug\TaskElement.dll</HintPath>
     </Reference>
   </ItemGroup>

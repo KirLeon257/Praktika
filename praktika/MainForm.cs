@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using Note;
 using ReminderElements;
 using Reminder;
-using Task;
+using TaskBook;
 using TaskElement;
 using Newtonsoft.Json;
 
@@ -20,14 +20,20 @@ namespace praktika
     public partial class MainForm : Form
     {
         public int id_user { get; set; }
+
         JsonSerializer serializer;
         public List<NoteClass> Notes;
         public List<RemindeClass> Remindes;
+        public List<TaskClass> Tasks;
+
         public Dictionary<int, List<NoteClass>> DicNoteUsers;
         public Dictionary<int, List<RemindeClass>> DicReminedUsers;
+        public Dictionary<int, List<TaskClass>> DicTaskUsers;
+
         NoteEditForm editNote;
         public EditReminde editReminde;
         public string UserLogin { get; set; }
+        EditTask editTask;
 
         public MainForm()
         {
@@ -39,6 +45,7 @@ namespace praktika
             serializer = new JsonSerializer();
             DicNoteUsers = new Dictionary<int, List<NoteClass>>();
             DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
+            editTask = new EditTask(this);
         }
 
         private void NoteBtn_Click(object sender, EventArgs e)
@@ -231,7 +238,8 @@ namespace praktika
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+            editTask.Mode = EditFormMode.Create;
+            editTask.ShowDialog();
         }
     }
 }

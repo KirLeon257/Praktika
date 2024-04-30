@@ -53,9 +53,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TaskElement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="TaskElement.cs" />
     <Compile Include="TaskElement.Designer.cs">
       <DependentUpon>TaskElement.cs</DependentUpon>
     </Compile>
@@ -83,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1491254405-plusaddmoredetail_82972.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90-908232_vintage-lined-paper-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

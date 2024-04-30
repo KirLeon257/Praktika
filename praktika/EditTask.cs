@@ -14,7 +14,7 @@ namespace praktika
 {
     public partial class EditTask : Form
     {
-        EditFormMode Mode;
+        public EditFormMode Mode;
         TaskElement.TaskElement element;
         MainForm MainForm;
         public EditTask(TaskElement.TaskElement element, MainForm form)
@@ -32,13 +32,14 @@ namespace praktika
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text != "")
+            if (textBox2.Text == "")
             {
                 MessageBox.Show("Введите доп задачу!");
                 return;
             }
 
             listBox1.Items.Add(textBox2.Text);
+            textBox2.Clear();
         }
 
         private void EditTask_Load(object sender, EventArgs e)
@@ -47,9 +48,13 @@ namespace praktika
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(Mode == EditFormMode.Create)
+            if (Mode == EditFormMode.Create)
             {
                 CreateTask();
+            }
+            else if (Mode == EditFormMode.Edit)
+            {
+
             }
         }
 
@@ -58,10 +63,16 @@ namespace praktika
             TaskClass task = new TaskClass(textBox1.Text);
             foreach (var item in listBox1.Items)
             {
-                task.AddSmallTask(item.ToString());
+                task.AddSmallTask((string)item);
             }
-            TaskElement.TaskElement element = new TaskElement.TaskElement(task,MainForm);
-            
+            TaskElement.TaskElement element = new TaskElement.TaskElement(task, MainForm);
+            MainForm.TasksFlowLayout.Controls.Add(element);
+            Hide();
+        }
+
+        private void EditTask_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

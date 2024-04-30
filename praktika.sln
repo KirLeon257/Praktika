@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReminderElements", "Reminde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task", "Task\Task.csproj", "{7E5B6CDB-74D9-465C-B23F-6178095B12C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskElement", "TaskElement\TaskElement.csproj", "{625ADBF6-DFDB-417B-B038-80E0A4B57ED1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskVisElement", "TaskElement\TaskVisElement.csproj", "{625ADBF6-DFDB-417B-B038-80E0A4B57ED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

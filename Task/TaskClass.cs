@@ -26,7 +26,7 @@ namespace TaskBook
             smallTasks.Add(smallTask);
         }
     }
-
+    [Serializable]
     public class SmallTaskClass
     {
         public string SmallTitle { get; set; }

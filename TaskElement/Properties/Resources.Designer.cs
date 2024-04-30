@@ -69,5 +69,15 @@ namespace TaskElement.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _90_908232_vintage_lined_paper_background {
+            get {
+                object obj = ResourceManager.GetObject("90-908232_vintage-lined-paper-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
