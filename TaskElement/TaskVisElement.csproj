@@ -53,7 +53,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TaskElement.cs" />
+    <Compile Include="TaskElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TaskElement.Designer.cs">
       <DependentUpon>TaskElement.cs</DependentUpon>
     </Compile>

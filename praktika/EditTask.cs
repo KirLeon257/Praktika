@@ -66,6 +66,7 @@ namespace praktika
                 task.AddSmallTask((string)item);
             }
             TaskElement.TaskElement element = new TaskElement.TaskElement(task, MainForm);
+            MainForm.Tasks.Add(task);
             MainForm.TasksFlowLayout.Controls.Add(element);
             Hide();
         }

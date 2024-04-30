@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReminderElement.cs" />
+    <Compile Include="ReminderElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ReminderElement.Designer.cs">
       <DependentUpon>ReminderElement.cs</DependentUpon>
     </Compile>

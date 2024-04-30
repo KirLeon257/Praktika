@@ -24,12 +24,6 @@ namespace TaskElement
         }
 
 
-        public TaskElement()
-        {
-            InitializeComponent();
-        }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "")
@@ -82,14 +76,11 @@ namespace TaskElement
             LoadSmallTasks(Task);
         }
 
-        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            
-        }
+        
 
         private void TitleCheckBox_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (TitleCheckBox.Checked)
+            if (TitleCheckBox.CheckState==CheckState.Checked)
             {
                 for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 {
@@ -107,9 +98,11 @@ namespace TaskElement
             }
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
+        
 
+        private void checkedListBox1_ItemCheck_1(object sender, ItemCheckEventArgs e)
+        {
+            
         }
     }
 }

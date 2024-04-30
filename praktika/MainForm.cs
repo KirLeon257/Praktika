@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Note;
 using ReminderElements;
@@ -21,6 +15,10 @@ namespace praktika
     {
         public int id_user { get; set; }
 
+        readonly string PATH_NOTE = "notes.json";
+        readonly string PATH_DIR = "resorses";
+        readonly string PATH_REMINDES = "remineds.json";
+        readonly string PATH_TASKS = "tasks.json";
         JsonSerializer serializer;
         public List<NoteClass> Notes;
         public List<RemindeClass> Remindes;
@@ -38,14 +36,20 @@ namespace praktika
         public MainForm()
         {
             InitializeComponent();
+
             editReminde = new EditReminde(this);
             editNote = new NoteEditForm(this);
+            editTask = new EditTask(this);
+
             Notes = new List<NoteClass>();
             Remindes = new List<RemindeClass>();
-            serializer = new JsonSerializer();
+            Tasks = new List<TaskClass>();
+
             DicNoteUsers = new Dictionary<int, List<NoteClass>>();
             DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
-            editTask = new EditTask(this);
+            DicTaskUsers = new Dictionary<int, List<TaskClass>>();
+
+            serializer = new JsonSerializer();
         }
 
         private void NoteBtn_Click(object sender, EventArgs e)
@@ -75,6 +79,7 @@ namespace praktika
         {
             LoadNotes();
             LoadRemined();
+            LoadTasks();
             UserNameLabel.Text = UserLogin;
         }
 
@@ -83,7 +88,7 @@ namespace praktika
             try
             {
 
-                using (JsonTextReader fs = new JsonTextReader(new StreamReader("notes.json")))
+                using (JsonTextReader fs = new JsonTextReader(new StreamReader(PATH_NOTE)))
                 {
                     DicNoteUsers = serializer.Deserialize<Dictionary<int, List<NoteClass>>>(fs);
                     if (DicNoteUsers == null)
@@ -95,9 +100,15 @@ namespace praktika
 
                 }
             }
-            catch (Exception ex)
+            catch (FileNotFoundException)
             {
-                MessageBox.Show(ex.HResult.ToString());
+                throw;
+                //File.Create(PATH_NOTE).Close();
+            }catch (DirectoryNotFoundException)
+            {
+                throw;
+                //Directory.CreateDirectory(PATH_DIR);
+                //File.Create(PATH_NOTE).Close();
             }
         }
 
@@ -127,6 +138,7 @@ namespace praktika
         {
             SaveNotes();
             SaveRemineds();
+            SaveTasks();
             Application.Exit();
 
         }
@@ -141,7 +153,7 @@ namespace praktika
             {
                 DicNoteUsers.Add(id_user, Notes);
             }
-            using (StreamWriter fs = new StreamWriter("notes.json"))
+            using (StreamWriter fs = new StreamWriter(PATH_NOTE))
             {
 
                 serializer.Serialize(fs, DicNoteUsers);
@@ -171,7 +183,7 @@ namespace praktika
         {
             try
             {
-                using (JsonTextReader fs = new JsonTextReader(new StreamReader("remineds.json")))
+                using (JsonTextReader fs = new JsonTextReader(new StreamReader(PATH_REMINDES)))
                 {
                     DicReminedUsers = serializer.Deserialize<Dictionary<int, List<RemindeClass>>>(fs);
                     if (DicReminedUsers == null)
@@ -183,10 +195,14 @@ namespace praktika
                 }
                 
             }
-            catch (Exception)
+            catch (FileNotFoundException)
             {
-
-                throw;
+                //File.Create(PATH_REMINDES).Close();
+            }
+            catch (DirectoryNotFoundException)
+            {
+               // Directory.CreateDirectory(PATH_DIR);
+               // //File.Create(PATH_REMINDES).Close();
             }
         }
 
@@ -223,7 +239,7 @@ namespace praktika
                 {
                     DicReminedUsers.Add(id_user, Remindes);
                 }
-                using (StreamWriter fs = new StreamWriter("remineds.json"))
+                using (StreamWriter fs = new StreamWriter(PATH_REMINDES))
                 {
 
                     serializer.Serialize(fs, DicReminedUsers);
@@ -240,6 +256,67 @@ namespace praktika
         {
             editTask.Mode = EditFormMode.Create;
             editTask.ShowDialog();
+        }
+
+        void SaveTasks()
+        {
+            try
+            {
+                if (DicTaskUsers.ContainsKey(id_user))
+                {
+                    DicTaskUsers[id_user] = Tasks;
+                }
+                else
+                {
+                    DicTaskUsers.Add(id_user, Tasks);
+                }
+
+                using (StreamWriter sw = new StreamWriter(PATH_TASKS))
+                {
+                    serializer.Serialize(sw, DicTaskUsers);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        void LoadTasks()
+        {
+            try
+            {
+                using (JsonTextReader jr = new JsonTextReader(new StreamReader("tasks.json")))
+                {
+                    DicTaskUsers = serializer.Deserialize<Dictionary<int, List<TaskClass>>>(jr);
+                    if (DicTaskUsers == null)
+                    {
+                        return;
+                    }
+
+                    AddTasks();
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                File.Create("tasks.json").Close();
+            }
+        }
+
+        void AddTasks()
+        {
+            if (DicTaskUsers.Count == 0)
+            {
+                return;
+            }
+
+            Tasks = DicTaskUsers[id_user];
+            foreach (TaskClass task in Tasks)
+            {
+                TaskElement.TaskElement taskElement = new TaskElement.TaskElement(task, this);
+                TasksFlowLayout.Controls.Add(taskElement);
+            }
         }
     }
 }

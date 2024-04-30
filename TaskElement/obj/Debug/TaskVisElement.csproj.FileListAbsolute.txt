@@ -20,6 +20,6 @@ D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktik
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\TaskElement\obj\Debug\TaskElement.TaskElement.resources
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\TaskElement\obj\Debug\TaskVisElement.csproj.GenerateResource.cache
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\TaskElement\obj\Debug\TaskVisElement.csproj.CoreCompileInputs.cache
-D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\TaskElement\obj\Debug\TaskVisElement.csproj.CopyComplete
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\TaskElement\obj\Debug\TaskElement.dll
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\TaskElement\obj\Debug\TaskElement.pdb
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\TaskElement\obj\Debug\TaskVisE.7DE23E91.Up2Date

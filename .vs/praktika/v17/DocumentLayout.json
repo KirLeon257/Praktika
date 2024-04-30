@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\516\\\u0422\u0420\u0415\u0422\u0418\u0419 \u041A\u0423\u0420\u0421\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0421\u041E\u041F\u0420\u041E\u0412\u041E\u0416\u0414\u0415\u041D\u0418\u0415\\praktikareserv\\Praktika\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{625ADBF6-DFDB-417B-B038-80E0A4B57ED1}|TaskElement\\TaskVisElement.csproj|d:\\516\\\u0442\u0440\u0435\u0442\u0438\u0439 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0441\u043E\u043F\u0440\u043E\u0432\u043E\u0436\u0434\u0435\u043D\u0438\u0435\\praktikareserv\\praktika\\taskelement\\taskelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625ADBF6-DFDB-417B-B038-80E0A4B57ED1}|TaskElement\\TaskVisElement.csproj|solutionrelative:taskelement\\taskelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625ADBF6-DFDB-417B-B038-80E0A4B57ED1}|TaskElement\\TaskVisElement.csproj|d:\\516\\\u0442\u0440\u0435\u0442\u0438\u0439 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0441\u043E\u043F\u0440\u043E\u0432\u043E\u0436\u0434\u0435\u043D\u0438\u0435\\praktikareserv\\praktika\\taskelement\\taskelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{625ADBF6-DFDB-417B-B038-80E0A4B57ED1}|TaskElement\\TaskVisElement.csproj|solutionrelative:taskelement\\taskelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\516\\\u0422\u0420\u0415\u0422\u0418\u0419 \u041A\u0423\u0420\u0421\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0421\u041E\u041F\u0420\u041E\u0412\u041E\u0416\u0414\u0415\u041D\u0418\u0415\\praktikareserv\\Praktika\\TaskElement\\TaskElement.cs",
+              "RelativeDocumentMoniker": "TaskElement\\TaskElement.cs",
+              "ToolTip": "D:\\516\\\u0422\u0420\u0415\u0422\u0418\u0419 \u041A\u0423\u0420\u0421\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0421\u041E\u041F\u0420\u041E\u0412\u041E\u0416\u0414\u0415\u041D\u0418\u0415\\praktikareserv\\Praktika\\TaskElement\\TaskElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "TaskElement\\TaskElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T18:00:24.637Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskElement.cs",
+              "DocumentMoniker": "D:\\516\\\u0422\u0420\u0415\u0422\u0418\u0419 \u041A\u0423\u0420\u0421\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0421\u041E\u041F\u0420\u041E\u0412\u041E\u0416\u0414\u0415\u041D\u0418\u0415\\praktikareserv\\Praktika\\TaskElement\\TaskElement.cs",
+              "RelativeDocumentMoniker": "TaskElement\\TaskElement.cs",
+              "ToolTip": "D:\\516\\\u0422\u0420\u0415\u0422\u0418\u0419 \u041A\u0423\u0420\u0421\\\u041F\u0420\u0410\u041A\u0422\u0418\u041A\u0410 \u0421\u041E\u041F\u0420\u041E\u0412\u041E\u0416\u0414\u0415\u041D\u0418\u0415\\praktikareserv\\Praktika\\TaskElement\\TaskElement.cs",
+              "RelativeToolTip": "TaskElement\\TaskElement.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAswFMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T17:59:33.997Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
