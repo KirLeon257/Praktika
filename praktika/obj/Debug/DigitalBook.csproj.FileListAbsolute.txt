@@ -30,6 +30,4 @@ D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktik
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\bin\Debug\Task.dll
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\bin\Debug\Task.pdb
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\praktika.EditTask.resources
-D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\DigitalBook.csproj.SuggestedBindingRedirects.cache
-D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\praktika.exe.config
-D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\DigitalB.E55651CE.Up2Date
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\praktika\obj\Debug\DigitalBook.csproj.CopyComplete

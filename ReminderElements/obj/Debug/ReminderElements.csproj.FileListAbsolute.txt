@@ -21,4 +21,4 @@ D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktik
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\bin\Debug\Task.dll
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\bin\Debug\TaskElement.pdb
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\bin\Debug\Task.pdb
-D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\Reminder.D0C1A45C.Up2Date
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\ReminderElements\obj\Debug\ReminderElements.csproj.CopyComplete

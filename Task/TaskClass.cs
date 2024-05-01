@@ -10,7 +10,7 @@ namespace TaskBook
     public class TaskClass
     {
         public string Title { get; set; }
-        bool Status { get; set; }
+        public bool Status { get; set; }
         public List<SmallTaskClass> smallTasks;
 
         public TaskClass(string title)

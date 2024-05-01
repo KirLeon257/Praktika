@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\praktika\\DigitalBook.csproj",
-        "projectName": "praktika",
+        "projectName": "DigitalBook",
         "projectPath": "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\praktika\\DigitalBook.csproj",
         "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
         "outputPath": "D:\\516\\ТРЕТИЙ КУРС\\ПРАКТИКА СОПРОВОЖДЕНИЕ\\praktikareserv\\Praktika\\praktika\\obj\\",
@@ -33,11 +33,6 @@
               }
             }
           }
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -56,9 +51,6 @@
       },
       "runtimes": {
         "win": {
-          "#import": []
-        },
-        "win-arm64": {
           "#import": []
         },
         "win-x64": {

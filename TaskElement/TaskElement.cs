@@ -86,10 +86,9 @@ namespace TaskElement
                 {
                     checkedListBox1.SetItemChecked(i, true);
                 }
-                Font font = TitleCheckBox.Font;
                 
             }
-            else
+            else if(TitleCheckBox.CheckState == CheckState.Unchecked)
             {
                 for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 {
@@ -102,7 +101,27 @@ namespace TaskElement
 
         private void checkedListBox1_ItemCheck_1(object sender, ItemCheckEventArgs e)
         {
-            
+            if (e.NewValue == CheckState.Checked)
+            {
+                if(checkedListBox1.CheckedItems.Count+1>0 && checkedListBox1.CheckedItems.Count+1 < checkedListBox1.Items.Count)
+                {
+                    TitleCheckBox.CheckState = CheckState.Indeterminate;
+                }else if(checkedListBox1.CheckedItems.Count + 1== checkedListBox1.Items.Count)
+                {
+                    TitleCheckBox.CheckState = CheckState.Checked;
+                }
+            }
+            else if(e.NewValue == CheckState.Unchecked)
+            {
+                if (checkedListBox1.CheckedItems.Count - 1 > 0 && checkedListBox1.CheckedItems.Count - 1 < checkedListBox1.Items.Count)
+                {
+                    TitleCheckBox.CheckState = CheckState.Indeterminate;
+                }
+                else if (checkedListBox1.CheckedItems.Count - 1 <= 0)
+                {
+                    TitleCheckBox.CheckState = CheckState.Unchecked;
+                }
+            }
         }
     }
 }
