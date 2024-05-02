@@ -37,7 +37,9 @@ namespace praktika
                 MessageBox.Show("Введите доп задачу!");
                 return;
             }
-
+            if (listBox1.Items.Contains(textBox2.Text)){
+                return;
+            }
             listBox1.Items.Add(textBox2.Text);
             textBox2.Clear();
         }

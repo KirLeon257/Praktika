@@ -31,6 +31,10 @@ namespace TaskElement
                 return;
             }
             SmallTaskClass smallTask = new SmallTaskClass(textBox1.Text);
+            if (Task.ContainSmallTask(smallTask))
+            {
+                return;
+            }
             Task.smallTasks.Add(smallTask);
             checkedListBox1.Items.Add(smallTask.SmallTitle);
             textBox1.Clear();
@@ -52,9 +56,9 @@ namespace TaskElement
             foreach (SmallTaskClass smallTask in task.smallTasks)
             {
                 checkedListBox1.Items.Add(smallTask.SmallTitle);
-                if (smallTask.SmallStatus)
+                if (smallTask.SmallStatus==CheckState.Checked)
                 {
-                    checkedListBox1.SetItemChecked(checkedListBox1.Items.IndexOf(smallTask), true);
+                    checkedListBox1.SetItemCheckState(checkedListBox1.Items.IndexOf(smallTask.SmallTitle), CheckState.Checked);
                 }
             }
         }
@@ -105,22 +109,26 @@ namespace TaskElement
             {
                 if(checkedListBox1.CheckedItems.Count+1>0 && checkedListBox1.CheckedItems.Count+1 < checkedListBox1.Items.Count)
                 {
-                    TitleCheckBox.CheckState = CheckState.Indeterminate;
+                    TitleCheckBox.CheckState = CheckState.Unchecked;
                 }else if(checkedListBox1.CheckedItems.Count + 1== checkedListBox1.Items.Count)
                 {
                     TitleCheckBox.CheckState = CheckState.Checked;
+                    Task.Status = CheckState.Checked;
                 }
+                Task.smallTasks[e.Index].SmallStatus = CheckState.Checked;
             }
             else if(e.NewValue == CheckState.Unchecked)
             {
                 if (checkedListBox1.CheckedItems.Count - 1 > 0 && checkedListBox1.CheckedItems.Count - 1 < checkedListBox1.Items.Count)
                 {
-                    TitleCheckBox.CheckState = CheckState.Indeterminate;
+                    TitleCheckBox.CheckState = CheckState.Unchecked;
                 }
                 else if (checkedListBox1.CheckedItems.Count - 1 <= 0)
                 {
                     TitleCheckBox.CheckState = CheckState.Unchecked;
+
                 }
+                Task.smallTasks[e.Index].SmallStatus = CheckState.Unchecked;
             }
         }
     }

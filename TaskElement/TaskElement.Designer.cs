@@ -87,7 +87,6 @@
             this.TitleCheckBox.Text = "checkBox1";
             this.TitleCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TitleCheckBox.UseVisualStyleBackColor = true;
-            this.TitleCheckBox.CheckedChanged += new System.EventHandler(this.TitleCheckBox_CheckedChanged_1);
             // 
             // panel2
             // 

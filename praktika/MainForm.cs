@@ -47,7 +47,7 @@ namespace praktika
 
             DicNoteUsers = new Dictionary<int, List<NoteClass>>();
             DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
-            DicTaskUsers = new Dictionary<int, List<TaskClass>>();
+            
 
             serializer = new JsonSerializer();
         }
@@ -292,6 +292,7 @@ namespace praktika
                     DicTaskUsers = serializer.Deserialize<Dictionary<int, List<TaskClass>>>(jr);
                     if (DicTaskUsers == null)
                     {
+                        DicTaskUsers = new Dictionary<int, List<TaskClass>>();
                         return;
                     }
 
