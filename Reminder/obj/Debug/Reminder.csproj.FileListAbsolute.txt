@@ -7,3 +7,4 @@ D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktik
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Reminder\bin\Debug\System.ValueTuple.dll
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Reminder\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
 D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Reminder\obj\Debug\Reminder.csproj.CopyComplete
+D:\516\ТРЕТИЙ КУРС\ПРАКТИКА СОПРОВОЖДЕНИЕ\praktikareserv\Praktika\Reminder\obj\Debug\Reminder.csproj.AssemblyReference.cache

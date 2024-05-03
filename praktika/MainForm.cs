@@ -283,6 +283,11 @@ namespace praktika
             }
         }
 
+        public void DeleteTask(TaskClass task)
+        {
+            Tasks.Remove(task);
+        }
+
         void LoadTasks()
         {
             try
@@ -308,6 +313,10 @@ namespace praktika
         void AddTasks()
         {
             if (DicTaskUsers.Count == 0)
+            {
+                return;
+            }
+            if (!DicTaskUsers.ContainsKey(id_user))
             {
                 return;
             }

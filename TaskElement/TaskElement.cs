@@ -16,11 +16,13 @@ namespace TaskElement
     {
         TaskClass Task;
         MainForm MainForm;
+        EditTask editTask;
         public TaskElement(TaskClass task, MainForm form)
         {
             InitializeComponent();
             this.Task = task;
             MainForm = form;
+            editTask = new EditTask(this, MainForm);
         }
 
 
@@ -37,6 +39,7 @@ namespace TaskElement
             }
             Task.smallTasks.Add(smallTask);
             checkedListBox1.Items.Add(smallTask.SmallTitle);
+            TitleCheckBox.Checked = false;
             textBox1.Clear();
         }
 
@@ -44,6 +47,7 @@ namespace TaskElement
         {
             TitleCheckBox.Text = Task.Title;
             LoadSmallTasks(Task);
+            
         }
 
         void LoadSmallTasks(TaskClass task)
@@ -53,14 +57,17 @@ namespace TaskElement
                 return;
             }
 
-            foreach (SmallTaskClass smallTask in task.smallTasks)
+            
+            for (int i = 0; i < task.smallTasks.Count; i++)
             {
-                checkedListBox1.Items.Add(smallTask.SmallTitle);
-                if (smallTask.SmallStatus==CheckState.Checked)
+
+                checkedListBox1.Items.Add(Task.smallTasks[i].SmallTitle);
+                if (Task.smallTasks[i].SmallStatus == CheckState.Checked)
                 {
-                    checkedListBox1.SetItemCheckState(checkedListBox1.Items.IndexOf(smallTask.SmallTitle), CheckState.Checked);
+                    checkedListBox1.SetItemCheckState(checkedListBox1.Items.IndexOf(Task.smallTasks[i].SmallTitle), CheckState.Checked);
                 }
             }
+           
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -80,56 +87,97 @@ namespace TaskElement
             LoadSmallTasks(Task);
         }
 
-        
+
 
         private void TitleCheckBox_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (TitleCheckBox.CheckState==CheckState.Checked)
+            if (TitleCheckBox.CheckState == CheckState.Checked)
             {
                 for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 {
-                    checkedListBox1.SetItemChecked(i, true);
+                    checkedListBox1.SetItemCheckState(i, CheckState.Checked);
                 }
-                
+
             }
-            else if(TitleCheckBox.CheckState == CheckState.Unchecked)
+            else if (TitleCheckBox.CheckState == CheckState.Unchecked)
             {
                 for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 {
-                    checkedListBox1.SetItemChecked(i, false);
+                    checkedListBox1.SetItemCheckState(i, CheckState.Unchecked);
                 }
             }
         }
 
-        
+
 
         private void checkedListBox1_ItemCheck_1(object sender, ItemCheckEventArgs e)
         {
+            CheckState StateTask = CheckTitleStatus(e);
+            TitleCheckBox.CheckState = StateTask;
+            Task.Status = StateTask;
+        }
+
+        private void TitleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void удалитьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (checkedListBox1.SelectedIndex != -1)
+                {
+                    Task.smallTasks.Remove(Task.smallTasks[checkedListBox1.SelectedIndex]);
+                    checkedListBox1.Items.RemoveAt(checkedListBox1.SelectedIndex);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm.DeleteTask(Task);
+            this.Dispose();
+        }
+
+        CheckState CheckTitleStatus(ItemCheckEventArgs e)
+        {
+            CheckState state = new CheckState();
             if (e.NewValue == CheckState.Checked)
             {
-                if(checkedListBox1.CheckedItems.Count+1>0 && checkedListBox1.CheckedItems.Count+1 < checkedListBox1.Items.Count)
+                if (checkedListBox1.CheckedItems.Count + 1 > 0 && checkedListBox1.CheckedItems.Count + 1 < checkedListBox1.Items.Count)
                 {
-                    TitleCheckBox.CheckState = CheckState.Unchecked;
-                }else if(checkedListBox1.CheckedItems.Count + 1== checkedListBox1.Items.Count)
+                    state = CheckState.Indeterminate;
+                }
+                else if (checkedListBox1.CheckedItems.Count + 1 == checkedListBox1.Items.Count)
                 {
-                    TitleCheckBox.CheckState = CheckState.Checked;
-                    Task.Status = CheckState.Checked;
+                    state = CheckState.Checked;
                 }
                 Task.smallTasks[e.Index].SmallStatus = CheckState.Checked;
             }
-            else if(e.NewValue == CheckState.Unchecked)
+            else if (e.NewValue == CheckState.Unchecked)
             {
                 if (checkedListBox1.CheckedItems.Count - 1 > 0 && checkedListBox1.CheckedItems.Count - 1 < checkedListBox1.Items.Count)
                 {
-                    TitleCheckBox.CheckState = CheckState.Unchecked;
+                    state = CheckState.Indeterminate;
                 }
                 else if (checkedListBox1.CheckedItems.Count - 1 <= 0)
                 {
-                    TitleCheckBox.CheckState = CheckState.Unchecked;
-
+                    state = CheckState.Unchecked;
                 }
                 Task.smallTasks[e.Index].SmallStatus = CheckState.Unchecked;
             }
+            return state;
         }
     }
 }

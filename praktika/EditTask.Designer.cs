@@ -42,7 +42,7 @@ namespace praktika
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 20);
+            this.textBox1.Size = new System.Drawing.Size(211, 20);
             this.textBox1.TabIndex = 0;
             // 
             // label1
@@ -58,7 +58,7 @@ namespace praktika
             // 
             this.textBox2.Location = new System.Drawing.Point(15, 76);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 20);
+            this.textBox2.Size = new System.Drawing.Size(288, 20);
             this.textBox2.TabIndex = 3;
             // 
             // label2
@@ -72,11 +72,11 @@ namespace praktika
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(261, 73);
+            this.button1.Location = new System.Drawing.Point(309, 74);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
+            this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
