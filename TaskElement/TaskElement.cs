@@ -39,8 +39,16 @@ namespace TaskElement
             }
             Task.smallTasks.Add(smallTask);
             checkedListBox1.Items.Add(smallTask.SmallTitle);
-            TitleCheckBox.Checked = false;
-            textBox1.Clear();
+            if(checkedListBox1.CheckedItems.Count > 0)
+            {
+                TitleCheckBox.CheckState = CheckState.Indeterminate;
+            }
+            else
+            {
+                TitleCheckBox.CheckState = CheckState.Unchecked;
+            }
+
+                textBox1.Clear();
         }
 
         private void TaskElement_Load(object sender, EventArgs e)
@@ -119,7 +127,13 @@ namespace TaskElement
 
         private void TitleCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if (TitleCheckBox.CheckState == CheckState.Checked)
+            {
+                CheckedAllElement();
+            }else if(TitleCheckBox.CheckState == CheckState.Unchecked)
+            {
+                UncheckedAllElement();
+            }
         }
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,6 +192,22 @@ namespace TaskElement
                 Task.smallTasks[e.Index].SmallStatus = CheckState.Unchecked;
             }
             return state;
+        }
+
+        void CheckedAllElement()
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, true);
+            }
+        }
+
+        void UncheckedAllElement()
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+            }
         }
     }
 }
