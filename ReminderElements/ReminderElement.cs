@@ -61,5 +61,10 @@ namespace ReminderElements
             EditReminde.Mode = EditFormMode.Edit;
             EditReminde.ShowDialog();
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

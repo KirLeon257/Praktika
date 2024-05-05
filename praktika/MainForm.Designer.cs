@@ -31,6 +31,7 @@ namespace praktika
         {
             this.MenuPanel = new System.Windows.Forms.Panel();
             this.UserNameLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TaskBtn = new System.Windows.Forms.Button();
             this.RemindBtn = new System.Windows.Forms.Button();
@@ -39,17 +40,17 @@ namespace praktika
             this.NotePage = new System.Windows.Forms.TabPage();
             this.NoteTable = new System.Windows.Forms.FlowLayoutPanel();
             this.NotesMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemindPage = new System.Windows.Forms.TabPage();
             this.ReminedTable = new System.Windows.Forms.FlowLayoutPanel();
             this.RemindeMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.создатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.TaskPage = new System.Windows.Forms.TabPage();
             this.TasksFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.TaskMenuStreap = new System.Windows.Forms.MenuStrip();
-            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.создатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.NotePage.SuspendLayout();
             this.NotesMenuStrip.SuspendLayout();
@@ -57,7 +58,6 @@ namespace praktika
             this.RemindeMenuStrip.SuspendLayout();
             this.TaskPage.SuspendLayout();
             this.TaskMenuStreap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuPanel
@@ -79,11 +79,21 @@ namespace praktika
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.Location = new System.Drawing.Point(60, 125);
+            this.UserNameLabel.Location = new System.Drawing.Point(50, 125);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(70, 25);
             this.UserNameLabel.TabIndex = 5;
             this.UserNameLabel.Text = "label4";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::praktika.Properties.Resources.avatardefault_92824__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -117,6 +127,7 @@ namespace praktika
             // 
             // NoteBtn
             // 
+            this.NoteBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.NoteBtn.Location = new System.Drawing.Point(36, 201);
             this.NoteBtn.Name = "NoteBtn";
             this.NoteBtn.Size = new System.Drawing.Size(94, 35);
@@ -171,6 +182,14 @@ namespace praktika
             this.NotesMenuStrip.TabIndex = 1;
             this.NotesMenuStrip.Text = "menuStrip1";
             // 
+            // создатьToolStripMenuItem
+            // 
+            this.создатьToolStripMenuItem.Image = global::praktika.Properties.Resources._1491254405_plusaddmoredetail_82972;
+            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.создатьToolStripMenuItem.Text = "Создать";
+            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
+            // 
             // RemindPage
             // 
             this.RemindPage.Controls.Add(this.ReminedTable);
@@ -200,6 +219,14 @@ namespace praktika
             this.RemindeMenuStrip.Size = new System.Drawing.Size(617, 24);
             this.RemindeMenuStrip.TabIndex = 1;
             this.RemindeMenuStrip.Text = "menuStrip1";
+            // 
+            // создатьToolStripMenuItem1
+            // 
+            this.создатьToolStripMenuItem1.Image = global::praktika.Properties.Resources._1491254405_plusaddmoredetail_82972;
+            this.создатьToolStripMenuItem1.Name = "создатьToolStripMenuItem1";
+            this.создатьToolStripMenuItem1.Size = new System.Drawing.Size(78, 20);
+            this.создатьToolStripMenuItem1.Text = "Создать";
+            this.создатьToolStripMenuItem1.Click += new System.EventHandler(this.создатьToolStripMenuItem1_Click);
             // 
             // TaskPage
             // 
@@ -232,22 +259,6 @@ namespace praktika
             this.TaskMenuStreap.TabIndex = 2;
             this.TaskMenuStreap.Text = "menuStrip1";
             // 
-            // создатьToolStripMenuItem
-            // 
-            this.создатьToolStripMenuItem.Image = global::praktika.Properties.Resources._1491254405_plusaddmoredetail_82972;
-            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.создатьToolStripMenuItem.Text = "Создать";
-            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
-            // 
-            // создатьToolStripMenuItem1
-            // 
-            this.создатьToolStripMenuItem1.Image = global::praktika.Properties.Resources._1491254405_plusaddmoredetail_82972;
-            this.создатьToolStripMenuItem1.Name = "создатьToolStripMenuItem1";
-            this.создатьToolStripMenuItem1.Size = new System.Drawing.Size(78, 20);
-            this.создатьToolStripMenuItem1.Text = "Создать";
-            this.создатьToolStripMenuItem1.Click += new System.EventHandler(this.создатьToolStripMenuItem1_Click);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Image = global::praktika.Properties.Resources._1491254405_plusaddmoredetail_82972;
@@ -255,16 +266,6 @@ namespace praktika
             this.toolStripMenuItem1.Size = new System.Drawing.Size(78, 20);
             this.toolStripMenuItem1.Text = "Создать";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::praktika.Properties.Resources.avatardefault_92824__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -281,6 +282,7 @@ namespace praktika
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuPanel.ResumeLayout(false);
             this.MenuPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.NotePage.ResumeLayout(false);
             this.NotePage.PerformLayout();
@@ -294,7 +296,6 @@ namespace praktika
             this.TaskPage.PerformLayout();
             this.TaskMenuStreap.ResumeLayout(false);
             this.TaskMenuStreap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

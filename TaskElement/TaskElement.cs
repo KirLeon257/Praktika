@@ -14,7 +14,7 @@ namespace TaskElement
 {
     public partial class TaskElement : UserControl
     {
-        TaskClass Task;
+        public TaskClass Task { get; set; }
         MainForm MainForm;
         EditTask editTask;
         public TaskElement(TaskClass task, MainForm form)
@@ -138,7 +138,9 @@ namespace TaskElement
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            editTask.Mode = EditFormMode.Edit;
+            editTask.Text = "Редактирование...";
+            editTask.ShowDialog();
         }
 
         private void удалитьToolStripMenuItem1_Click(object sender, EventArgs e)

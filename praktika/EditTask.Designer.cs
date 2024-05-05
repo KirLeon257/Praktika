@@ -40,7 +40,7 @@ namespace praktika
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 32);
+            this.textBox1.Location = new System.Drawing.Point(12, 37);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 20);
             this.textBox1.TabIndex = 0;
@@ -97,11 +97,13 @@ namespace praktika
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(369, 134);
             this.listBox1.TabIndex = 7;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // EditTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(396, 279);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);

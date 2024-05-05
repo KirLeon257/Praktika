@@ -50,20 +50,13 @@ namespace praktika
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
-            {
-                errorProvider1.SetError(textBox1, "Поле не должно быть пустым!");
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            
         }
 
         void CreateRemined()
         {
             if (!CheckValidation() || textBox1.Text==""){
-                new Task(() => MessageBox.Show("Введены некоректные значения!"));
+                new Task(() => MessageBox.Show("Введены некоректные значения!")).Start();
                 return;
             }
             DateTime dateTime = DateTime.Parse(dateTimePicker1.Text);
@@ -101,6 +94,7 @@ namespace praktika
                 textBox1.Text = reminderElement.Reminde.Title;
                 dateTimePicker1.Value = reminderElement.Reminde.TimeOfReminde;
             }
+            
         }
     }
 }

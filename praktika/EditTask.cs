@@ -17,6 +17,7 @@ namespace praktika
         public EditFormMode Mode;
         TaskElement.TaskElement element;
         MainForm MainForm;
+        int SelectedIndex;
         public EditTask(TaskElement.TaskElement element, MainForm form)
         {
             InitializeComponent();
@@ -40,12 +41,18 @@ namespace praktika
             if (listBox1.Items.Contains(textBox2.Text)){
                 return;
             }
+
             listBox1.Items.Add(textBox2.Text);
             textBox2.Clear();
         }
 
         private void EditTask_Load(object sender, EventArgs e)
         {
+            if (Mode == EditFormMode.Edit)
+            {
+                textBox1.Text = element.Task.Title;
+                LoadSmallTasks();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,10 +60,6 @@ namespace praktika
             if (Mode == EditFormMode.Create)
             {
                 CreateTask();
-            }
-            else if (Mode == EditFormMode.Edit)
-            {
-
             }
         }
 
@@ -74,6 +77,29 @@ namespace praktika
         }
 
         private void EditTask_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            listBox1.Items.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Mode == EditFormMode.Edit)
+            {
+                textBox2.Text = listBox1.Items[listBox1.SelectedIndex].ToString();
+            }
+        }
+
+        void LoadSmallTasks()
+        {
+            foreach (SmallTaskClass task in element.Task.smallTasks)
+            {
+                listBox1.Items.Add(task.SmallTitle);
+            }
+        }
+
+        void EditSmallTask(int index)
         {
 
         }

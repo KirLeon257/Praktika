@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Drawing;
 using System.Windows.Forms;
 using Note;
 using ReminderElements;
@@ -32,6 +33,7 @@ namespace praktika
         public EditReminde editReminde;
         public string UserLogin { get; set; }
         EditTask editTask;
+        Color defcolor, SelectColor;
 
         public MainForm()
         {
@@ -47,25 +49,35 @@ namespace praktika
 
             DicNoteUsers = new Dictionary<int, List<NoteClass>>();
             DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
-            
 
+            defcolor = NoteBtn.BackColor;
+            SelectColor = Color.BlueViolet;
             serializer = new JsonSerializer();
         }
 
         private void NoteBtn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
+            NoteBtn.BackColor = SelectColor;
+            TaskBtn.BackColor = defcolor;
+            RemindBtn.BackColor = defcolor;
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
+            NoteBtn.BackColor = defcolor;
+            TaskBtn.BackColor = SelectColor;
+            RemindBtn.BackColor = defcolor;
         }
 
         private void TaskBtn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
+            NoteBtn.BackColor = defcolor;
+            TaskBtn.BackColor = defcolor;
+            RemindBtn.BackColor = SelectColor;
         }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)

@@ -29,14 +29,11 @@ namespace praktika
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -74,10 +71,6 @@ namespace praktika
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm";
@@ -101,7 +94,6 @@ namespace praktika
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditReminde";
             this.Load += new System.EventHandler(this.EditReminde_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +105,6 @@ namespace praktika
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
