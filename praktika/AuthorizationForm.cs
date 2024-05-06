@@ -145,6 +145,32 @@ namespace praktika
             }
         }
 
+        private void LoginTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                PwdTextBox.Focus();
+            }
+        }
+
+        private void PwdTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PwdTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
         //int GetUserId(string login, string pwd)
         //{

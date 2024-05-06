@@ -14,10 +14,10 @@ namespace ReminderElements
 {
     public partial class ReminderElement : UserControl
     {
-        public RemindeClass Reminde { get;}
+        public RemindeClass Reminde { get; }
         MainForm mainForm;
         EditReminde EditReminde;
-        public ReminderElement(RemindeClass reminde,MainForm mainForm)
+        public ReminderElement(RemindeClass reminde, MainForm mainForm)
         {
             InitializeComponent();
             Reminde = reminde;
@@ -28,7 +28,7 @@ namespace ReminderElements
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (DateTime.Now < Reminde.TimeOfReminde) 
+            if (DateTime.Now < Reminde.TimeOfReminde)
             {
                 return;
             }
@@ -46,14 +46,17 @@ namespace ReminderElements
 
         private void ReminderElement_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mainForm.DeleteReminedElement(this);
-            mainForm.Remindes.Remove(Reminde);
-            this.Dispose();
+            if (MessageBox.Show($"Вы уверены, что хотите удалить напоминание \"{Reminde.Title}\"", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                mainForm.DeleteReminedElement(this);
+                mainForm.Remindes.Remove(Reminde);
+                this.Dispose();
+            }
         }
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)

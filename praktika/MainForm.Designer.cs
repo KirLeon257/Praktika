@@ -62,7 +62,7 @@ namespace praktika
             // 
             // MenuPanel
             // 
-            this.MenuPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.MenuPanel.BackColor = System.Drawing.Color.LightSlateGray;
             this.MenuPanel.Controls.Add(this.UserNameLabel);
             this.MenuPanel.Controls.Add(this.pictureBox1);
             this.MenuPanel.Controls.Add(this.label1);
@@ -79,7 +79,7 @@ namespace praktika
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.Location = new System.Drawing.Point(50, 125);
+            this.UserNameLabel.Location = new System.Drawing.Point(60, 125);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(70, 25);
             this.UserNameLabel.TabIndex = 5;
@@ -98,16 +98,18 @@ namespace praktika
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 29);
+            this.label1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.label1.Font = new System.Drawing.Font("Script MT Bold", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(12, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 30);
+            this.label1.Size = new System.Drawing.Size(150, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "DigitalBook";
             // 
             // TaskBtn
             // 
-            this.TaskBtn.Location = new System.Drawing.Point(36, 317);
+            this.TaskBtn.Location = new System.Drawing.Point(36, 283);
             this.TaskBtn.Name = "TaskBtn";
             this.TaskBtn.Size = new System.Drawing.Size(94, 35);
             this.TaskBtn.TabIndex = 2;
@@ -117,7 +119,7 @@ namespace praktika
             // 
             // RemindBtn
             // 
-            this.RemindBtn.Location = new System.Drawing.Point(36, 258);
+            this.RemindBtn.Location = new System.Drawing.Point(36, 242);
             this.RemindBtn.Name = "RemindBtn";
             this.RemindBtn.Size = new System.Drawing.Size(94, 35);
             this.RemindBtn.TabIndex = 1;
@@ -142,7 +144,7 @@ namespace praktika
             this.tabControl1.Controls.Add(this.RemindPage);
             this.tabControl1.Controls.Add(this.TaskPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.HangulFull;
             this.tabControl1.ItemSize = new System.Drawing.Size(23, 23);
             this.tabControl1.Location = new System.Drawing.Point(169, 0);
             this.tabControl1.Name = "tabControl1";
@@ -160,7 +162,7 @@ namespace praktika
             this.NotePage.Padding = new System.Windows.Forms.Padding(3);
             this.NotePage.Size = new System.Drawing.Size(623, 419);
             this.NotePage.TabIndex = 0;
-            this.NotePage.Text = "tabPage1";
+            this.NotePage.Text = "Заметки";
             this.NotePage.UseVisualStyleBackColor = true;
             // 
             // NoteTable
@@ -199,7 +201,7 @@ namespace praktika
             this.RemindPage.Padding = new System.Windows.Forms.Padding(3);
             this.RemindPage.Size = new System.Drawing.Size(623, 419);
             this.RemindPage.TabIndex = 1;
-            this.RemindPage.Text = "tabPage2";
+            this.RemindPage.Text = "Напоминания";
             this.RemindPage.UseVisualStyleBackColor = true;
             // 
             // ReminedTable
@@ -237,7 +239,7 @@ namespace praktika
             this.TaskPage.Padding = new System.Windows.Forms.Padding(3);
             this.TaskPage.Size = new System.Drawing.Size(623, 419);
             this.TaskPage.TabIndex = 2;
-            this.TaskPage.Text = "tabPage1";
+            this.TaskPage.Text = "Задачи";
             this.TaskPage.UseVisualStyleBackColor = true;
             // 
             // TasksFlowLayout

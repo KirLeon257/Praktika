@@ -16,7 +16,7 @@ namespace praktika
 
         NoteElement EditElement, NewElement;
         MainForm MainForm;
-       public EditFormMode Mode { get; set; }
+        public EditFormMode Mode { get; set; }
 
         public enum EditFormMode
         {
@@ -44,29 +44,52 @@ namespace praktika
 
         private void KyrcivToolStrip_Click(object sender, EventArgs e)
         {
-            Font newFont = new Font(NoteTextRich.SelectionFont, //1
-       (NoteTextRich.SelectionFont.Italic ?             //2
-       NoteTextRich.SelectionFont.Style & ~FontStyle.Italic :   //3
-       NoteTextRich.SelectionFont.Style | FontStyle.Italic));  //4
-            NoteTextRich.SelectionFont = newFont;
+            try
+            {
+
+                Font newFont = new Font(NoteTextRich.SelectionFont, //1
+           (NoteTextRich.SelectionFont.Italic ?             //2
+           NoteTextRich.SelectionFont.Style & ~FontStyle.Italic :   //3
+           NoteTextRich.SelectionFont.Style | FontStyle.Italic));  //4
+                NoteTextRich.SelectionFont = newFont;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Font newFont = new Font(NoteTextRich.SelectionFont, //1
-       (NoteTextRich.SelectionFont.Bold ?               //2
-       NoteTextRich.SelectionFont.Style & ~FontStyle.Bold : //3
-       NoteTextRich.SelectionFont.Style | FontStyle.Bold));  //4
-            NoteTextRich.SelectionFont = newFont;
+            try
+            {
+                Font newFont = new Font(NoteTextRich.SelectionFont, //1
+           (NoteTextRich.SelectionFont.Bold ?               //2
+           NoteTextRich.SelectionFont.Style & ~FontStyle.Bold : //3
+           NoteTextRich.SelectionFont.Style | FontStyle.Bold));  //4
+                NoteTextRich.SelectionFont = newFont;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void UnderlineTollStrip_Click(object sender, EventArgs e)
         {
-            Font newFont = new Font(NoteTextRich.SelectionFont, //1
-       (NoteTextRich.SelectionFont.Underline ?              //2
-       NoteTextRich.SelectionFont.Style & ~FontStyle.Underline :    //3
-       NoteTextRich.SelectionFont.Style | FontStyle.Underline));  //4
-            NoteTextRich.SelectionFont = newFont;
+            try
+            {
+                Font newFont = new Font(NoteTextRich.SelectionFont, 
+                    (NoteTextRich.SelectionFont.Underline ? NoteTextRich.SelectionFont.Style 
+                    & ~FontStyle.Underline : NoteTextRich.SelectionFont.Style | FontStyle.Underline));
+                NoteTextRich.SelectionFont = newFont;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,7 +118,7 @@ namespace praktika
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            if(fontDialog1.ShowDialog() == DialogResult.OK)
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
             {
                 NoteTextRich.SelectionFont = fontDialog1.Font;
             }

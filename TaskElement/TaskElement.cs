@@ -39,7 +39,7 @@ namespace TaskElement
             }
             Task.smallTasks.Add(smallTask);
             checkedListBox1.Items.Add(smallTask.SmallTitle);
-            if(checkedListBox1.CheckedItems.Count > 0)
+            if (checkedListBox1.CheckedItems.Count > 0)
             {
                 TitleCheckBox.CheckState = CheckState.Indeterminate;
             }
@@ -48,14 +48,14 @@ namespace TaskElement
                 TitleCheckBox.CheckState = CheckState.Unchecked;
             }
 
-                textBox1.Clear();
+            textBox1.Clear();
         }
 
         private void TaskElement_Load(object sender, EventArgs e)
         {
             TitleCheckBox.Text = Task.Title;
             LoadSmallTasks(Task);
-            
+
         }
 
         void LoadSmallTasks(TaskClass task)
@@ -65,7 +65,7 @@ namespace TaskElement
                 return;
             }
 
-            
+
             for (int i = 0; i < task.smallTasks.Count; i++)
             {
 
@@ -75,7 +75,7 @@ namespace TaskElement
                     checkedListBox1.SetItemCheckState(checkedListBox1.Items.IndexOf(Task.smallTasks[i].SmallTitle), CheckState.Checked);
                 }
             }
-           
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -130,7 +130,8 @@ namespace TaskElement
             if (TitleCheckBox.CheckState == CheckState.Checked)
             {
                 CheckedAllElement();
-            }else if(TitleCheckBox.CheckState == CheckState.Unchecked)
+            }
+            else if (TitleCheckBox.CheckState == CheckState.Unchecked)
             {
                 UncheckedAllElement();
             }
@@ -162,8 +163,11 @@ namespace TaskElement
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainForm.DeleteTask(Task);
-            this.Dispose();
+            if (MessageBox.Show($"Вы уверены, что хотите удалить задачу \"{Task.Title}\"", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MainForm.DeleteTask(Task);
+                this.Dispose();
+            }
         }
 
         CheckState CheckTitleStatus(ItemCheckEventArgs e)

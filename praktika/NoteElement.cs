@@ -19,7 +19,7 @@ namespace praktika
         Size EditSize, DefSize;
         TextBox TitleTextBox;
         RichTextBox NoteTextRich;
-        public Button ConfirmBtn,EditFormBtn;
+        public Button ConfirmBtn, EditFormBtn;
 
         public NoteElement(NoteClass note, MainForm form)
         {
@@ -63,14 +63,14 @@ namespace praktika
                 Note.Text = NoteTextRich.Text;
                 ExceptChanges();
             }
-            else if(TitleTextBox.Text.Length == 0 && NoteTextRich.Text.Length == 0)
+            else if (TitleTextBox.Text.Length == 0 && NoteTextRich.Text.Length == 0)
             {
                 if (MessageBox.Show($"Вы хотите удалить заметку {TitleLable.Text}", "Предупреждение", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     удалитьToolStripMenuItem.PerformClick();
                 }
             }
-            
+
             HideEditComponents();
             ShowDefaultComponents();
 
@@ -81,8 +81,11 @@ namespace praktika
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form.DeleteNoteElement(this);
-            this.Dispose();
+            if (MessageBox.Show($"Вы уверены, что хотите удалить заметку \"{Note.Title}\"", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Form.DeleteNoteElement(this);
+                this.Dispose();
+            }
         }
 
         private void NoteElement_MouseHover(object sender, EventArgs e)

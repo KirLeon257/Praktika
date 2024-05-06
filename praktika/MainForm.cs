@@ -58,26 +58,26 @@ namespace praktika
         private void NoteBtn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
-            NoteBtn.BackColor = SelectColor;
-            TaskBtn.BackColor = defcolor;
-            RemindBtn.BackColor = defcolor;
+            //NoteBtn.BackColor = SelectColor;
+            //TaskBtn.BackColor = defcolor;
+            //RemindBtn.BackColor = defcolor;
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
-            NoteBtn.BackColor = defcolor;
-            TaskBtn.BackColor = SelectColor;
-            RemindBtn.BackColor = defcolor;
+            //NoteBtn.BackColor = defcolor;
+            //TaskBtn.BackColor = SelectColor;
+            //RemindBtn.BackColor = defcolor;
         }
 
         private void TaskBtn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
-            NoteBtn.BackColor = defcolor;
-            TaskBtn.BackColor = defcolor;
-            RemindBtn.BackColor = SelectColor;
+            //NoteBtn.BackColor = defcolor;
+            //TaskBtn.BackColor = defcolor;
+            //RemindBtn.BackColor = SelectColor;
         }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,7 +116,8 @@ namespace praktika
             {
                 throw;
                 //File.Create(PATH_NOTE).Close();
-            }catch (DirectoryNotFoundException)
+            }
+            catch (DirectoryNotFoundException)
             {
                 throw;
                 //Directory.CreateDirectory(PATH_DIR);
@@ -140,7 +141,7 @@ namespace praktika
             {
                 NoteElement element = new NoteElement(note, this);
                 NoteTable.Controls.Add(element);
-                
+
             }
 
 
@@ -205,7 +206,7 @@ namespace praktika
                     }
                     AddRemites();
                 }
-                
+
             }
             catch (FileNotFoundException)
             {
@@ -213,8 +214,8 @@ namespace praktika
             }
             catch (DirectoryNotFoundException)
             {
-               // Directory.CreateDirectory(PATH_DIR);
-               // //File.Create(PATH_REMINDES).Close();
+                // Directory.CreateDirectory(PATH_DIR);
+                // //File.Create(PATH_REMINDES).Close();
             }
         }
 
@@ -321,6 +322,7 @@ namespace praktika
                 File.Create("tasks.json").Close();
             }
         }
+
 
         void AddTasks()
         {
