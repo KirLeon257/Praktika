@@ -34,9 +34,9 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TitleLable = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DateTimeLabel = new System.Windows.Forms.Label();
-            this.TitleLable = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,6 +80,16 @@
             this.panel1.Size = new System.Drawing.Size(341, 62);
             this.panel1.TabIndex = 1;
             // 
+            // TitleLable
+            // 
+            this.TitleLable.AutoSize = true;
+            this.TitleLable.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLable.Location = new System.Drawing.Point(4, 12);
+            this.TitleLable.Name = "TitleLable";
+            this.TitleLable.Size = new System.Drawing.Size(82, 36);
+            this.TitleLable.TabIndex = 3;
+            this.TitleLable.Text = "label1";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -99,16 +109,6 @@
             this.DateTimeLabel.Size = new System.Drawing.Size(102, 37);
             this.DateTimeLabel.TabIndex = 3;
             this.DateTimeLabel.Text = "label2";
-            // 
-            // TitleLable
-            // 
-            this.TitleLable.AutoSize = true;
-            this.TitleLable.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLable.Location = new System.Drawing.Point(23, 16);
-            this.TitleLable.Name = "TitleLable";
-            this.TitleLable.Size = new System.Drawing.Size(82, 36);
-            this.TitleLable.TabIndex = 3;
-            this.TitleLable.Text = "label1";
             // 
             // ReminderElement
             // 
