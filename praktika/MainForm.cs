@@ -49,6 +49,7 @@ namespace praktika
 
             DicNoteUsers = new Dictionary<int, List<NoteClass>>();
             DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
+            DicTaskUsers = new Dictionary<int, List<TaskClass>>();
 
             defcolor = NoteBtn.BackColor;
             SelectColor = Color.BlueViolet;
@@ -58,26 +59,16 @@ namespace praktika
         private void NoteBtn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
-            //NoteBtn.BackColor = SelectColor;
-            //TaskBtn.BackColor = defcolor;
-            //RemindBtn.BackColor = defcolor;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
-            //NoteBtn.BackColor = defcolor;
-            //TaskBtn.BackColor = SelectColor;
-            //RemindBtn.BackColor = defcolor;
         }
 
         private void TaskBtn_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
-            //NoteBtn.BackColor = defcolor;
-            //TaskBtn.BackColor = defcolor;
-            //RemindBtn.BackColor = SelectColor;
         }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,8 +96,7 @@ namespace praktika
                     DicNoteUsers = serializer.Deserialize<Dictionary<int, List<NoteClass>>>(fs);
                     if (DicNoteUsers == null)
                     {
-                        DicNoteUsers = new Dictionary<int, List<NoteClass>>();
-
+                        return;
                     }
                     AddNotes();
 
@@ -114,14 +104,7 @@ namespace praktika
             }
             catch (FileNotFoundException)
             {
-                throw;
-                //File.Create(PATH_NOTE).Close();
-            }
-            catch (DirectoryNotFoundException)
-            {
-                throw;
-                //Directory.CreateDirectory(PATH_DIR);
-                //File.Create(PATH_NOTE).Close();
+                File.Create(PATH_NOTE).Close();
             }
         }
 
@@ -141,7 +124,6 @@ namespace praktika
             {
                 NoteElement element = new NoteElement(note, this);
                 NoteTable.Controls.Add(element);
-
             }
 
 
@@ -201,8 +183,7 @@ namespace praktika
                     DicReminedUsers = serializer.Deserialize<Dictionary<int, List<RemindeClass>>>(fs);
                     if (DicReminedUsers == null)
                     {
-                        DicReminedUsers = new Dictionary<int, List<RemindeClass>>();
-
+                        return;
                     }
                     AddRemites();
                 }
@@ -210,12 +191,7 @@ namespace praktika
             }
             catch (FileNotFoundException)
             {
-                //File.Create(PATH_REMINDES).Close();
-            }
-            catch (DirectoryNotFoundException)
-            {
-                // Directory.CreateDirectory(PATH_DIR);
-                // //File.Create(PATH_REMINDES).Close();
+                File.Create(PATH_REMINDES).Close();
             }
         }
 
@@ -310,7 +286,7 @@ namespace praktika
                     DicTaskUsers = serializer.Deserialize<Dictionary<int, List<TaskClass>>>(jr);
                     if (DicTaskUsers == null)
                     {
-                        DicTaskUsers = new Dictionary<int, List<TaskClass>>();
+                       // DicTaskUsers = new Dictionary<int, List<TaskClass>>();
                         return;
                     }
 
