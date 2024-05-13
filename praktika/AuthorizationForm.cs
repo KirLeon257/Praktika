@@ -108,10 +108,12 @@ namespace praktika
                     
                 }
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
-
-                throw;
+                if(ex.ErrorCode == -2146232060)
+                {
+                    MessageBox.Show("Такой пользоваель уже существует! Используйте другой логин","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
             }
         }
 

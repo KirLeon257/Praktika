@@ -17,7 +17,6 @@ namespace praktika
         public int id_user { get; set; }
 
         readonly string PATH_NOTE = "notes.json";
-        readonly string PATH_DIR = "resorses";
         readonly string PATH_REMINDES = "remineds.json";
         readonly string PATH_TASKS = "tasks.json";
         JsonSerializer serializer;
@@ -234,10 +233,10 @@ namespace praktika
                     serializer.Serialize(fs, DicReminedUsers);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -265,10 +264,10 @@ namespace praktika
                     serializer.Serialize(sw, DicTaskUsers);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -281,12 +280,11 @@ namespace praktika
         {
             try
             {
-                using (JsonTextReader jr = new JsonTextReader(new StreamReader("tasks.json")))
+                using (JsonTextReader jr = new JsonTextReader(new StreamReader(PATH_TASKS)))
                 {
                     DicTaskUsers = serializer.Deserialize<Dictionary<int, List<TaskClass>>>(jr);
                     if (DicTaskUsers == null)
                     {
-                       // DicTaskUsers = new Dictionary<int, List<TaskClass>>();
                         return;
                     }
 
@@ -295,7 +293,7 @@ namespace praktika
             }
             catch (FileNotFoundException)
             {
-                File.Create("tasks.json").Close();
+                File.Create(PATH_TASKS).Close();
             }
         }
 
