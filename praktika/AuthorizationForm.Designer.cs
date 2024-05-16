@@ -29,6 +29,7 @@ namespace praktika
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
             this.label1 = new System.Windows.Forms.Label();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.PwdTextBox = new System.Windows.Forms.TextBox();
@@ -135,6 +136,8 @@ namespace praktika
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
@@ -148,12 +151,12 @@ namespace praktika
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox LoginTextBox;
-        private System.Windows.Forms.TextBox PwdTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox LoginTextBox;
+        public System.Windows.Forms.TextBox PwdTextBox;
     }
 }

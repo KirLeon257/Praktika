@@ -46,7 +46,10 @@ namespace praktika
         {
             try
             {
-
+                if (!NoteTextRich.Focused)
+                {
+                    NoteTextRich.Focus();
+                }
                 Font newFont = new Font(NoteTextRich.SelectionFont, //1
            (NoteTextRich.SelectionFont.Italic ?             //2
            NoteTextRich.SelectionFont.Style & ~FontStyle.Italic :   //3
@@ -64,6 +67,10 @@ namespace praktika
         {
             try
             {
+                if (!NoteTextRich.Focused)
+                {
+                    NoteTextRich.Focus();
+                }
                 Font newFont = new Font(NoteTextRich.SelectionFont, //1
            (NoteTextRich.SelectionFont.Bold ?               //2
            NoteTextRich.SelectionFont.Style & ~FontStyle.Bold : //3
@@ -81,8 +88,12 @@ namespace praktika
         {
             try
             {
-                Font newFont = new Font(NoteTextRich.SelectionFont, 
-                    (NoteTextRich.SelectionFont.Underline ? NoteTextRich.SelectionFont.Style 
+                if (!NoteTextRich.Focused)
+                {
+                    NoteTextRich.Focus();
+                }
+                Font newFont = new Font(NoteTextRich.SelectionFont,
+                    (NoteTextRich.SelectionFont.Underline ? NoteTextRich.SelectionFont.Style
                     & ~FontStyle.Underline : NoteTextRich.SelectionFont.Style | FontStyle.Underline));
                 NoteTextRich.SelectionFont = newFont;
             }
@@ -120,7 +131,14 @@ namespace praktika
         {
             if (fontDialog1.ShowDialog() == DialogResult.OK)
             {
-                NoteTextRich.SelectionFont = fontDialog1.Font;
+                if (NoteTextRich.SelectedText.Length != 0)
+                {
+                    NoteTextRich.SelectionFont = fontDialog1.Font;
+                }
+                else
+                {
+                    NoteTextRich.Font = fontDialog1.Font;
+                }
             }
         }
 

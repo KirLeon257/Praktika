@@ -29,6 +29,7 @@ namespace praktika
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuPanel = new System.Windows.Forms.Panel();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -72,14 +73,14 @@ namespace praktika
             this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(169, 450);
+            this.MenuPanel.Size = new System.Drawing.Size(169, 406);
             this.MenuPanel.TabIndex = 0;
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.Location = new System.Drawing.Point(60, 125);
+            this.UserNameLabel.Location = new System.Drawing.Point(50, 125);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(70, 25);
             this.UserNameLabel.TabIndex = 5;
@@ -149,7 +150,7 @@ namespace praktika
             this.tabControl1.Location = new System.Drawing.Point(169, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(631, 450);
+            this.tabControl1.Size = new System.Drawing.Size(578, 406);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.TabStop = false;
             // 
@@ -160,7 +161,7 @@ namespace praktika
             this.NotePage.Location = new System.Drawing.Point(4, 27);
             this.NotePage.Name = "NotePage";
             this.NotePage.Padding = new System.Windows.Forms.Padding(3);
-            this.NotePage.Size = new System.Drawing.Size(623, 419);
+            this.NotePage.Size = new System.Drawing.Size(570, 375);
             this.NotePage.TabIndex = 0;
             this.NotePage.Text = "Заметки";
             this.NotePage.UseVisualStyleBackColor = true;
@@ -171,7 +172,7 @@ namespace praktika
             this.NoteTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NoteTable.Location = new System.Drawing.Point(3, 27);
             this.NoteTable.Name = "NoteTable";
-            this.NoteTable.Size = new System.Drawing.Size(617, 389);
+            this.NoteTable.Size = new System.Drawing.Size(564, 345);
             this.NoteTable.TabIndex = 2;
             // 
             // NotesMenuStrip
@@ -180,7 +181,7 @@ namespace praktika
             this.создатьToolStripMenuItem});
             this.NotesMenuStrip.Location = new System.Drawing.Point(3, 3);
             this.NotesMenuStrip.Name = "NotesMenuStrip";
-            this.NotesMenuStrip.Size = new System.Drawing.Size(617, 24);
+            this.NotesMenuStrip.Size = new System.Drawing.Size(564, 24);
             this.NotesMenuStrip.TabIndex = 1;
             this.NotesMenuStrip.Text = "menuStrip1";
             // 
@@ -199,7 +200,7 @@ namespace praktika
             this.RemindPage.Location = new System.Drawing.Point(4, 27);
             this.RemindPage.Name = "RemindPage";
             this.RemindPage.Padding = new System.Windows.Forms.Padding(3);
-            this.RemindPage.Size = new System.Drawing.Size(623, 419);
+            this.RemindPage.Size = new System.Drawing.Size(570, 375);
             this.RemindPage.TabIndex = 1;
             this.RemindPage.Text = "Напоминания";
             this.RemindPage.UseVisualStyleBackColor = true;
@@ -209,7 +210,7 @@ namespace praktika
             this.ReminedTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReminedTable.Location = new System.Drawing.Point(3, 27);
             this.ReminedTable.Name = "ReminedTable";
-            this.ReminedTable.Size = new System.Drawing.Size(617, 389);
+            this.ReminedTable.Size = new System.Drawing.Size(564, 345);
             this.ReminedTable.TabIndex = 2;
             // 
             // RemindeMenuStrip
@@ -218,7 +219,7 @@ namespace praktika
             this.создатьToolStripMenuItem1});
             this.RemindeMenuStrip.Location = new System.Drawing.Point(3, 3);
             this.RemindeMenuStrip.Name = "RemindeMenuStrip";
-            this.RemindeMenuStrip.Size = new System.Drawing.Size(617, 24);
+            this.RemindeMenuStrip.Size = new System.Drawing.Size(564, 24);
             this.RemindeMenuStrip.TabIndex = 1;
             this.RemindeMenuStrip.Text = "menuStrip1";
             // 
@@ -237,7 +238,7 @@ namespace praktika
             this.TaskPage.Location = new System.Drawing.Point(4, 27);
             this.TaskPage.Name = "TaskPage";
             this.TaskPage.Padding = new System.Windows.Forms.Padding(3);
-            this.TaskPage.Size = new System.Drawing.Size(623, 419);
+            this.TaskPage.Size = new System.Drawing.Size(570, 375);
             this.TaskPage.TabIndex = 2;
             this.TaskPage.Text = "Задачи";
             this.TaskPage.UseVisualStyleBackColor = true;
@@ -248,7 +249,7 @@ namespace praktika
             this.TasksFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TasksFlowLayout.Location = new System.Drawing.Point(3, 27);
             this.TasksFlowLayout.Name = "TasksFlowLayout";
-            this.TasksFlowLayout.Size = new System.Drawing.Size(617, 389);
+            this.TasksFlowLayout.Size = new System.Drawing.Size(564, 345);
             this.TasksFlowLayout.TabIndex = 3;
             // 
             // TaskMenuStreap
@@ -257,7 +258,7 @@ namespace praktika
             this.toolStripMenuItem1});
             this.TaskMenuStreap.Location = new System.Drawing.Point(3, 3);
             this.TaskMenuStreap.Name = "TaskMenuStreap";
-            this.TaskMenuStreap.Size = new System.Drawing.Size(617, 24);
+            this.TaskMenuStreap.Size = new System.Drawing.Size(564, 24);
             this.TaskMenuStreap.TabIndex = 2;
             this.TaskMenuStreap.Text = "menuStrip1";
             // 
@@ -273,13 +274,15 @@ namespace praktika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(747, 406);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.MenuPanel);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.NotesMenuStrip;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Книга";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuPanel.ResumeLayout(false);

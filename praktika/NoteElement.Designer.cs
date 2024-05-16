@@ -42,12 +42,12 @@ namespace praktika
             // 
             this.TitleLable.AutoEllipsis = true;
             this.TitleLable.AutoSize = true;
-            this.TitleLable.BackColor = System.Drawing.Color.MistyRose;
+            this.TitleLable.BackColor = System.Drawing.Color.Aquamarine;
             this.TitleLable.ContextMenuStrip = this.OptionMenuStrip;
             this.TitleLable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TitleLable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TitleLable.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLable.Location = new System.Drawing.Point(3, 9);
+            this.TitleLable.Location = new System.Drawing.Point(3, 13);
             this.TitleLable.Name = "TitleLable";
             this.TitleLable.Size = new System.Drawing.Size(72, 28);
             this.TitleLable.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace praktika
             // TextNoteRichTextBox
             // 
             this.TextNoteRichTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TextNoteRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextNoteRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextNoteRichTextBox.ContextMenuStrip = this.OptionMenuStrip;
             this.TextNoteRichTextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TextNoteRichTextBox.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,7 +97,7 @@ namespace praktika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Coral;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ContextMenuStrip = this.OptionMenuStrip;
@@ -106,7 +106,7 @@ namespace praktika
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;
             this.Name = "NoteElement";
-            this.Size = new System.Drawing.Size(234, 142);
+            this.Size = new System.Drawing.Size(237, 144);
             this.DoubleClick += new System.EventHandler(this.NoteElement_DoubleClick);
             this.OptionMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);

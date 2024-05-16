@@ -14,7 +14,7 @@ namespace praktika
 {
     public partial class AuthorizationForm : Form
     {
-        SqlConnection sqlConnection;
+        public readonly SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["praktika.Properties.Settings.DigitalBookConnectionString"].ConnectionString);
         SqlCommand command;
         SqlDataAdapter sqlData;
         DataTable users;
@@ -26,7 +26,6 @@ namespace praktika
 
         private void AuthorizationForm_Load(object sender, EventArgs e)
         {
-            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["praktika.Properties.Settings.DigitalBookConnectionString"].ConnectionString);
             try
             {
                 sqlConnection.Open();
@@ -50,7 +49,7 @@ namespace praktika
                     throw new FormatException("Введите корректные данные!");
                 }
 
-                if (!LoginUser())
+                if (!LoginUser(LoginTextBox.Text, PwdTextBox.Text))
                 {
                     MessageBox.Show("Неверный логин и/или пароль!");
                     return;
@@ -68,7 +67,7 @@ namespace praktika
 
         bool CheckValidation()
         {
-            if (LoginTextBox.Text == "" || PwdTextBox.Text == "" || PwdTextBox.Text.Length < 8)
+            if (LoginTextBox.Text == "" || PwdTextBox.Text == "" || PwdTextBox.Text.Length < 6)
             {
                 return false;
             }
@@ -83,47 +82,31 @@ namespace praktika
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (LoginTextBox.Text == "" || PwdTextBox.Text == "" || PwdTextBox.Text.Length < 8)
+            RegistrationForm registration = new RegistrationForm(this);
+            Hide();
+            DialogResult result = registration.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                MessageBox.Show("Введите данные для регистрации");
-                return;
-            }
-
-            RegistrationeUser();
-        }
-
-        void RegistrationeUser()
-        {
-            try
-            {
-                command = new SqlCommand("INSERT INTO [users]([login],[pwd]) VALUES (@login,@pwd)", sqlConnection);
-                command.Parameters.AddWithValue("login", LoginTextBox.Text);
-                command.Parameters.AddWithValue("pwd", PwdTextBox.Text);
-                if (command.ExecuteNonQuery() == 1)
-                {
-                    if (LoginUser())
-                    {
-                        this.Hide();
-                    }
-                    
+                if (LoginUser(registration.login, registration.pwd)){
+                    this.Hide();
                 }
             }
-            catch (SqlException ex)
+            else if (result == DialogResult.Cancel)
             {
-                if(ex.ErrorCode == -2146232060)
-                {
-                    MessageBox.Show("Такой пользоваель уже существует! Используйте другой логин","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
+                registration.Dispose();
+                this.Show();
             }
         }
 
-        bool LoginUser()
+
+
+        bool LoginUser(string login, string pwd)
         {
             try
             {
-                command = new SqlCommand("SELECT * FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
-                command.Parameters.AddWithValue("login", LoginTextBox.Text);
-                command.Parameters.AddWithValue("pwd", PwdTextBox.Text);
+                command = new SqlCommand("SELECT * FROM [newusers] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
+                command.Parameters.AddWithValue("login", login);
+                command.Parameters.AddWithValue("pwd", pwd);
                 sqlData = new SqlDataAdapter(command);
                 users = new DataTable();
                 sqlData.Fill(users);
@@ -141,7 +124,6 @@ namespace praktika
             }
             catch (SqlException ex)
             {
-
                 MessageBox.Show(ex.Message);
                 return false;
             }
@@ -172,31 +154,5 @@ namespace praktika
         {
 
         }
-
-
-        //int GetUserId(string login, string pwd)
-        //{
-        //    try
-        //    {
-        //        command = new SqlCommand("SELECT [id] FROM [users] WHERE [login]=@login and [pwd]=@pwd", sqlConnection);
-        //        command.Parameters.AddWithValue("login", login);
-        //        command.Parameters.AddWithValue("pwd", pwd);
-        //        sqlData.SelectCommand = command;
-        //        users = new DataTable();
-        //        sqlData.Fill(users);
-
-        //        if (users.Rows.Count != 1)
-        //        {
-        //            return -1;
-        //        }
-
-        //        return (int)users.Rows[0]["id"];
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //}
     }
 }

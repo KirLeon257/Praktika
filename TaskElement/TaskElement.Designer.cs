@@ -68,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(359, 74);
+            this.panel1.Size = new System.Drawing.Size(348, 74);
             this.panel1.TabIndex = 15;
             // 
             // TitleCheckBox
@@ -93,7 +93,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(359, 195);
+            this.panel2.Size = new System.Drawing.Size(348, 167);
             this.panel2.TabIndex = 18;
             // 
             // groupBox2
@@ -104,9 +104,9 @@
             this.groupBox2.Controls.Add(this.checkedListBox1);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Location = new System.Drawing.Point(19, 8);
+            this.groupBox2.Location = new System.Drawing.Point(19, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(315, 173);
+            this.groupBox2.Size = new System.Drawing.Size(308, 152);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Подзадачи";
@@ -124,11 +124,11 @@
             // checkedListBox1
             // 
             this.checkedListBox1.ContextMenuStrip = this.contextMenuStrip2;
-            this.checkedListBox1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(6, 45);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(293, 116);
+            this.checkedListBox1.Size = new System.Drawing.Size(293, 100);
             this.checkedListBox1.TabIndex = 7;
             this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck_1);
             // 
@@ -163,7 +163,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "TaskElement";
-            this.Size = new System.Drawing.Size(359, 269);
+            this.Size = new System.Drawing.Size(348, 241);
             this.Load += new System.EventHandler(this.TaskElement_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

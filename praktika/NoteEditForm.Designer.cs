@@ -29,6 +29,7 @@ namespace praktika
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NoteEditForm));
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -164,6 +165,7 @@ namespace praktika
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TitleTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NoteEditForm";
             this.Text = "NoteEditForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NoteEditForm_FormClosing_1);
